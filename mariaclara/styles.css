@@ -1,8 +1,52 @@
 header{
     background-color:#FFFAFC;
-     border-bottom: 1 solid #FFE1E7;
+    border-bottom: 1px solid #FFE1E7;
+    width: 1920px;
+    height: 73px;
+    border-bottom-width: 1px;
 }
 
 body{
     background-color: #FFF2F6;
+}
+
+img{
+    width: 111px;
+    height: 45px;
+    top: 20px;
+    left: 118px;
+}
+
+.boasvindas{
+    width: 206px;
+    height: 39px;
+    top: 188px;
+    left: 182px;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.inicio{
+    width: 1240px;
+    height: 243px;
+    top: 171px;
+    left: 118px;
+    border-radius: 20px;
+    background: #FFF8FA;
+    box-shadow: 6px 6px 5.2px 0px #FF98AD40;
+}
+
+h3.inicio{
+    width: 539px;
+    height: 24px;
+    top: 237px;
+    left: 182px;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
 }
