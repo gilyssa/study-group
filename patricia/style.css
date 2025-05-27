@@ -1,0 +1,84 @@
+
+
+* {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0 20px;
+    width: 100%;
+    height: 73px;
+    background-color: #fffafc;
+    border-bottom: 1px solid #FFE1E7
+}
+
+.logo {
+    Width: 111px;
+    Height: 45px;
+    Left: 118px; 
+    position: relative;  
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    margin-right: 118px;    
+}
+
+.foto-perfil {
+    border-radius: 50%;
+    Width: 40px;
+    Height: 40px;   
+    background-color: #F4D7F5;
+
+}
+
+.nome-perfil {
+    background: none;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;      
+    color: #3C254D;
+    cursor: pointer;
+}
+main {
+    width: 100%;       
+    height: calc(100vh - 73px);
+    background-color: #FFF2F6;
+
+}
+
+li {
+    display: inline;
+    color:  #3C254D;
+    margin-left: 50px; 
+    font-weight: 500;
+    font-size: 15px;
+       
+
+}
+li::before {
+    content: ">";
+    margin: 0 8px;
+}
+
+li:first-child::before {
+    display: none;
+}
