@@ -65,12 +65,21 @@ main {
 
 }
 
+.opcoes {
+    padding-top: 20px;
+
+}
+
+.opcoes ol {
+    margin-left: 122px;
+
+}
+
 li {
     display: inline;
-    color:  #3C254D;
-    margin-left: 50px; 
+    color:  #3C254D; 
     font-weight: 500;
-    font-size: 15px;
+    font-size: 20px;
        
 
 }
