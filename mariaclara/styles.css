@@ -40,7 +40,10 @@ h1#ola{
     background: #FFF8FA;
     box-shadow: 6px 6px 5.2px 0px #FF98AD40;
     color:#3C254D;
+    padding: 24px;
+    display: flex;
 }
+
 h3#bemvinda{
     width: 539px;
     height: 24px;
