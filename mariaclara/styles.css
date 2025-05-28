@@ -17,7 +17,7 @@ img{
     left: 118px;
 }
 
-.boasvindas{
+h1#ola{
     width: 206px;
     height: 39px;
     top: 188px;
@@ -27,19 +27,21 @@ img{
     font-size: 32px;
     line-height: 100%;
     letter-spacing: 0%;
+    color:#3C254D;
 }
 
-.inicio{
+.container_1{
     width: 1240px;
     height: 243px;
     top: 171px;
     left: 118px;
+    font-family: Montserrat;
     border-radius: 20px;
     background: #FFF8FA;
     box-shadow: 6px 6px 5.2px 0px #FF98AD40;
+    color:#3C254D;
 }
-
-h3.inicio{
+h3#bemvinda{
     width: 539px;
     height: 24px;
     top: 237px;
@@ -49,4 +51,56 @@ h3.inicio{
     font-size: 20px;
     line-height: 100%;
     letter-spacing: 0%;
+    color:#3C254D;
 }
+
+h4#infocurta{
+    width: 630;
+    height: 20;
+    top: 265px;
+    left: 182px;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #3C254D;
+}
+
+.bloco_membro{
+    width: 183;
+    height: 88;
+    top: 309px;
+    left: 197px;
+    border-radius: 20px;
+    border-width: 1px;
+    background: linear-gradient(180deg, #FFF8FA 0%, #FAE8F8 95.67%, #F4D7F5 100%);
+    border: 1px solid #F4D7F5
+}
+
+h1#total_de_membros{
+    width: 60;
+    height: 39;
+    top: 323px;
+    left: 261px;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #3C254D;
+}
+
+h2#texto_membros{
+    width: 99;
+    height: 24;
+    top: 358px;
+    left: 238px;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #3C254D;
+}
+
