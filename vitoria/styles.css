@@ -1,0 +1,37 @@
+* {
+    font-family:"Montserrat", sans-serif;
+}
+
+nav{
+    width: 100%;  
+    max-width: 1920px;
+    height: 73px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #FFE1E7;
+    padding: 0 118px;
+}
+
+.navbar-logo{
+    height: 45px;
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-avatar img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.user-name p{
+    white-space: nowrap;
+    font-size: 16px;
+    color: #3C254D;
+    font-weight: 500;
+}
