@@ -110,3 +110,45 @@ li:first-child::before {
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
+.selecao div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 1477px;
+    height: 67px;
+    top: 281px;
+    left: 177px;
+    border-radius: 20px;
+    border-width: 1px;
+    background: #FFFAFC;
+    border: 1px solid #FFE1E7;
+    box-shadow: 6px 6px 5.2px 0px #FF98AD40;
+}
+
+.front { 
+    width: 194px;
+    height: 41px;
+    top: 294px;
+    left: 210px;
+    border-radius: 16px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #3C254D;
+    background: linear-gradient(180deg, #FFF8FA 0%, #FAE8F8 95.67%, #F4D7F5 100%);
+    border: 1px solid #F4D7F5;
+}
+
+.back,
+.dados,
+.ui-ux {
+    background: none;
+    border: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #3C254D;
+}
