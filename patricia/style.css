@@ -91,3 +91,15 @@ li::before {
 li:first-child::before {
     display: none;
 }
+
+.selecao {
+    margin: 80px auto auto 150px;
+
+}
+
+.selecao h1 {
+    font-weight: 700;
+    font-size: 32px;
+    color: #3C254D;
+
+}
