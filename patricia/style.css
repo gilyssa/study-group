@@ -101,5 +101,12 @@ li:first-child::before {
     font-weight: 700;
     font-size: 32px;
     color: #3C254D;
+}
 
+.selecao p {
+    font-weight: 500;
+    font-size: 20px;
+    color: #3C254D;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
