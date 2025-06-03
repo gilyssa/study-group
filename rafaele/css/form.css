@@ -14,3 +14,7 @@
 .form-cadastro-direita {
     background-color: #FFF0F5;
 }
+
+.form-cadastro-direita .form-text {
+    font-size: 18px;
+}
