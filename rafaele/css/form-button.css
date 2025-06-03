@@ -1,0 +1,11 @@
+.form-button{
+    border-style: none;
+    width: 428px;
+    height: 77px;
+    border-radius: 20px;
+    background-color: var(--btn-color);
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
