@@ -1,5 +1,5 @@
 .form-input{
-    width: 495px;
+    max-width: 495px;
     height: 72px;
     padding: 10px 20px;
     border-style: none;

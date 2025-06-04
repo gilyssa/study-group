@@ -18,7 +18,7 @@
 }
 
 .form-cadastro-esquerda img {
-    padding-right: 108px;           /* Controla o tamanho da imagem */
+    padding-right: 108px;        
 }
 
 .form-cadastro-direita {
@@ -32,5 +32,14 @@
 .form-cadastro-esquerda .form-text {
     font-size: 30px;
     color: #3C254D;
-
 }
+
+@media (max-width: 1370px) {
+    .form-cadastro-esquerda{
+        display: none;
+    }
+
+@media (max-width: 1370px) {
+    .form{
+        width: 100%;
+    }

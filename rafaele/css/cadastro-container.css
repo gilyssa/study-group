@@ -5,3 +5,10 @@
     box-shadow: 0 20px 31.1px #D8458B40;
     overflow: hidden;
 }
+
+@media (max-width: 1370px) {
+    .cadastro-container{
+        width: 100vw;
+        height: 100vh;
+        box-shadow: none;
+    }
