@@ -1,0 +1,12 @@
+.form-input-mobile{
+    max-width: 130px;
+    height: 20px;
+    padding: 10px 20px;
+    border-style: none;
+    background-color: #FFE6F3;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #5C5660;
+    
+}
