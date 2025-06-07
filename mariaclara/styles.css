@@ -1,109 +1,217 @@
-header{
-    background-color:#FFFAFC;
-    border-bottom: 1px solid #FFE1E7;
-    width: 1920px;
-    height: 73px;
-    border-bottom-width: 1px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
-body{
-    background-color: #FFF2F6;
+body {
+  background-color: #FFF2F6;
+  color: #3C254D;
 }
 
-img{
-    width: 111px;
-    height: 45px;
-    top: 20px;
-    left: 118px;
+header {
+  background-color: #FFFAFC;
+  border-bottom: 1px solid #FFE1E7;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 73px;
+  align-items: center;
+  border-bottom: 1px solid #FFE1E7
 }
 
-h1#ola{
-    width: 206px;
-    height: 39px;
-    top: 188px;
-    left: 182px;
-    font-family: Montserrat;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color:#3C254D;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.container_1{
-    width: 1240px;
-    height: 243px;
-    top: 171px;
-    left: 118px;
-    font-family: Montserrat;
-    border-radius: 20px;
-    background: #FFF8FA;
-    box-shadow: 6px 6px 5.2px 0px #FF98AD40;
-    color:#3C254D;
-    padding: 24px;
-    display: flex;
+.logo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 180px;
+  left: 45px;
+  width: 130px;
+  height: auto;
+  display:block;
+  max-width: 100%;
+  margin-left: 40px;
 }
 
-h3#bemvinda{
-    width: 539px;
-    height: 24px;
-    top: 237px;
-    left: 182px;
-    font-family: Montserrat;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color:#3C254D;
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-h4#infocurta{
-    width: 630;
-    height: 20;
-    top: 265px;
-    left: 182px;
-    font-family: Montserrat;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color: #3C254D;
+.user-info span {
+  font-weight: 500;
+  margin-right: 40px;
 }
 
-.bloco_membro{
-    width: 183;
-    height: 88;
-    top: 309px;
-    left: 197px;
-    border-radius: 20px;
-    border-width: 1px;
-    background: linear-gradient(180deg, #FFF8FA 0%, #FAE8F8 95.67%, #F4D7F5 100%);
-    border: 1px solid #F4D7F5
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-left: 50px;
 }
 
-h1#total_de_membros{
-    width: 60;
-    height: 39;
-    top: 323px;
-    left: 261px;
-    font-family: Montserrat;
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color: #3C254D;
+.breadcrumb {
+  padding: 16px 32px;
+  font-size: 14px;
+  margin-left: 50px;
 }
 
-h2#texto_membros{
-    width: 99;
-    height: 24;
-    top: 358px;
-    left: 238px;
-    font-family: Montserrat;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color: #3C254D;
+.dashboard {
+  padding: 32px;
 }
+
+.boas-vindas {
+  background-color: #FFF8FA;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 6px 6px 5.2px 0px #FF98AD40;
+  margin-bottom: 32px;
+}
+
+.boas-vindas h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.boas-vindas .subtitulo {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 8px 0;
+}
+
+.boas-vindas .descricao {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.resumos {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.resumo {
+  background: linear-gradient(180deg, #FFF8FA 0%, #FAE8F8 95.67%, #F4D7F5 100%);
+  border: 1px solid #F4D7F5;
+  border-radius: 20px;
+  padding: 16px;
+  text-align: center;
+  flex: 1;
+}
+
+.resumo strong {
+  font-size: 24px;
+  display: block;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 2px 2px 10px #f4c6d5;
+}
+
+.livro{
+  top: 23px;
+  left: 24px;
+}
+
+.folha{
+    top: 23px;
+    left: 24px;
+}
+
+.github_logo{
+    top: 23px;
+    left: 24px;  
+}
+
+.progresso_beca{
+    top: 23px;
+    left: 24px;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: #F4D7F5;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.tag.small {
+  font-size: 10px;
+  background-color: #FFE1E7;
+}
+
+button {
+  background-color: #FF8CA3;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 12px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.cronograma ul,
+.card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.cronograma li {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.progresso .barra {
+  width: 100%;
+  height: 8px;
+  background-color: #FFE1E7;
+  border-radius: 8px;
+  margin: 4px 0 12px;
+  overflow: hidden;
+}
+
+.progresso .barra div {
+  height: 100%;
+  background-color: #FF8CA3;
+}
+
+
 
