@@ -37,4 +37,37 @@ nav{
     color: #3C254D;
     font-weight: 500;
 }
- 
+
+#header-trilhas{
+    padding-top: 63px;
+    padding-left: 182px;
+
+    .gerenciar-titulo{
+        font-size: 2rem;
+        font-weight: 700;
+        color: #3C254D;
+        padding-bottom: 10px;
+    }
+
+    .gerenciar-subtitulo{
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: #3C254D;
+        padding-bottom: 40px;
+    }
+}
+
+#carrossel-trilhas{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 189px;
+}
+
+.carrossel-gerenciar{
+    background-color: #F4D7F5;
+    width:363px;
+    height: 226px;
+    border-radius: 20px;
+}
+
