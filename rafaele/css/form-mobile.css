@@ -18,6 +18,10 @@
     order: 1;
 }
 
+.form-cadastro-esquerda .material-symbols-outlined {
+    align-self: flex-start
+}
+
 .form-cadastro-direita {
     background-color: #FFF0F5;
     padding: 20px;
