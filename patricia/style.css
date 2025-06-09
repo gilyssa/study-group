@@ -11,6 +11,7 @@ body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    background-color: #FFF2F6;
 
 }
 
@@ -60,7 +61,7 @@ header {
 main {
     width: 100%;
     height: calc(100vh - 73px);
-    background-color: #FFF2F6;
+   
 
 }
 
@@ -176,7 +177,7 @@ li:first-child::before {
     display: flex;
     justify-content: space-around;
     margin-top: 30px;
-    left: 33px;
+    /* left: 33px;  */
 }
 .section-esquerda h2 {
     width: 406px;
@@ -186,7 +187,7 @@ li:first-child::before {
     letter-spacing: 0%;
     color: #3C254D;
 }
-.button-pendente {
+.pendente {
     display: flex;
     align-items: center;
     justify-content: center;
