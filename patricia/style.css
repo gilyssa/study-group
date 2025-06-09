@@ -140,6 +140,7 @@ li:first-child::before {
     color: #3C254D;
     background: linear-gradient(180deg, #FFF8FA 0%, #FAE8F8 95.67%, #F4D7F5 100%);
     border: 1px solid #F4D7F5;
+    cursor: pointer;
 }
 
 .back,
@@ -152,6 +153,7 @@ li:first-child::before {
     line-height: 100%;
     letter-spacing: 0%;
     color: #3C254D;
+    cursor: pointer;
 }
 
 .div-sections {
@@ -257,6 +259,7 @@ li:first-child::before {
     letter-spacing: 0%;
     color: #FFFAFC;
     gap: 5px;
+    cursor: pointer;
 
 }
 
@@ -358,5 +361,6 @@ h4{
     letter-spacing: 0%;
     color: #3C254D;
     box-shadow: 0px 4px 4px 0px #00000040;
+    cursor: pointer;
 
 }
