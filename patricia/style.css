@@ -27,9 +27,9 @@ header {
 }
 
 .logo {
-    Width: 111px;
-    Height: 45px;
-    Left: 118px;
+    width: 111px;
+    height: 45px;
+    left: 118px;
     position: relative;
 }
 
@@ -42,8 +42,8 @@ header {
 
 .foto-perfil {
     border-radius: 50%;
-    Width: 40px;
-    Height: 40px;
+    width: 40px;
+    height: 40px;
     background-color: #F4D7F5;
 
 }
@@ -70,7 +70,7 @@ main {
 
 }
 
-.opcoes ol {
+.opcoes ul {
     margin-left: 122px;
 
 }
