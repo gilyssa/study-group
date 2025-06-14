@@ -47,7 +47,7 @@
         display: none;
     }
 
-@media (max-width: 1370px) {
     .form-mobile{
         width: 100%;
     }
+}
