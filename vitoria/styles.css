@@ -12,44 +12,45 @@ nav{
     padding: 20px 0px 8px 118px;
     border-bottom: 1px solid #FFE1E7;
     background-color: #FFFAFC;
-}
 
-.navbar-logo{
-    height: 45px;
-}
+    & .navbar-logo{
+    height: 45px; 
+    }
 
-.user-info{
+    & .user-info{
     display: flex;
     align-items: center;
     gap: 15px;
     padding: 17px 122px;
-}
+    }
 
-.user-avatar img{
+    & .user-avatar img{
     height: 40px;
     width: 40px;
     border-radius: 50%;
-}
+    }
 
-.user-name p{
+    & .user-name p{
     white-space: nowrap;
     font-size: 16px;
     color: #3C254D;
     font-weight: 500;
+    }
 }
+
 
 #header-trilhas{
     padding-top: 63px;
     padding-left: 182px;
 
-    .gerenciar-titulo{
+    & .gerenciar-titulo{
         font-size: 2rem;
         font-weight: 700;
         color: #3C254D;
         padding-bottom: 10px;
     }
 
-    .gerenciar-subtitulo{
+    & .gerenciar-subtitulo{
         font-size: 1.25rem;
         font-weight: 500;
         color: #3C254D;
@@ -74,7 +75,7 @@ nav{
 }
 
 
-.icone-card{
+.carrossel-icone{
     display: flex;
     justify-content: center;
     align-items: center;
