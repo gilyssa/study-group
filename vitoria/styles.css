@@ -59,15 +59,41 @@ nav{
 
 #carrossel-trilhas{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding-left: 189px;
 }
 
-.carrossel-gerenciar{
+#carrossel-gerenciar{
     background-color: #F4D7F5;
     width:363px;
     height: 226px;
     border-radius: 20px;
+    box-shadow: 6px 6px 5.2px 0px rgba(255, 152, 173, 0.25);
+
 }
 
+
+.icone-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 33px;
+}
+
+.carrossel-textos{
+    padding-top: 14px;
+    text-align: center;
+
+    .carrossel-titulo{
+        font-weight: 500;
+        font-size: 1.37rem;
+        color: #3C254D;
+    }
+
+    .carrossel-subtitulo{
+        font-weight: 400;
+        color: #C89FF2;
+        font-size: 1rem;
+    }
+}
