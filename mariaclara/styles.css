@@ -4,12 +4,12 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
-
+/* === BODY === */
 body {
   background-color: #FFF2F6;
   color: #3C254D;
 }
-
+/* === HEADER === */
 header {
   background-color: #FFFAFC;
   border-bottom: 1px solid #FFE1E7;
@@ -19,7 +19,6 @@ header {
   align-items: center;
   height: 73px;
   align-items: center;
-  border-bottom: 1px solid #FFE1E7
 }
 
 .header-container {
@@ -33,13 +32,13 @@ header {
   background-repeat: no-repeat;
   top: 180px;
   left: 45px;
-  width: 130px;
+  width: 110px;
   height: auto;
   display:block;
   max-width: 100%;
   margin-left: 40px;
+  margin-bottom: 12px;
 }
-
 
 .user-info {
   display: flex;
@@ -65,7 +64,7 @@ header {
   font-size: 14px;
   margin-left: 50px;
 }
-
+/* === DASHBOARD === */
 .dashboard {
   padding: 32px;
 }
@@ -115,6 +114,7 @@ header {
   display: block;
 }
 
+/* === CARDS === */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -128,24 +128,10 @@ header {
   box-shadow: 2px 2px 10px #f4c6d5;
 }
 
-.livro{
-  top: 23px;
-  left: 24px;
-}
-
-.folha{
-    top: 23px;
-    left: 24px;
-}
-
-.github_logo{
-    top: 23px;
-    left: 24px;  
-}
-
-.progresso_beca{
-    top: 23px;
-    left: 24px;
+.icone-card {
+  width: 24px;
+  height: 23px;
+  margin-bottom: 12px;
 }
 
 .card h2 {
@@ -186,6 +172,12 @@ button {
   cursor: pointer;
   margin-top: 12px;
   box-shadow: 0px 4px 4px 0px #00000040;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #e06a89;
+  transform: scale(1.03);
 }
 
 .cronograma ul,
