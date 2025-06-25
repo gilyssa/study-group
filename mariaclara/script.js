@@ -40,4 +40,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderBreadcrumb();
 });
-
