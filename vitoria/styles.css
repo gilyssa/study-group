@@ -58,12 +58,28 @@ nav{
     }
 }
 
+
+.carrossel-padrao {
+    width: 363px;
+    height: 226px;
+    border-radius: 20px;
+    background-color: #FFFAFC;
+    box-shadow: 6px 6px 5.2px 0px rgba(255, 152, 173, 0.25);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
 #carrossel-trilhas{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: 189px;
+    gap: 24px;
 }
+
 
 #carrossel-gerenciar{
     background-color: #F4D7F5;
@@ -71,7 +87,6 @@ nav{
     height: 226px;
     border-radius: 20px;
     box-shadow: 6px 6px 5.2px 0px rgba(255, 152, 173, 0.25);
-
 }
 
 
@@ -80,11 +95,13 @@ nav{
     justify-content: center;
     align-items: center;
     padding-top: 33px;
+ 
 }
 
 .carrossel-textos{
-    padding-top: 14px;
+    padding: 20px 14px;
     text-align: center;
+    box-sizing: border-box;
 
     .carrossel-titulo{
         font-weight: 500;
@@ -98,3 +115,5 @@ nav{
         font-size: 1rem;
     }
 }
+
+
