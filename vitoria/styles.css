@@ -59,7 +59,7 @@ nav{
     }
 }
 
-#carrossel-trilhas {
+#cards-trilhas {
   display: flex;
   max-width: 1600px;
   margin: 0 auto;
@@ -69,7 +69,7 @@ nav{
 }
 
 
-.carrossel-padrao {
+.card-padrao {
     width: 300px;
     height: 226px;
     border-radius: 20px;
@@ -80,7 +80,7 @@ nav{
     flex-direction: column;
 }
 
-.carrossel-icone{
+.card-icone{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,18 +88,18 @@ nav{
  
 }
 
-.carrossel-textos{
+.card-textos{
     padding: 20px 14px;
     text-align: center;
     box-sizing: border-box;
 
-    .carrossel-titulo{
+    .card-titulo{
         font-weight: 500;
         font-size: 1.37rem;
         color: #3C254D;
     }
 
-    .carrossel-subtitulo{
+    .card-subtitulo{
         font-weight: 400;
         color: #C89FF2;
         font-size: 1rem;
@@ -107,7 +107,7 @@ nav{
 }
 
 
-#carrossel-gerenciar{
+#card-gerenciar{
     background-color: #F4D7F5;
     border-radius: 20px;
     box-shadow: 6px 6px 5.2px 0px rgba(255, 152, 173, 0.25);
