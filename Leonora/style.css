@@ -1,0 +1,125 @@
+@charset "UTF-8"; /*Evita possíveis problemas com caracteres especiais*/
+body {
+    background: #FFF2F6;
+}
+
+.barra-superior {
+    border-bottom: 1px solid #FFE1E7;
+    background: #FFFAFC;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 16px;
+    height: 73px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.area-logo {
+    flex-shrink: 0;
+}
+
+.logo-superior {
+    width: 111px;
+    height: 45px;
+    flex-shrink: 0;
+    aspect-ratio: 37/15;
+    flex-shrink: 1; /* Permite que a logo encolha funcionalmente se precisar */
+}
+
+.avatar {
+    background-color: #F4D7F5;
+    object-fit: cover;    
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.nome-user {
+    color: #3C254D;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    white-space: nowrap;  /* Evitando quebra de linha */
+    overflow: hidden;     /* Corta o nome se for muito grande */
+    text-overflow: ellipsis; /* Adiciona "..." em caso de nome muito grande que foi cortado */
+}
+
+.area-user {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    flex-shrink: 1; /* Permite que a área encolha funcionalmente se precisar */
+    min-width: 0;   /* Garante mais o ajuste do nome da user se necessário */
+}
+
+.conteudo-principal {
+    max-width: 1200px; /* Garante melhor responsividade e ajuste dos textos na tela */
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.breadcrumb {
+    display: block; /* Ajuda no alinhamento do breadcrumb com h1 e h2 */
+    width: 100%;
+}
+
+.breadcrumb a {
+    color: #3C254D;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+
+.breadcrumb ol {
+    display: flex; /* Alinha horizontalmente os itens da lista */
+    flex-wrap: wrap;  /* Evita que o texto extrapole em caso de tela muito pequena */
+    list-style: none; /* Retira os marcadores padrão para itens de lista */
+    gap: 8px; /* Define espaçamento padrão entre os itens da lista */
+    padding: 0; /* Evita desalinhamento por padding padrão do navegador */
+    margin: 0; /* Evita desalinhamento por margin padrão do navegador */
+}
+
+.breadcrumb li::after {
+    content: '>';
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: 8px; /* Define espaçamento padrão entre o item e o separador '>' */
+}
+
+.breadcrumb li:last-child::after {
+    content: ' '; /* Impede o separador '>' de aparecer após o último item da lista */
+}
+
+h1 {
+    color: #3C254D;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h2 {
+    color: #3C254D;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
