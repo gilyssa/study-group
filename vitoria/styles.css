@@ -114,5 +114,25 @@ nav{
 }
 
 
+#container-cadastrar-evento{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 34px;
+}
 
+#cadastrar-evento{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E25F8B;
+    width: 276px;
+    height: 44px;
+    border-radius: 20px;
+    gap: 14px;
 
+    span{
+        color: #FFFAFC;
+        font-size: 1rem;
+    }
+}
