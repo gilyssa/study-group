@@ -25,15 +25,17 @@
     </div>
     </nav>
     <main>
-        <section id="header-trilhas">
-            <header class="gerenciar-texto">
-                <h2 class="gerenciar-titulo">Gerenciar Trilhas</h2>
-                <p class="gerenciar-subtitulo">Painel administrativo para gerenciar conteúdos e alunas</p>
-            </header>
-        </section>
+        <div id="container-gerenciar">
+            <section id="header-trilhas">
+                <header class="gerenciar-texto">
+                    <h2 class="gerenciar-titulo">Gerenciar Trilhas</h2>
+                    <p class="gerenciar-subtitulo">Painel administrativo para gerenciar conteúdos e alunas</p>
+                </header>
+            </section>
+        </div>
 
-            <section id="cards-trilhas">
-                <div id="card-gerenciar">
+        <div id="container-cards">
+                <section id="card-gerenciar">
                      <div class="card-padrao">
                         <div class="card-icone">
                             <img src="assets/photos/gerenciar-foto.png" alt="">
@@ -43,10 +45,9 @@
                             <p class="card-subtitulo">Adicione, edite ou remova conteúdos</p>
                         </div>
                     </div>
-                </div>
+                </section>
                 
-                
-                <div id="card-entregas">
+                <section id="card-entregas">
                     <div class="card-padrao">
                         <div class="card-icone">
                             <img src="assets/photos/entregas-foto.png" alt="">
@@ -56,9 +57,9 @@
                             <p class="card-subtitulo">Acompanhe e avalie as atividades</p>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div id="card-feedback">
+                <section id="card-feedback">
                     <div class="card-padrao">
                         <div class="card-icone">
                             <img src="assets/photos/feedback.png" alt="">
@@ -68,9 +69,9 @@
                             <p class="card-subtitulo">Envie mensagens e orientações</p>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div id="card-relatorios">
+            <section id="card-relatorios">
                     <div class="card-padrao">
                         <div class="card-icone">
                             <img src="assets/photos/relatorio.png" alt="">
@@ -80,8 +81,9 @@
                             <p class="card-subtitulo">Visualize estatísticas e análises</p>
                         </div>
                     </div>
-                </div>
             </section>
+        </div>
+
             <div id="container-cadastrar-evento">
                 <button id="botao-cadastrar-evento">
                     <div id="icone-cadastrar-evento">
@@ -90,6 +92,7 @@
                     <span>cadastrar novo evento</span>
                 </button>
             </div>
+
             <div id="container-painel">
                 <h2 class="titulo-painel">Trilhas de estudo</h2>
                 <p class="subtitulo-painel">Gerencia as trilhas de estudos e seus conteúdos</p>
