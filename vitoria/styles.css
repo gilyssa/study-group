@@ -1,8 +1,18 @@
-
+body{
+    background-color:#FFF2F6;
+}
 
 * {
 
     font-family:"Montserrat", sans-serif;
+}
+
+#container-geral{
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 48px;
+  box-sizing: border-box;
 }
 
 nav{
@@ -115,7 +125,7 @@ nav{
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  padding: 34px;
+  margin-top: 40px;
 }
 
 #botao-cadastrar-evento{
