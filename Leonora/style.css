@@ -61,10 +61,11 @@ body {
 .conteudo-principal {
     max-width: 1200px; /* Garante melhor responsividade e ajuste dos textos na tela */
     margin: 0 auto;
-    padding: 0 32px;
+    padding-left: 122px;
 }
 
 .breadcrumb {
+    margin-bottom: 71px;
     display: block; /* Ajuda no alinhamento do breadcrumb com h1 e h2 */
     width: 100%;
 }
