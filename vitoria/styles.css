@@ -150,7 +150,7 @@ nav{
     width: 100%;
     max-width: 1556px;
     margin: 48px auto;
-    padding: 43px;
+    padding: 20px;
     border-radius: 20px;
     background-color: #ff89b84d;
 
@@ -158,8 +158,6 @@ nav{
         color: #C89FF2;
         font-size: 1.5rem;
         font-weight: 600;
-        margin-bottom: 10px;
-        padding: 8px;
     }
 
     .subtitulo-painel{
@@ -170,3 +168,40 @@ nav{
     }
 }
 
+#container-nova-trilha {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: auto;
+  height: auto;
+}
+
+#subtitulo-e-botao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+#botao-nova-trilha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #E25F8B;
+  width: 161px;
+  height: 44px;
+  border-radius: 20px;
+}
+
+#icone-nova-trilha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container-nova-trilha span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #FFFAFC;
+}
