@@ -208,3 +208,36 @@ nav{
   font-weight: 500;
   color: #FFFAFC;
 }
+
+.container-lista-conteudo{
+   max-width: 1494px;
+   height: 50px;
+   border-radius: 20px;
+   border: 1px solid #F4D7F5;
+   background: linear-gradient(180deg, #FFF8FA 0%, #FAE8F8 95.67%, #F4D7F5 100%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 0 24px;
+
+}
+
+.trilha-painel{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.titulo-curso{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #3C254D;
+}
+
+.modulo{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #3C254D;
+}
