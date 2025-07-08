@@ -8,7 +8,8 @@ body {
     background: #FFFAFC;
     width: 100%;
     max-width: 100%;
-    padding: 0 16px;
+    padding-left: 118px;
+    padding-right: 122px;
     height: 73px;
     flex-shrink: 0;
     display: flex;
@@ -62,10 +63,11 @@ body {
     max-width: 1200px; /* Garante melhor responsividade e ajuste dos textos na tela */
     margin: 0 auto;
     padding-left: 122px;
+    padding-right: 122px;
 }
 
 .breadcrumb {
-    margin-bottom: 71px;
+    margin-top: 20px;
     display: block; /* Ajuda no alinhamento do breadcrumb com h1 e h2 */
     width: 100%;
 }
@@ -89,7 +91,7 @@ body {
     display: flex; /* Alinha horizontalmente os itens da lista */
     flex-wrap: wrap;  /* Evita que o texto extrapole em caso de tela muito pequena */
     list-style: none; /* Retira os marcadores padrão para itens de lista */
-    gap: 8px; /* Define espaçamento padrão entre os itens da lista */
+    gap: 12px; /* Define espaçamento padrão entre os itens da lista */
     padding: 0; /* Evita desalinhamento por padding padrão do navegador */
     margin: 0; /* Evita desalinhamento por margin padrão do navegador */
 }
@@ -98,7 +100,7 @@ body {
     content: '>';
     font-weight: bolder;
     font-size: 20px;
-    margin-left: 8px; /* Define espaçamento padrão entre o item e o separador '>' */
+    margin-left: 30px; /* Define espaçamento padrão entre o item e o separador '>' */
 }
 
 .breadcrumb li:last-child::after {
@@ -112,6 +114,7 @@ h1 {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    margin-top: 71px;
 }
 
 h2 {
@@ -121,6 +124,7 @@ h2 {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    margin-top: 10px;
 }
 
 
