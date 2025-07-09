@@ -211,7 +211,7 @@ nav{
 
 .container-lista-conteudo{
    max-width: 1494px;
-   height: 50px;
+   height: 70px;
    border-radius: 20px;
    border: 1px solid #F4D7F5;
    background: linear-gradient(180deg, #FFF8FA 0%, #FAE8F8 95.67%, #F4D7F5 100%);
@@ -226,8 +226,14 @@ nav{
 
 .trilha-painel{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   gap: 3px;
+}
+
+.info-trilha{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
 }
 
 .titulo-curso{
@@ -240,4 +246,24 @@ nav{
     font-size: 1rem;
     font-weight: 400;
     color: #3C254D;
+}
+
+.container-acoes{
+    display: flex;
+    justify-content: flex-end;
+    width: 46px;
+    gap: 14px;
+}
+
+.acao-editar,
+.acao-excluir{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFAFC;
+    border-radius: 16px;
+    border: 1px solid #FFE1E7;
+    box-shadow: 6px 6px 5.2px 0px #FF98AD40;
+    padding: 10px;
+
 }
