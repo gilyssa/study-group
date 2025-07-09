@@ -152,14 +152,19 @@ nav{
     width: 100%;
     max-width: 1556px;
     margin: 48px auto;
-    padding: 20px;
+    padding: 25px;
     border-radius: 20px;
-    background-color: #ff89b84d;
+    background-color: #FFFAFC;
+    border: 1px solid #FFE1E7;
+    box-shadow: 6px 6px 5.2px 0px #FF98AD40;
+
 
     .titulo-painel{
         color: #C89FF2;
         font-size: 1.5rem;
         font-weight: 600;
+        margin-top: 25px;
+
     }
 
     .subtitulo-painel{
@@ -168,6 +173,10 @@ nav{
         color:#3C254D;
        
     }
+}
+
+#cabecalho-painel{
+    margin: 0 24px;
 }
 
 #container-nova-trilha {
@@ -217,7 +226,7 @@ nav{
     width: 100%;
     max-width: 1556px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 0 10px 10px 10px;
 }
 
 .container-lista-conteudo{
