@@ -219,7 +219,7 @@ nav{
   color: #FFFAFC;
 }
 
-#container-trilhas{
+.container-conteudo{
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -288,5 +288,44 @@ nav{
     border: 1px solid #FFE1E7;
     box-shadow: 6px 6px 5.2px 0px #FF98AD40;
     padding: 10px;
+
+}
+
+.cabecalho-entregas{
+     margin-bottom: 30px;
+}
+
+.titulo-entregas{
+     margin-bottom: 10px;
+}
+
+#container-entregas-aluna{
+  display: flex;
+  justify-content: flex-end;
+  max-width: 100%;
+
+}
+
+#botao-entregas-aluna{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 187px;
+    height: 43px;
+    background-color: #FFFAFC;
+    border: 1px solid #FFE1E7;
+    border-radius: 16px;
+   box-shadow: 6px 6px 5.2px 0px #FF98AD40;
+    gap: 10px;
+
+
+}
+
+#botao-entregas-aluna span{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #C89FF2;
+    text-shadow:  0px 1px 2px rgba(0, 0, 0, 0.2);
+
 
 }
