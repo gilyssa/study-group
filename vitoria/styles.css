@@ -201,7 +201,7 @@ nav{
   justify-content: center;
   gap: 8px;
   background-color: #E25F8B;
-  width: 161px;
+  width: 150px;
   height: 44px;
   border-radius: 20px;
    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
@@ -246,26 +246,26 @@ nav{
 }
 
 
-.trilha-painel{
+.painel-item{
   display: flex;
   justify-content: space-between;
   gap: 3px;
 }
 
-.info-trilha{
+.info-item{
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 3px;
 }
 
-.titulo-curso{
+.titulo-item{
     font-size: 1rem;
     font-weight: 500;
     color: #3C254D;
 }
 
-.modulo{
+.subtitulo-item{
     font-size: 1rem;
     font-weight: 400;
     color: #3C254D;
