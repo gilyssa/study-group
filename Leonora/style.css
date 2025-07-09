@@ -19,13 +19,12 @@ body {
 }
 
 .area-logo {
-    flex-shrink: 0;
+    margin-right: 118px;
 }
 
 .logo-superior {
     width: 111px;
     height: 45px;
-    flex-shrink: 0;
     aspect-ratio: 37/15;
     flex-shrink: 1; /* Permite que a logo encolha funcionalmente se precisar */
 }
@@ -41,7 +40,7 @@ body {
 
 .nome-user {
     color: #3C254D;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -67,6 +66,7 @@ body {
 }
 
 .breadcrumb {
+    color: #3C254D;
     margin-top: 20px;
     display: block; /* Ajuda no alinhamento do breadcrumb com h1 e h2 */
     width: 100%;
@@ -87,6 +87,10 @@ body {
     text-underline-position: from-font;
 }
 
+.breadcrumb a[aria-current="page"] {
+    text-decoration: none; 
+}
+
 .breadcrumb ol {
     display: flex; /* Alinha horizontalmente os itens da lista */
     flex-wrap: wrap;  /* Evita que o texto extrapole em caso de tela muito pequena */
@@ -96,16 +100,19 @@ body {
     margin: 0; /* Evita desalinhamento por margin padrão do navegador */
 }
 
-.breadcrumb li::after {
-    content: '>';
-    font-weight: bolder;
-    font-size: 20px;
-    margin-left: 30px; /* Define espaçamento padrão entre o item e o separador '>' */
+.breadcrumb li {
+    display: flex; /* Garante melhor o alinhamento do item da lista com o separador */
+    align-items: center;
 }
 
-.breadcrumb li:last-child::after {
-    content: ' '; /* Impede o separador '>' de aparecer após o último item da lista */
-}
+.breadcrumb li + li::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 18px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" fill="none"><path d="M2 2 L7 8 L2 14" stroke="%233C254D" stroke-width="2" fill="none"/></svg>') no-repeat center;
+    margin: 0 12px;
+    }
 
 h1 {
     color: #3C254D;
@@ -126,5 +133,3 @@ h2 {
     line-height: normal;
     margin-top: 10px;
 }
-
-
