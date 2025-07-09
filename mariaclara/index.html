@@ -8,11 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <script src="script.js"></script>
-
   <header>
     <div class="header-container">
-      <img src="imagens/logo_queens.png" alt="Logo Code Queens" class="logo"/>
+      <img src="imagens/logo_queens.png" alt="Logo Code Queens" class="logo" />
       <div class="user-info">
         <div class="avatar"></div>
         <span>Lyssa Lima</span>
@@ -24,7 +22,10 @@
     <span data-step="Início" class="breadcrumb-step">Início</span>
   </nav>
 
-  <main class="dashboard">
+<main class="dashboard">
+  <!-- Coluna da Esquerda -->
+  <div class="coluna-esquerda">
+    <!-- Boas-vindas -->
     <section class="boas-vindas">
       <h1>Olá, Lyssa!</h1>
       <p class="subtitulo">Bem vinda ao espaço oficial da Code Queens</p>
@@ -37,69 +38,143 @@
       </div>
     </section>
 
-    <section class="cards">
-      <div class="card">
-        <img src="imagens/livro_trilhas.png" alt="Trilhas de estudo" class="icone-card"/>
-        <h2>Trilhas de estudo</h2>
-        <p>Explore nossas trilhas e veja o melhor conteúdo para o seu nível!</p>
-        <div class="tags">
-          <span class="tag">Frontend</span>
-          <span class="tag">Backend</span>
-          <span class="tag">Dados</span>
+    <!-- Cards em duas colunas -->
+    <section class="grid-cards-custom">
+      <!-- Coluna 1 -->
+      <div class="coluna-cards">
+        <div class="card">
+          <h2><img src="imagens/livro_trilhas.png" alt="Trilhas de estudo" id="icone-trilhas"> Trilhas de estudo</h2>
+          <p>Explore nossas trilhas e veja o melhor conteúdo para o seu nível!</p>
+          <div class="tags">
+            <span class="tag">Frontend</span>
+            <span class="tag">Backend</span>
+            <span class="tag">Dados</span>
+          </div>
+          <button data-page="Trilhas de estudo">ver trilhas →</button>
         </div>
-        <button data-page="Trilhas de estudo">ver trilhas →</button>
-      </div>
 
-      <div class="card">
-        <img src="imagens/folha_atividade.png" alt="Atividades" class="icone-card"/>
-        <h2>Submeter atividades</h2>
-        <p>Entregue seus projetos e receba feedback personalizado das instrutoras</p>
-         <div class="card-atividade">
-        <ul>
-          <li>Landing page responsiva</li>
-          <li>Trilha frontend - módulo 1</li>
-          <li><span class="tag small">pendente</span></li>
-        </ul>
+        <div class="card">
+          <h2><img src="imagens/folha_atividade.png" alt="Submeter atividades" id="icone-atv"> Submeter atividades</h2>
+          <p>Entregue seus projetos e receba feedback personalizado das instrutoras</p>
+          <div class="card-atividade">
+          <div class="bolha">
+          <div class="linha-topo">
+            <ul class="info-atividade">
+              <li class="titulo-atividade">Landing page responsiva</li>
+               <li class="descricao">Trilha frontend - módulo 1</li>
+            </ul>
+            <span class="tag small">pendente</span>
+            </div>
+          </div>
+          </div>
+          <button data-page="Submeter atividades">ver atividades →</button>
         </div>
-        <button data-page="Submeter atividades">ver atividades →</button>
       </div>
 
-      <div class="card">
-        <img src="imagens/github_logo.png" alt="Repositório do Git" class="icone-card"/>
-        <h2>Repositórios do Git</h2>
-        <p>Acesse as tarefas e projetos nos repositórios da comunidade</p>
-        <ul>
-          <li>code-queens/frontend-exemplos</li>
-          <li>code-queens/projetos-react</li>
-        </ul>
-        <button data-page="Repositórios do Git">ver repositórios →</button>
-      </div>
+      <!-- Coluna 2 -->
+      <div class="coluna-cards">
+        <div class="card">
+          <h2><img src="imagens/github_logo.png" alt="Repositórios do Git" class="icone-card"> Repositórios do Git</h2>
+          <p>Acesse as tarefas e projetos nos repositórios da comunidade</p>
+          <ul class="lista-repositorios">
+            <li><span class="bolinha lilas"></span>code-queen/frontend-exemplos</li>
+            <li><span class="bolinha roxa"></span>code-queen/projetos-react</li>
+          </ul>
+          <button data-page="Repositórios do Git">ver repositórios →</button>
+        </div>
 
-      <div class="card cronograma">
-        <h2>Cronograma</h2>
-        <ul>
-          <li><strong>19h</strong> Aula ao vivo - HTML básico</li>
-          <li><strong>9h</strong> Plantão de dúvidas - Frontend</li>
-          <li><strong>18h</strong> Desafio semanal - Frontend</li>
-        </ul>
-      </div>
-
-      <div class="card progresso">
-        <img src="imagens/progresso_academico.png" alt="Progresso" class="icone-card"/>
-        <h2>Seu progresso</h2>
-        <p>Trilha frontend</p>
-        <div class="barra"><div style="width: 60%"></div></div>
-        <p>Trilha backend</p>
-        <div class="barra"><div style="width: 20%"></div></div>
-        <button data-page="Seu progresso">continuar estudando →</button>
-      </div>
-
-      <div class="card dicas">
-        <h2>Dicas rápidas</h2>
-        <p>Hidrate-se</p>
-        <p>Manter-se hidratada ajuda a melhorar o foco e o desempenho mental.</p>
+        <div class="card progresso">
+          <h2><img src="imagens/progresso_academico.png" alt="Seu progresso" class="icone-card"> Seu progresso</h2>
+          <div class="progresso-item">
+            <div class="progresso-label">
+              <span>Trilha frontend</span>
+              <span class="porcentagem">60%</span>
+            </div>
+            <div class="barra"><div style="width: 60%"></div></div>
+          </div>
+          <div class="progresso-item">
+            <div class="progresso-label">
+              <span>Trilha backend</span>
+              <span class="porcentagem">20%</span>
+            </div>
+            <div class="barra"><div style="width: 20%"></div></div>
+          </div>
+          <button class="botao-direita" data-page="Seu progresso">continuar estudando →</button>
+        </div>
       </div>
     </section>
-  </main>
+  </div>
+
+  <!-- Coluna da Direita -->
+  <aside class="sidebar-coluna">
+    <section class="calendario sidebar">
+      <div class="cabecalho-calendario">
+        <div class="titulo-mes">
+          <h3 id="mes-atual">Maio</h3>
+        </div>
+        <button id="btn-avancar">
+           <img src="imagens/seta.png" alt="Avançar mês" class="calendar-arrow">
+        </button>
+      </div>
+      <div class="semana">
+        <span>dom</span><span>seg</span><span>ter</span><span>qua</span>
+        <span>qui</span><span>sex</span><span>sab</span>
+      </div>
+      <div class="dias-calendario"></div>
+    </section>
+
+    <div class="card cronograma sidebar">
+      <h2>Cronograma</h2>
+      <div class="cronograma-item">
+        <div class="icon pink"><img src="imagens/icon-aula.png" alt="Aula ao vivo" /></div>
+        <div class="info">
+          <strong>Aula ao vivo</strong>
+          <span>HTML básico</span>
+        </div>
+        <div class="hora">19h</div>
+      </div>
+      <div class="cronograma-item">
+        <div class="icon purple"><img src="imagens/icon-duvidas.png" alt="Plantão de dúvidas" /></div>
+        <div class="info">
+          <strong>Plantão de dúvidas</strong>
+          <span>Frontend</span>
+        </div>
+        <div class="hora">9h</div>
+      </div>
+      <div class="cronograma-item">
+        <div class="icon blue"><img src="imagens/icon-desafio.png" alt="Desafio semanal" /></div>
+        <div class="info">
+          <strong>Desafio semanal</strong>
+          <span>Frontend</span>
+        </div>
+        <div class="hora">18h</div>
+      </div>
+    </div>
+
+    <div class="card dicas sidebar">
+      <h2>Dicas rápidas</h2>
+      <div class="carrossel-dicas">
+        <div class="dica ativa">
+          <p class="titulo">Hidrate-se</p>
+          <p>Manter-se hidratada ajuda a melhorar o foco e o desempenho mental.</p>
+        </div>
+        <div class="dica">
+          <p class="titulo">Durma bem</p>
+          <p>Uma boa noite de sono é essencial para consolidar o aprendizado.</p>
+        </div>
+        <div class="dica">
+          <p class="titulo">Faça pausas</p>
+          <p>Intervalos curtos ajudam a manter a produtividade por mais tempo.</p>
+        </div>
+      </div>
+      <div class="bolinhas">
+        <span class="bolinha ativa" onclick="mostrarDica(0)"></span>
+        <span class="bolinha" onclick="mostrarDica(1)"></span>
+        <span class="bolinha" onclick="mostrarDica(2)"></span>
+      </div>
+    </div>
+  </aside>
+</main>
+  <script src="script.js"></script>
 </body>
 </html>
