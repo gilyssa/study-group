@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CODE QUEENS - HOME</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <script src="script.js"></script>
+
+  <header>
+    <div class="header-container">
+      <img src="imagens/logo_queens.png" alt="Logo Code Queens" class="logo"/>
+      <div class="user-info">
+        <div class="avatar"></div>
+        <span>Lyssa Lima</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="breadcrumb">
+    <span data-step="Início" class="breadcrumb-step">Início</span>
+  </nav>
+
+  <main class="dashboard">
+    <section class="boas-vindas">
+      <h1>Olá, Lyssa!</h1>
+      <p class="subtitulo">Bem vinda ao espaço oficial da Code Queens</p>
+      <p class="descricao">Uma comunidade para educar e conectar mulheres na tecnologia.</p>
+      <div class="resumos">
+        <div class="resumo"><strong>571</strong><span>membros</span></div>
+        <div class="resumo"><strong>40</strong><span>aulas</span></div>
+        <div class="resumo"><strong>16</strong><span>projetos</span></div>
+        <div class="resumo"><strong>39</strong><span>encontros</span></div>
+      </div>
+    </section>
+
+    <section class="cards">
+      <div class="card">
+        <img src="imagens/livro_trilhas.png" alt="Trilhas de estudo" class="icone-card"/>
+        <h2>Trilhas de estudo</h2>
+        <p>Explore nossas trilhas e veja o melhor conteúdo para o seu nível!</p>
+        <div class="tags">
+          <span class="tag">Frontend</span>
+          <span class="tag">Backend</span>
+          <span class="tag">Dados</span>
+        </div>
+        <button data-page="Trilhas de estudo">ver trilhas →</button>
+      </div>
+
+      <div class="card">
+        <img src="imagens/folha_atividade.png" alt="Atividades" class="icone-card"/>
+        <h2>Submeter atividades</h2>
+        <p>Entregue seus projetos e receba feedback personalizado das instrutoras</p>
+         <div class="card-atividade">
+        <ul>
+          <li>Landing page responsiva</li>
+          <li>Trilha frontend - módulo 1</li>
+          <li><span class="tag small">pendente</span></li>
+        </ul>
+        </div>
+        <button data-page="Submeter atividades">ver atividades →</button>
+      </div>
+
+      <div class="card">
+        <img src="imagens/github_logo.png" alt="Repositório do Git" class="icone-card"/>
+        <h2>Repositórios do Git</h2>
+        <p>Acesse as tarefas e projetos nos repositórios da comunidade</p>
+        <ul>
+          <li>code-queens/frontend-exemplos</li>
+          <li>code-queens/projetos-react</li>
+        </ul>
+        <button data-page="Repositórios do Git">ver repositórios →</button>
+      </div>
+
+      <div class="card cronograma">
+        <h2>Cronograma</h2>
+        <ul>
+          <li><strong>19h</strong> Aula ao vivo - HTML básico</li>
+          <li><strong>9h</strong> Plantão de dúvidas - Frontend</li>
+          <li><strong>18h</strong> Desafio semanal - Frontend</li>
+        </ul>
+      </div>
+
+      <div class="card progresso">
+        <img src="imagens/progresso_academico.png" alt="Progresso" class="icone-card"/>
+        <h2>Seu progresso</h2>
+        <p>Trilha frontend</p>
+        <div class="barra"><div style="width: 60%"></div></div>
+        <p>Trilha backend</p>
+        <div class="barra"><div style="width: 20%"></div></div>
+        <button data-page="Seu progresso">continuar estudando →</button>
+      </div>
+
+      <div class="card dicas">
+        <h2>Dicas rápidas</h2>
+        <p>Hidrate-se</p>
+        <p>Manter-se hidratada ajuda a melhorar o foco e o desempenho mental.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
