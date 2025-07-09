@@ -183,6 +183,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     gap: 16px;
+    margin-bottom: 24px;
 }
 
 #botao-nova-trilha {
@@ -224,6 +225,7 @@ nav{
     flex-direction: column;
     justify-content: center;
     margin-bottom: 15px;
+
 
     max-width: 1494px;
     min-height: 70px;
