@@ -209,20 +209,31 @@ nav{
   color: #FFFAFC;
 }
 
-.container-lista-conteudo{
-   max-width: 1494px;
-   height: 70px;
-   border-radius: 20px;
-   border: 1px solid #F4D7F5;
-   background: linear-gradient(180deg, #FFF8FA 0%, #FAE8F8 95.67%, #F4D7F5 100%);
+#container-trilhas{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    max-width: 1556px;
+    margin: 0 auto;
+    padding: 10px;
+}
 
+.container-lista-conteudo{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 30px;
-    padding: 0 24px;
+    margin-bottom: 15px;
+
+    max-width: 1494px;
+    min-height: 70px;
+    padding: 17px;
+    border-radius: 20px;
+    border: 1px solid #F4D7F5;
+    background: linear-gradient(180deg, #FFF8FA 0%, #FAE8F8 95.67%, #F4D7F5 100%);
 
 }
+
 
 .trilha-painel{
   display: flex;
@@ -233,6 +244,7 @@ nav{
 .info-trilha{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 3px;
 }
 
