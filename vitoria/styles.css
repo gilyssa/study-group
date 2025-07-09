@@ -146,7 +146,7 @@ nav{
         color: #FFFAFC;
     }
 
-#container-painel{
+.container-painel{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -175,7 +175,7 @@ nav{
     }
 }
 
-#cabecalho-painel{
+.cabecalho-painel{
     margin: 0 24px;
 }
 
@@ -187,7 +187,7 @@ nav{
   height: auto;
 }
 
-#subtitulo-e-botao{
+.subtitulo-e-botao{
     display: flex;
     justify-content: space-between;
     align-items: center;
