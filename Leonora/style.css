@@ -87,8 +87,8 @@ body {
     text-underline-position: from-font;
 }
 
-.breadcrumb a[aria-current="page"] {
-    text-decoration: none; 
+.breadcrumb a.ativo {
+    text-decoration: none;
 }
 
 .breadcrumb ol {
@@ -132,4 +132,16 @@ h2 {
     font-weight: 500;
     line-height: normal;
     margin-top: 10px;
+}
+
+.barra-trilha {
+    /* Escrever estilo da barra das trilhas */
+}
+
+.botao-trilha {
+    /* Escrever estilo dos botões das trilhas */
+}
+
+.botao-trilha.ativo {
+    /* Escrever estilo do botão que estiver ativo */
 }

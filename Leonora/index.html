@@ -26,7 +26,7 @@
         <nav aria-label="breadcrumb" class="breadcrumb"> <!--Sinaliza para o navegador que é um breadcrumb-->
             <ol>
                 <li><a href="#">Início</a></li>
-                <li><a href="#" aria-current="page">Trilhas de Estudo</a></li>
+                <li><a class="ativo" href="#" aria-current="page">Trilhas de Estudo</a></li><!--garante mudanças de design e leitura do navegador na página específica que estiver ativa no momento-->
                 <li><a href="#">Submeter Atividades</a></li>
                 <li><a href="#">Agenda</a></li>
             </ol>
@@ -35,6 +35,24 @@
         <h2>Escolha uma trilha e comece sua jornada de aprendizado.</h2>
     </div>
 
+    <nav class="barra-trilhas" aria-label="Trilhas de estudo da Code Queens">
+        <ul>
+            <li><button class="botao-trilha ativo" aria-pressed="true">Frontend</button></li>
+            <li><button class="botao-trilha" aria-pressed="false">Backend</button></li>
+            <li><button class="botao-trilha" aria-pressed="false">Dados</button></li>
+            <li><button class="botao-trilha" aria-pressed="false">UI/UX</button></li>
+        </ul>
+    </nav>
+    <section>
+        <!-- Bloco maior da página que contém os módulos da Trilha selecionada -->
+        <section>
+            <!-- Blocos da página com cada módulo de uma Trilha mais detalhado -->
+            <article>
+                <!-- Bloco da página com as informações básicas de cada aula do módulo -->
+            </article>
+        </section>
+    </section>
+        
 <script src ="script.js"></script><!--Vinculando com o código JavaScript-->
 </body>
 </html>
