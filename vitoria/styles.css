@@ -195,28 +195,38 @@ nav{
     margin-bottom: 24px;
 }
 
-#botao-nova-trilha {
+ .botao-painel{
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   background-color: #E25F8B;
-  width: 150px;
-  height: 44px;
   border-radius: 20px;
-   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-#icone-nova-trilha {
+.icone-botao {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#container-nova-trilha span {
+.botao-painel span {
   font-size: 1rem;
   font-weight: 500;
   color: #FFFAFC;
+}
+
+
+#botao-nova-trilha {
+  width: 150px;
+  height: 44px;
+}
+
+#botao-feedback-geral {
+    width: 338px;
+    height: 44px;
+
 }
 
 .container-conteudo{
