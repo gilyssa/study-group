@@ -92,67 +92,70 @@
                 <span>cadastrar novo evento</span>
             </button>
         </div>
-
-        <div class="container-painel">
-            <div class="cabecalho-painel">
-                <h2 class="titulo-painel">Trilhas de estudo</h2>
-                <div class="subtitulo-e-botao">
-                    <p class="subtitulo-painel">Gerencia as trilhas de estudos e seus conteúdos</p>
-            <div id="container-nova-trilha">
-                <button id="botao-nova-trilha" class="botao-painel">
-                    <div class="icone-botao">
-                        <img src="assets/photos/add-icone.png" alt="">
-                    </div>
-                    <span>nova trilha</span>
-                </button>
+        
+        <div id="container-trilhas-estudos" class="container-conteudo ativo">
+            <div class="container-painel">
+                <div class="cabecalho-painel">
+                    <h2 class="titulo-painel">Trilhas de estudo</h2>
+                    <div class="subtitulo-e-botao">
+                        <p class="subtitulo-painel">Gerencia as trilhas de estudos e seus conteúdos</p>
+                    <div id="container-nova-trilha">
+                    <button id="botao-nova-trilha" class="botao-painel">
+                        <div class="icone-botao">
+                            <img src="assets/photos/add-icone.png" alt="">
+                        </div>
+                        <span>nova trilha</span>
+                    </button>
+                </div> 
+            </div> 
+        </div> 
+        <div class="bloco-conteudo">
+            <div class="container-lista-conteudo">
+                <!-- Trilha Frontend -->
+                <div class="painel-item">
+                <div class="info-item">
+                    <span class="titulo-item">Frontend</span>
+                    <span class="subtitulo-item">4 módulos</span>
+                </div>
+                <div class="container-acoes">
+                    <button class="acao-editar"><img src="assets/photos/editar.png"alt=""></button>
+                    <button class="acao-excluir"><img src="assets/photos/excluir.png" alt=""></button>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container-conteudo">
+        <!-- Trilha Backend -->
             <div class="container-lista-conteudo">
-            <!-- Trilha Frontend -->
-            <div class="painel-item">
-            <div class="info-item">
-                <span class="titulo-item">Frontend</span>
-                <span class="subtitulo-item">4 módulos</span>
-            </div>
+                <div class="painel-item">
+                <div class="info-item">
+                    <span class="titulo-item">Backend</span>
+                    <span class="subtitulo-item">3 módulos</span>
+                </div>
             <div class="container-acoes">
                 <button class="acao-editar"><img src="assets/photos/editar.png"alt=""></button>
                 <button class="acao-excluir"><img src="assets/photos/excluir.png" alt=""></button>
             </div>
         </div>
     </div>
-
-    <!-- Trilha Backend -->
+        
+    <!-- Trilha Dados -->
         <div class="container-lista-conteudo">
             <div class="painel-item">
             <div class="info-item">
-                <span class="titulo-item">Backend</span>
-                <span class="subtitulo-item">3 módulos</span>
+                <span class="titulo-item">Dados</span>
+                <span class="subtitulo-item">2 módulos</span>
             </div>
         <div class="container-acoes">
             <button class="acao-editar"><img src="assets/photos/editar.png"alt=""></button>
             <button class="acao-excluir"><img src="assets/photos/excluir.png" alt=""></button>
         </div>
-    </div>
-</div>
-    
-<!-- Trilha Dados -->
-    <div class="container-lista-conteudo">
-        <div class="painel-item">
-        <div class="info-item">
-            <span class="titulo-item">Dados</span>
-            <span class="subtitulo-item">2 módulos</span>
-        </div>
-       <div class="container-acoes">
-            <button class="acao-editar"><img src="assets/photos/editar.png"alt=""></button>
-            <button class="acao-excluir"><img src="assets/photos/excluir.png" alt=""></button>
+            </div>
         </div>
     </div>
-    </div>
-</div>
 </div>  <!-- fecha .container-trilhas-estudo -->
+</div>
+
+        
 
     <div id="container-entregas" class="container-conteudo oculto">
         <div class="container-painel">
@@ -160,7 +163,7 @@
             <h2 class="titulo-painel titulo-entregas">Entregas por aluna</h2>
             <p class="subtitulo-painel">Visualize e avalie as atividades entregues por cada alunas</p>
         </div>
-        <div class="container-conteudo">
+        <div class="bloco-conteudo">
         <div class="container-lista-conteudo">
         <!-- Primeira aluna-->
         <div class="painel-item">
@@ -207,7 +210,8 @@
         </div> 
       </div> 
     </div> 
-  </div>  <!-- fecha .container-entregas -->
+  </div>
+    </div>  <!-- fecha .container-entregas -->
 
     <div id="container-feedback" class="container-conteudo oculto">
         <div class="container-painel">
@@ -225,7 +229,7 @@
             </div>
         </div>
     </div>
-        <div class="container-conteudo">
+        <div class="bloco-conteudo">
         <div class="container-lista-conteudo">
         <!-- Primeiro feedback-->
         <div class="painel-item">
@@ -241,7 +245,7 @@
     </div>
 </div> 
 </div>   
-        <div class="container-conteudo">
+        <div class="bloco-conteudo">
         <div class="container-lista-conteudo">
         <!-- Segundo feedback-->
         <div class="painel-item">
@@ -257,7 +261,7 @@
     </div>
 </div>
 </div>
-     <div class="container-conteudo">
+     <div class="bloco-conteudo">
         <div class="container-lista-conteudo">
         <!--Terceiro feedback-->
         <div class="painel-item">
