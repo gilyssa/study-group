@@ -75,6 +75,14 @@ nav{
     }
 }
 
+#card-gerenciar,
+#card-entregas,
+#card-feedback,
+#card-relatorios {
+  cursor: pointer;
+}
+
+
 #container-cards{
   display: flex;
   width: 100%;
