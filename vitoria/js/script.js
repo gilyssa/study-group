@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const cardEntregas = document.querySelector ("#card-entregas");
     const cardFeedback = document.querySelector("#card-feedback");
     const cardRelatorios = document.querySelector("#card-relatorios");
+    const todosCards = document.querySelectorAll("#container-cards section");
+
 
     const containerEntregas = document.querySelector("#container-entregas");
     const containerFeedback = document.querySelector("#container-feedback");
