@@ -1,11 +1,25 @@
 @charset "UTF-8"; /*Evita possíveis problemas com caracteres especiais*/
+
+:root {
+    --cor-fundo: #FFF2F6;
+    --cor-elementos-principais: #FFFAFC;
+    --cor-borda-elementos: #FFE1E7;
+    --cor-elementos-secundarios: #F4D7F5;
+    --cor-botao-download-materiais: #E25F8B;
+    --gradiente-botao-ativo: linear-gradient(180deg, #FFF8FA 0%, #F9E7F7 95.67%, #F4D7F5 100%);
+    --box-shadow-barra-trilhas: 6px 6px 5.2px 0px rgba(255, 152, 173, 0.25);
+    --cor-texto-principal: #3C254D;
+    --cor-texto-secundario: #C89FF2;
+    --fonte-principal: "Montserrat";
+} /* aqui investi na modularização do CSS usando variáveis CSS, para facilitar caso mudasse algo depois */
+
 body {
-    background: #FFF2F6;
+    background: var(--cor-fundo);
 }
 
 .barra-superior {
-    border-bottom: 1px solid #FFE1E7;
-    background: #FFFAFC;
+    border-bottom: 1px solid var(--cor-borda-elementos);
+    background: var(--cor-elementos-principais);
     width: 100%;
     max-width: 100%;
     padding-left: 118px;
@@ -19,19 +33,18 @@ body {
 }
 
 .area-logo {
-    flex-shrink: 0;
+    margin-right: 118px;
 }
 
 .logo-superior {
     width: 111px;
     height: 45px;
-    flex-shrink: 0;
     aspect-ratio: 37/15;
     flex-shrink: 1; /* Permite que a logo encolha funcionalmente se precisar */
 }
 
 .avatar {
-    background-color: #F4D7F5;
+    background-color: var(--cor-elementos-secundarios);
     object-fit: cover;    
     width: 40px;
     height: 40px;
@@ -40,8 +53,8 @@ body {
 }
 
 .nome-user {
-    color: #3C254D;
-    font-family: 'Montserrat';
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-principal);
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -67,14 +80,15 @@ body {
 }
 
 .breadcrumb {
+    color: var(--cor-texto-principal);
     margin-top: 20px;
     display: block; /* Ajuda no alinhamento do breadcrumb com h1 e h2 */
     width: 100%;
 }
 
 .breadcrumb a {
-    color: #3C254D;
-    font-family: Montserrat;
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-principal);
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -87,6 +101,10 @@ body {
     text-underline-position: from-font;
 }
 
+.breadcrumb a.ativo {
+    text-decoration: none;
+}
+
 .breadcrumb ol {
     display: flex; /* Alinha horizontalmente os itens da lista */
     flex-wrap: wrap;  /* Evita que o texto extrapole em caso de tela muito pequena */
@@ -96,20 +114,23 @@ body {
     margin: 0; /* Evita desalinhamento por margin padrão do navegador */
 }
 
-.breadcrumb li::after {
-    content: '>';
-    font-weight: bolder;
-    font-size: 20px;
-    margin-left: 30px; /* Define espaçamento padrão entre o item e o separador '>' */
+.breadcrumb li {
+    display: flex; /* Garante melhor o alinhamento do item da lista com o separador */
+    align-items: center;
 }
 
-.breadcrumb li:last-child::after {
-    content: ' '; /* Impede o separador '>' de aparecer após o último item da lista */
-}
+.breadcrumb li + li::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 18px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" fill="none"><path d="M2 2 L7 8 L2 14" stroke="%233C254D" stroke-width="2" fill="none"/></svg>') no-repeat center;
+    margin: 0 12px;
+    }
 
 h1 {
-    color: #3C254D;
-    font-family: Montserrat;
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-principal);
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -117,9 +138,9 @@ h1 {
     margin-top: 71px;
 }
 
-h2 {
-    color: #3C254D;
-    font-family: Montserrat;
+.conteudo-principal p {
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-principal);
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -127,4 +148,53 @@ h2 {
     margin-top: 10px;
 }
 
+.barra-trilhas {
+    width: 100%; /* a barra ocupa todo o espaço reservado para ela na tela, conforme responsividade */
+    max-width: 1200px;
+    margin: 20px auto 0;
+    margin-top: 20px;
+    height: 67px;
+    border-radius: 20px;
+    border: 1px solid var(--cor-borda-elementos);
+    background: var(--cor-elementos-principais);
+    box-sizing: border-box;
+    box-shadow: var(--box-shadow-barra-trilhas);
+    display: flex;
+    justify-content: space-around; /* garante espaçamento uniforme entre os nomes na barra */
+    align-items: center;
+}
 
+.botao-trilha {
+    color: var(--cor-texto-principal);
+    border: none; /* retira a borda padrão do botão */
+    background: transparent; /* torna o fundo do botão transparente */
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.botao-trilha.ativo {
+padding: 9px 50px;
+flex-shrink: 0;
+border-radius: 16px;
+border: 1px solid var(--cor-elementos-secundarios);
+background: var(--gradiente-botao-ativo)
+}
+
+.trilha {
+    /* estilização do container geral de cada trilha */
+}
+
+.modulo {
+    /* estilização dos módulos das trilhas */
+}
+
+.aula {
+    /* estilização das aulas listadas nos módulos */
+}
+
+.botao-download-material {
+    /* estilização do botão para download do material de aula */
+}

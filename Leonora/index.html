@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shrotcut icon" href="imagens/favicon-code-queens.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="imagens/favicon-code-queens.ico" type="image/x-icon">
     <!--Colocando um favicon na guia do site-->
     <title>Trilhas de Estudo - Code Queens</title>
     <link rel="stylesheet" href="style.css"><!--Vinculando a folha de estilo CSS-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet"> <!--Importando a fonte Montserrat-->
-
-    </head>
+</head>
 
 <body>
     <header class="barra-superior">
@@ -23,20 +22,52 @@
         </div>    
     </header>
 
-    <div class="conteudo-principal">
-        <nav aria-label="breadcrumb" class="breadcrumb">
+    <main class="conteudo-principal">
+        <nav aria-label="breadcrumb" class="breadcrumb"> <!--Sinaliza para o navegador que é um breadcrumb-->
             <ol>
                 <li><a href="#">Início</a></li>
-                <li><a href="#">Trilhas de Estudo</a></li>
+                <li><a class="ativo" href="#" aria-current="page">Trilhas de Estudo</a></li><!--garante mudanças de design e leitura do navegador na página específica que estiver ativa no momento-->
                 <li><a href="#">Submeter Atividades</a></li>
                 <li><a href="#">Agenda</a></li>
             </ol>
         </nav>
-
         <h1>Trilhas de Estudo</h1>
-        <h2>Escolha uma trilha e comece sua jornada de aprendizado.</h2>
-    </div>
+        <p>Escolha uma trilha e comece sua jornada de aprendizado.</p>
+    </main>
 
+        <nav class="barra-trilhas" aria-label="Trilhas de estudo da Code Queens">
+            <button class="botao-trilha ativo" aria-pressed="true">Frontend</button>
+            <button class="botao-trilha" aria-pressed="false">Backend</button>
+            <button class="botao-trilha" aria-pressed="false">Dados</button>
+            <button class="botao-trilha" aria-pressed="false">UI/UX</button>
+            
+        </nav>
+        <section class="trilha" aria-labelledby="titulo-frontend"> <!-- adicionei o parâmetro "aria-labelledby" para melhorar a demarcação de tags com nomes menos específicos, em prol da acessibilidade -->
+            <h2 id="titulo-frontend">Frontend</h2>
+            <p>Desenvolvimento de interfaces web e aplicações frontend</p>
+            <section class="modulo" aria-labelledby="modulo-1-frontend">
+                <h3 id="modulo-1-frontend">Módulo 1: HTML e CSS</h3>
+                <article class="aula" aria-labelledby="aula-1-frontend">
+                    <h4 id="aula-1-frontend">Aula 1: Introdução ao HTML</h4>
+                    <p>Fundamentos do HTML e estrutura básica de documentos web</p>
+                    <a class="botao-download-material" href="#" download>baixar material - aula 1</a> <!-- especifiquei mais o nome de cada botão para download -->
+                </article>
+                <article class="aula" aria-labelledby="aula-2-frontend">
+                    <h4 id="aula-2-frontend">Aula 2: Estrutura básica de um projeto</h4>
+                    <p>Como organizar arquivos e pastas em um projeto frontend</p>
+                    <a class="botao-download-material" href="#" download>baixar material - aula 2</a>
+                </article>
+                <article class="aula" aria-labelledby="aula-3-frontend">
+                    <h4 id="aula-3-frontend">Aula 3: Semântica no HTML</h4>
+                    <p>Tags semânticas e boas práticas para acessibilidade</p>
+                    <a class="botao-download-material" href="#"download>baixar material - aula 3</a>
+                </article>
+            </section>
+            <section class="modulo" aria-labelledby="modulo-2-frontend">
+                <h3 id="modulo-2-frontend">Módulo 2: CSS Avançado</h3>
+            </section>
+        </section>
+        
 <script src ="script.js"></script><!--Vinculando com o código JavaScript-->
 </body>
 </html>
