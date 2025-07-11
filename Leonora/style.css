@@ -1,11 +1,25 @@
 @charset "UTF-8"; /*Evita possíveis problemas com caracteres especiais*/
+
+:root {
+    --cor-fundo: #FFF2F6;
+    --cor-elementos-principais: #FFFAFC;
+    --cor-borda-elementos: #FFE1E7;
+    --cor-elementos-secundarios: #F4D7F5;
+    --cor-botao-download-materiais: #E25F8B;
+    --gradiente-botao-ativo: linear-gradient(180deg, #FFF8FA 0%, #F9E7F7 95.67%, #F4D7F5 100%);
+    --box-shadow-barra-trilhas: 6px 6px 5.2px 0px rgba(255, 152, 173, 0.25);
+    --cor-texto-principal: #3C254D;
+    --cor-texto-secundario: #C89FF2;
+    --fonte-principal: "Montserrat";
+} /* aqui investi na modularização do CSS usando variáveis CSS, para facilitar caso mudasse algo depois */
+
 body {
-    background: #FFF2F6;
+    background: var(--cor-fundo);
 }
 
 .barra-superior {
-    border-bottom: 1px solid #FFE1E7;
-    background: #FFFAFC;
+    border-bottom: 1px solid var(--cor-borda-elementos);
+    background: var(--cor-elementos-principais);
     width: 100%;
     max-width: 100%;
     padding-left: 118px;
@@ -30,7 +44,7 @@ body {
 }
 
 .avatar {
-    background-color: #F4D7F5;
+    background-color: var(--cor-elementos-secundarios);
     object-fit: cover;    
     width: 40px;
     height: 40px;
@@ -39,8 +53,8 @@ body {
 }
 
 .nome-user {
-    color: #3C254D;
-    font-family: "Montserrat";
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-principal);
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -66,15 +80,15 @@ body {
 }
 
 .breadcrumb {
-    color: #3C254D;
+    color: var(--cor-texto-principal);
     margin-top: 20px;
     display: block; /* Ajuda no alinhamento do breadcrumb com h1 e h2 */
     width: 100%;
 }
 
 .breadcrumb a {
-    color: #3C254D;
-    font-family: Montserrat;
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-principal);
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -115,8 +129,8 @@ body {
     }
 
 h1 {
-    color: #3C254D;
-    font-family: Montserrat;
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-principal);
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -125,8 +139,8 @@ h1 {
 }
 
 .conteudo-principal p {
-    color: #3C254D;
-    font-family: Montserrat;
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-principal);
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -134,26 +148,24 @@ h1 {
     margin-top: 10px;
 }
 
-.container-barra-trilhas {
-    max-width: 1920px; 
-    padding: 0 177px 0 177px; /* garante que a barra <nav> tenha o tamanho e posição corretos */
-    box-sizing: border-box;
-}
-
 .barra-trilhas {
     width: 100%; /* a barra ocupa todo o espaço reservado para ela na tela, conforme responsividade */
+    max-width: 1200px;
+    margin: 20px auto 0;
+    margin-top: 20px;
     height: 67px;
     border-radius: 20px;
-    border: 1px solid #FFE1E7;
-    background: #FFFAFC;
-    box-shadow: 6px 6px 5.2px 0px rgba(255, 152, 173, 0.25);
+    border: 1px solid var(--cor-borda-elementos);
+    background: var(--cor-elementos-principais);
+    box-sizing: border-box;
+    box-shadow: var(--box-shadow-barra-trilhas);
     display: flex;
     justify-content: space-around; /* garante espaçamento uniforme entre os nomes na barra */
     align-items: center;
 }
 
 .botao-trilha {
-    color: #3C254D;
+    color: var(--cor-texto-principal);
     border: none; /* retira a borda padrão do botão */
     background: transparent; /* torna o fundo do botão transparente */
     font-family: Montserrat;
@@ -164,12 +176,11 @@ h1 {
 }
 
 .botao-trilha.ativo {
-width: 194px;
-height: 41px;
+padding: 9px 50px;
 flex-shrink: 0;
 border-radius: 16px;
-border: 1px solid #F4D7F5;
-background: linear-gradient(180deg, #FFF8FA 0%, #F9E7F7 95.67%, #F4D7F5 100%);
+border: 1px solid var(--cor-elementos-secundarios);
+background: var(--gradiente-botao-ativo)
 }
 
 .trilha {
