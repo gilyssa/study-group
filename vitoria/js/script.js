@@ -1,6 +1,13 @@
-document.addEventListener("DomContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const cardGerenciar = document.querySelector ("#card-gerenciar");
     const containerTrilhas = document.querySelector("#container-trilhas-estudos");
+    const cardEntregas = document.querySelector ("#card-entregas");
+    const cardFeedback = document.querySelector("#card-feedback");
+    const cardRelatorios = document.querySelector("#card-relatorios");
+
+    const containerEntregas = document.querySelector("#container-entregas");
+    const containerFeedback = document.querySelector("#container-feedback");
+    const containerRelatorios = document.querySelector("#container-relatorios");
 
     const todosContainers = document.querySelectorAll(".container-conteudo");
 
@@ -16,5 +23,17 @@ document.addEventListener("DomContentLoaded", () => {
 
     cardGerenciar.addEventListener("click",() => {
         mostrarContainer(containerTrilhas);
+    });
+    
+    cardEntregas.addEventListener("click", () => {
+        mostrarContainer(containerEntregas);
+    });
+
+    cardFeedback.addEventListener("click",() => {
+        mostrarContainer(containerFeedback);
+    });
+
+    cardRelatorios.addEventListener("click", () =>{
+        mostrarContainer(containerRelatorios);
     });
 });
