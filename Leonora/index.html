@@ -32,26 +32,42 @@
             </ol>
         </nav>
         <h1>Trilhas de Estudo</h1>
-        <h2>Escolha uma trilha e comece sua jornada de aprendizado.</h2>
+        <p>Escolha uma trilha e comece sua jornada de aprendizado.</p>
     </div>
 
-    <nav class="barra-trilhas" aria-label="Trilhas de estudo da Code Queens">
-        <ul>
-            <li><button class="botao-trilha ativo" aria-pressed="true">Frontend</button></li>
-            <li><button class="botao-trilha" aria-pressed="false">Backend</button></li>
-            <li><button class="botao-trilha" aria-pressed="false">Dados</button></li>
-            <li><button class="botao-trilha" aria-pressed="false">UI/UX</button></li>
-        </ul>
-    </nav>
-    <section>
-        <!-- Bloco maior da página que contém os módulos da Trilha selecionada -->
-        <section>
-            <!-- Blocos da página com cada módulo de uma Trilha mais detalhado -->
-            <article>
-                <!-- Bloco da página com as informações básicas de cada aula do módulo -->
-            </article>
+    <div class="container-barra-trilhas">
+        <nav class="barra-trilhas" aria-label="Trilhas de estudo da Code Queens">
+            <button class="botao-trilha ativo" aria-pressed="true">Frontend</button>
+            <button class="botao-trilha" aria-pressed="false">Backend</button>
+            <button class="botao-trilha" aria-pressed="false">Dados</button>
+            <button class="botao-trilha" aria-pressed="false">UI/UX</button>
+            
+        </nav>
+        <section class="trilha" aria-labelledby="titulo-frontend"> <!-- adicionei o parâmetro "aria-labelledby" para melhorar a demarcação de tags com nomes menos específicos, em prol da acessibilidade -->
+            <h2 id="titulo-frontend">Frontend</h2>
+            <p>Desenvolvimento de interfaces web e aplicações frontend</p>
+            <section class="modulo" aria-labelledby="modulo-1-frontend">
+                <h3 id="modulo-1-frontend">Módulo 1: HTML e CSS</h3>
+                <article class="aula" aria-labelledby="aula-1-frontend">
+                    <h4 id="aula-1-frontend">Aula 1: Introdução ao HTML</h4>
+                    <p>Fundamentos do HTML e estrutura básica de documentos web</p>
+                    <a class="botao-download-material" href="#" download>baixar material - aula 1</a> <!-- especifiquei mais o nome de cada botão para download -->
+                </article>
+                <article class="aula" aria-labelledby="aula-2-frontend">
+                    <h4 id="aula-2-frontend">Aula 2: Estrutura básica de um projeto</h4>
+                    <p>Como organizar arquivos e pastas em um projeto frontend</p>
+                    <a class="botao-download-material" href="#" download>baixar material - aula 2</a>
+                </article>
+                <article class="aula" aria-labelledby="aula-3-frontend">
+                    <h4 id="aula-3-frontend">Aula 3: Semântica no HTML</h4>
+                    <p>Tags semânticas e boas práticas para acessibilidade</p>
+                    <a class="botao-download-material" href="#"download>baixar material - aula 3</a>
+                </article>
+            </section>
+            <section class="modulo" aria-labelledby="modulo-2-frontend">
+                <h3 id="modulo-2-frontend">Módulo 2: CSS Avançado</h3>
+            </section>
         </section>
-    </section>
         
 <script src ="script.js"></script><!--Vinculando com o código JavaScript-->
 </body>

@@ -124,7 +124,7 @@ h1 {
     margin-top: 71px;
 }
 
-h2 {
+.conteudo-principal p {
     color: #3C254D;
     font-family: Montserrat;
     font-size: 20px;
@@ -134,14 +134,56 @@ h2 {
     margin-top: 10px;
 }
 
-.barra-trilha {
-    /* Escrever estilo da barra das trilhas */
+.container-barra-trilhas {
+    max-width: 1920px; 
+    padding: 0 177px 0 177px; /* garante que a barra <nav> tenha o tamanho e posição corretos */
+    box-sizing: border-box;
+}
+
+.barra-trilhas {
+    width: 100%; /* a barra ocupa todo o espaço reservado para ela na tela, conforme responsividade */
+    height: 67px;
+    border-radius: 20px;
+    border: 1px solid #FFE1E7;
+    background: #FFFAFC;
+    box-shadow: 6px 6px 5.2px 0px rgba(255, 152, 173, 0.25);
+    display: flex;
+    justify-content: space-around; /* garante espaçamento uniforme entre os nomes na barra */
+    align-items: center;
 }
 
 .botao-trilha {
-    /* Escrever estilo dos botões das trilhas */
+    color: #3C254D;
+    border: none; /* retira a borda padrão do botão */
+    background: transparent; /* torna o fundo do botão transparente */
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 .botao-trilha.ativo {
-    /* Escrever estilo do botão que estiver ativo */
+width: 194px;
+height: 41px;
+flex-shrink: 0;
+border-radius: 16px;
+border: 1px solid #F4D7F5;
+background: linear-gradient(180deg, #FFF8FA 0%, #F9E7F7 95.67%, #F4D7F5 100%);
+}
+
+.trilha {
+    /* estilização do container geral de cada trilha */
+}
+
+.modulo {
+    /* estilização dos módulos das trilhas */
+}
+
+.aula {
+    /* estilização das aulas listadas nos módulos */
+}
+
+.botao-download-material {
+    /* estilização do botão para download do material de aula */
 }
