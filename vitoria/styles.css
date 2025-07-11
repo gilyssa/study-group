@@ -137,6 +137,12 @@ nav{
     }
 }
 
+.card-ativo {
+  background-color: #F5D6F5; /* cor do fundo quando estiver ativo */
+  border-radius: 16px;
+  transition: background-color 0.3s ease;
+}
+
 #container-cadastrar-evento{
   display: flex;
   justify-content: flex-end;
