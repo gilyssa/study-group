@@ -110,6 +110,13 @@ nav{
     box-sizing: border-box;
 }
 
+.card-padrao.card-ativo {
+  background-color: #F5D6F5;
+  border-radius: 16px;
+  transition: background-color 0.3s ease;
+}
+
+
 .card-icone{
     display: flex;
     justify-content: center;
@@ -135,12 +142,6 @@ nav{
         color: #C89FF2;
         
     }
-}
-
-.card-ativo {
-  background-color: #F5D6F5; /* cor do fundo quando estiver ativo */
-  border-radius: 16px;
-  transition: background-color 0.3s ease;
 }
 
 #container-cadastrar-evento{
