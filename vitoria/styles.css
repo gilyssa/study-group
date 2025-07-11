@@ -339,7 +339,16 @@ nav{
 
 }
 
-.texto-relatorio {
+.box-relatorios{
+  display: flex;
+  justify-content: space-between; 
+  max-width: 1556px;
+  gap: 24px; 
+  flex-wrap: wrap; 
+  margin: 0 auto; 
+}
+
+.texto-relatorio{
   display: flex;
   flex-direction: column;
   gap: 3px; 
@@ -347,11 +356,11 @@ nav{
 }
 
 .relatorio-largura-personalizada{
-  width: 641px;
+  width: 500px;
   height: 139px;
 }
 
 .botao-relatorio{
-    width: 571px;
+    width: 450px;
     height: 43px;
 }
