@@ -82,6 +82,14 @@ nav{
   cursor: pointer;
 }
 
+container-conteudo.oculto {
+  display: none;
+}
+
+.container-conteudo.ativo {
+  display: flex;
+  flex-direction: column;
+}
 
 #container-cards{
   display: flex;
