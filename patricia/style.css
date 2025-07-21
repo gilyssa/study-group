@@ -80,18 +80,12 @@ li {
     color: #3C254D;
     font-weight: 500;
     font-size: 20px;
-
-
+}
+a {
+    margin-right: 30px;
+    text-decoration: none;
 }
 
-li::before {
-    content: ">";
-    margin: 0 8px;
-}
-
-li:first-child::before {
-    display: none;
-}
 
 .selecao {
     margin: 80px auto auto 150px;
@@ -116,7 +110,8 @@ li:first-child::before {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 1477px;
+    max-width: 1477px;
+    width: 90%;
     height: 67px;
     top: 281px;
     left: 177px;
@@ -127,7 +122,21 @@ li:first-child::before {
     box-shadow: 6px 6px 5.2px 0px #FF98AD40;
 }
 
-.front {
+
+.front,
+.back,
+.dados,
+.ui-ux {
+    background: none;
+    border: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #3C254D;
+    cursor: pointer;
+}
+.ativo{
     width: 194px;
     height: 41px;
     top: 294px;
@@ -141,19 +150,7 @@ li:first-child::before {
     background: linear-gradient(180deg, #FFF8FA 0%, #FAE8F8 95.67%, #F4D7F5 100%);
     border: 1px solid #F4D7F5;
     cursor: pointer;
-}
 
-.back,
-.dados,
-.ui-ux {
-    background: none;
-    border: none;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color: #3C254D;
-    cursor: pointer;
 }
 
 .div-sections {
@@ -367,6 +364,7 @@ h4 {
 
 }
 
+
 @media (max-width: 1280px) {
     header {
         height: 60px;
@@ -377,13 +375,14 @@ h4 {
         height: 40px;
         left: 50px;
     }
+
     .peril {
         display: flex;
         align-items: center;
         gap: 8px;
         margin-right: 5px;
     }
-    
+
     .foto-perfil {
         border-radius: 50%;
         width: 35px;
@@ -391,7 +390,8 @@ h4 {
         background-color: #F4D7F5;
 
     }
-     .nome-perfil {
+
+    .nome-perfil {
         background: none;
         border: none;
         font-weight: 500;
@@ -399,12 +399,14 @@ h4 {
         line-height: 100%;
         color: #3C254D;
         cursor: pointer;
-    }    
+    }
+
     .opcoes ul {
         margin-left: 70px;
 
     }
-     .opcoes li {
+
+    .opcoes li {
         font-size: 18px;
 
     }
@@ -417,7 +419,8 @@ h4 {
     .selecao h1 {
         font-size: 30px;
     }
-      .selecao p {
+
+    .selecao p {
         font-size: 18px;
     }
 
@@ -425,7 +428,8 @@ h4 {
         width: 650px;
         justify-content: baseline;
     }
-      .front,
+
+    .front,
     .back,
     .dados,
     .ui-ux {
@@ -434,8 +438,9 @@ h4 {
         font-size: 18px;
 
     }
-     .div-sections {
-        
+
+    .div-sections {
+
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
@@ -451,10 +456,11 @@ h4 {
 }
 
 @media (max-width: 768px) {
-      body {
+    body {
         height: 100vh;
         overflow: hidden;
     }
+
     .logo {
         width: 80px;
         height: 25px;
@@ -473,6 +479,7 @@ h4 {
     .nome-perfil {
         font-size: 12px;
     }
+
     main {
         overflow-y: auto;
         overflow-x: hidden;
@@ -486,6 +493,7 @@ h4 {
         font-size: 10px;
 
     }
+
     .selecao {
         margin: 25px auto auto 22px;
     }
@@ -502,6 +510,7 @@ h4 {
         width: 350px;
 
     }
+
     .front,
     .back,
     .dados,
@@ -518,20 +527,23 @@ h4 {
         gap: 16px;
         margin-top: 20px;
         padding: 0 12px;
-      
+
     }
+
     .section-esquerda {
         width: 360px;
         height: 210px;
         margin-left: 5px;
         padding: 16px;
     }
+
     .div-section-esquerda {
         display: flex;
         align-items: flex-start;
         gap: 2px;
         margin-top: 10px;
     }
+
     .section-esquerda h2 {
         font-weight: 500;
         font-size: 18px;
@@ -539,39 +551,45 @@ h4 {
         flex: 1;
         min-width: 200px;
     }
+
     .pendente {
         padding: 6px 12px;
         height: auto;
         font-size: 12px;
         margin-right: 5px;
-     }   
-      .paragrafo-data {
+    }
+
+    .paragrafo-data {
         width: 100%;
         margin-left: 0;
         font-size: 13px;
         margin-bottom: 4px;
     }
-     .paragrafo-tarefa {
+
+    .paragrafo-tarefa {
         width: 100%;
         margin-left: 0;
         font-size: 14px;
         line-height: 1.4;
         margin-bottom: 12px;
     }
-     .button-enviar {
-        width:80%;
+
+    .button-enviar {
+        width: 80%;
         height: 44px;
         margin-left: 30px;
         margin-top: 38px;
         font-size: 14px;
-       
+
     }
+
     .section-direita {
         width: 360px;
         height: auto;
         padding: 12px;
         margin-left: 5px;
     }
+
     .div-section-direita {
         display: flex;
         align-items: flex-start;
@@ -584,11 +602,13 @@ h4 {
         font-size: 18px;
         margin-bottom: 8px;
     }
+
     .entregue {
         padding: 6px 12px;
         height: auto;
         font-size: 12px;
     }
+
     .paragrafo-data2 {
         width: 100%;
         margin-left: 0;
@@ -603,6 +623,7 @@ h4 {
         line-height: 1.4;
         margin-bottom: 12px;
     }
+
     .div-feedback {
         width: 100%;
         height: auto;
@@ -636,4 +657,4 @@ h4 {
         margin-top: 12px;
         font-size: 14px;
     }
-}    
+}
