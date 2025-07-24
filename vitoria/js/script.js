@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const todosContainers = document.querySelectorAll(".container-conteudo");
 
-      //Mostra o conteúdo do container clicado e esconde todos os outros
+    //Mostra o conteúdo do container clicado e esconde todos os outros
     function mostrarContainer(container) {
       // Remove a classe "ativo" (que mostra) e adiciona "oculto" (que esconde) em todos os containers
       todosContainers.forEach(c => {
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const interno = card.querySelector('.card-padrao');
     if (interno) interno.classList.remove("card-ativo");
   });
-   // Adiciona a classe de destaque apenas ao card clicado
+  // Adiciona a classe de destaque apenas ao card clicado
   const clicadoInterno = cardClicado.querySelector('.card-padrao');
   if (clicadoInterno) clicadoInterno.classList.add("card-ativo");
 }
