@@ -55,8 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // CALENDÁRIO
   const monthElement = document.getElementById("mes-atual");
+  const anoElement = document.getElementById("ano");
   const diasContainer = document.querySelector(".dias-calendario");
   const btnAvancar = document.getElementById("btn-avancar");
+  const btnVoltar = document.getElementById("btn-voltar");
 
   let hoje = new Date();
   let mes = hoje.getMonth();
@@ -85,28 +87,29 @@ document.addEventListener("DOMContentLoaded", () => {
       diasContainer.appendChild(vazio);
     }
 
-  for (let dia = 1; dia <= totalDias; dia++) {
-  const divDia = document.createElement("div");
-  divDia.classList.add("dia-calendario");
+    for (let dia = 1; dia <= totalDias; dia++) {
+      const divDia = document.createElement("div");
+      divDia.classList.add("dia-calendario");
 
-  const dataStr = `${ano}-${String(mes + 1).padStart(2, "0")}-${String(dia).padStart(2, "0")}`;
-  const corPino = datasImportantes[dataStr];
+      const dataStr = `${ano}-${String(mes + 1).padStart(2, "0")}-${String(dia).padStart(2, "0")}`;
+      const corPino = datasImportantes[dataStr];
 
-  const numeroSpan = document.createElement("span");
-  numeroSpan.textContent = dia;
-  numeroSpan.classList.add("numero-dia");
+      const numeroSpan = document.createElement("span");
+      numeroSpan.textContent = dia;
+      numeroSpan.classList.add("numero-dia");
 
-  if (corPino) {
-    const pino = document.createElement("span");
-    pino.classList.add("pino-data", corPino);
-    divDia.appendChild(pino);
-  }
+      if (corPino) {
+        const pino = document.createElement("span");
+        pino.classList.add("pino-data", corPino);
+        divDia.appendChild(pino);
+      }
 
-  divDia.appendChild(numeroSpan); 
-  diasContainer.appendChild(divDia);
-}
+      divDia.appendChild(numeroSpan);
+      diasContainer.appendChild(divDia);
+    }
 
-    monthElement.textContent = `${nomesMeses[mes]}`;
+    monthElement.textContent = nomesMeses[mes];
+    anoElement.textContent = ano;
   }
 
   btnAvancar.addEventListener("click", () => {
@@ -114,6 +117,15 @@ document.addEventListener("DOMContentLoaded", () => {
     if (mes > 11) {
       mes = 0;
       ano++;
+    }
+    renderizaCalendario(mes, ano);
+  });
+
+  btnVoltar.addEventListener("click", () => {
+    mes--;
+    if (mes < 0) {
+      mes = 11;
+      ano--;
     }
     renderizaCalendario(mes, ano);
   });
@@ -147,3 +159,4 @@ document.addEventListener("DOMContentLoaded", () => {
   mostrarDica(indiceAtual);
   setInterval(proximaDica, 5000);
 });
+
