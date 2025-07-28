@@ -154,7 +154,7 @@ header {
 
 .resumos {
   display: flex;
-  justify-content: space-evenly; /* ou use space-between se quiser alinhado nas bordas */
+  justify-content: space-evenly; 
   flex-wrap: wrap;
   gap: 16px;
   margin-top: 20px;
