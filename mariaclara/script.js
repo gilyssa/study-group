@@ -1,47 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // BREADCRUMB
-  const breadcrumb = document.querySelector(".breadcrumb");
-  let pagesVisited = ["Início"];
+function animarNumerosSuavemente() {
+  // NÚMEROS DO RESUMO ANIMADOS 
+  const contadores = document.querySelectorAll('.resumo strong');
 
-  function renderBreadcrumb() {
-    breadcrumb.innerHTML = "";
-    pagesVisited.forEach((page, index) => {
-      if (index > 0) {
-        const imgSeta = document.createElement("img");
-        imgSeta.src = "imagens/seta.png";
-        imgSeta.alt = "Separador";
-        imgSeta.classList.add("breadcrumb-separador");
-        breadcrumb.appendChild(imgSeta);
-      }
-      const span = document.createElement("span");
-      span.textContent = page;
-      span.setAttribute("data-step", page);
-      span.classList.add("breadcrumb-step");
-      breadcrumb.appendChild(span);
-    });
-
-    document.querySelectorAll(".breadcrumb-step").forEach((el, i) => {
-      el.addEventListener("click", () => {
-        if (i < pagesVisited.length - 1) {
-          pagesVisited = pagesVisited.slice(0, i + 1);
-          renderBreadcrumb();
-        }
-      });
-    });
-  }
-
-  document.querySelectorAll("button[data-page]").forEach(button => {
-    button.addEventListener("click", () => {
-      const page = button.getAttribute("data-page");
-      if (!pagesVisited.includes(page)) {
-        pagesVisited.push(page);
-        renderBreadcrumb();
-      }
-    });
+  contadores.forEach((contador, i) => {
+    setTimeout(() => {
+      contador.classList.add('aparecer');
+    }, 200 * i); // efeito cascata
   });
-
-  renderBreadcrumb();
-
+}
   // ANIMAÇÃO DE BARRAS
   const progressBars = document.querySelectorAll(".progresso .barra div");
   progressBars.forEach((bar) => {
@@ -131,6 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   renderizaCalendario(mes, ano);
+  animarNumerosSuavemente();
 
   // CARROSSEL DE DICAS
   let indiceAtual = 0;
@@ -160,3 +128,18 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(proximaDica, 5000);
 });
 
+const logo = document.querySelector(".logo");
+const menuLateral = document.getElementById("menu-lateral");
+
+logo.addEventListener("click", () => {
+  menuLateral.classList.toggle("ativo");
+  menuLateral.classList.toggle("oculto");
+});
+document.addEventListener("click", (e) => {
+  const clicouFora = !menuLateral.contains(e.target) && !logo.contains(e.target);
+
+  if (clicouFora && menuLateral.classList.contains("ativo")) {
+    menuLateral.classList.remove("ativo");
+    menuLateral.classList.add("oculto");
+  }
+});
