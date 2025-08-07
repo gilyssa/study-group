@@ -4,70 +4,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="imagens/favicon-code-queens.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/imagens/favicon-code-queens.ico" type="image/x-icon">
     <!--Colocando um favicon na guia do site-->
     <title>Trilhas de Estudo - Code Queens</title>
-    <link rel="stylesheet" href="style.css"><!--Vinculando a folha de estilo CSS-->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet"> <!--Importando a fonte Montserrat-->
+    <link rel="stylesheet" href="style.css"> <!--Vinculando a folha de estilo CSS-->
+    <!-- Importando a fonte Montserrat -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap">
+
 </head>
 
 <body>
-    <header class="barra-superior">
-        <div class="area-logo">
-            <img src="imagens/logo.png" alt="Logo Code Queens" class="logo-superior">
-        </div>
-        <div class="area-user">
-            <img src="imagens/avatar.jpg" alt="Avatar da Usuária" class="avatar">
-            <span class="nome-user">Lyssa Lima</span>
-        </div>    
-    </header>
+    <div class="container-barra-superior">
+        <header class="conteudo-barra-superior">
+            <div class="area-logo">
+                <img src="assets/imagens/logo-code-queens.png" alt="Logo Code Queens" class="logo-superior">
+            </div>
+            <div class="area-user">
+                <svg class="icone-avatar" aria-label="Área para foto da usuária">
+                    <use href="assets/sprite.svg#icone-avatar"></use>
+                </svg>
+                <span class="nome-user">Lyssa Lima</span>
+            </div> 
+        </header>
+    </div>
 
-    <main class="conteudo-principal">
-        <nav aria-label="breadcrumb" class="breadcrumb"> <!--Sinaliza para o navegador que é um breadcrumb-->
-            <ol>
-                <li><a href="#">Início</a></li>
-                <li><a class="ativo" href="#" aria-current="page">Trilhas de Estudo</a></li><!--garante mudanças de design e leitura do navegador na página específica que estiver ativa no momento-->
-                <li><a href="#">Submeter Atividades</a></li>
-                <li><a href="#">Agenda</a></li>
-            </ol>
-        </nav>
+    <nav class="breadcrumb" aria-label="breadcrumb"> <!--Sinaliza para o navegador que é um breadcrumb-->
+        <ol>
+            <li><a href="#">Início</a></li>
+            <li><svg class="separador-breadcrumb" aria-hidden="true">
+                    <use href="assets/sprite.svg#separador-breadcrumb"></use>
+            </svg></li>
+            <li><a href="#" aria-current="page">Trilhas de Estudo</a></li>
+            <li><svg class="separador-breadcrumb" aria-hidden="true">
+                    <use href="assets/sprite.svg#separador-breadcrumb"></use>
+            </svg></li>
+            <li><a href="#">Submeter Atividades</a></li>
+            <li><svg class="separador-breadcrumb">
+                    <use href="assets/sprite.svg#separador-breadcrumb"></use>
+            </svg></li>
+            <li><a href="#">Agenda</a></li>
+        </ol>
+    </nav>
+
+    <div class="titulos-principais">
         <h1>Trilhas de Estudo</h1>
-        <p>Escolha uma trilha e comece sua jornada de aprendizado.</p>
-    </main>
+        <p>Escolha uma trilha e comece sua jornada de aprendizado!</p>
+    </div>
 
-        <nav class="barra-trilhas" aria-label="Trilhas de estudo da Code Queens">
-            <button class="botao-trilha ativo" aria-pressed="true">Frontend</button>
-            <button class="botao-trilha" aria-pressed="false">Backend</button>
-            <button class="botao-trilha" aria-pressed="false">Dados</button>
-            <button class="botao-trilha" aria-pressed="false">UI/UX</button>
-            
-        </nav>
-        <section class="trilha" aria-labelledby="titulo-frontend"> <!-- adicionei o parâmetro "aria-labelledby" para melhorar a demarcação de tags com nomes menos específicos, em prol da acessibilidade -->
-            <h2 id="titulo-frontend">Frontend</h2>
-            <p>Desenvolvimento de interfaces web e aplicações frontend</p>
-            <section class="modulo" aria-labelledby="modulo-1-frontend">
-                <h3 id="modulo-1-frontend">Módulo 1: HTML e CSS</h3>
-                <article class="aula" aria-labelledby="aula-1-frontend">
-                    <h4 id="aula-1-frontend">Aula 1: Introdução ao HTML</h4>
-                    <p>Fundamentos do HTML e estrutura básica de documentos web</p>
-                    <a class="botao-download-material" href="#" download>baixar material - aula 1</a> <!-- especifiquei mais o nome de cada botão para download -->
-                </article>
-                <article class="aula" aria-labelledby="aula-2-frontend">
-                    <h4 id="aula-2-frontend">Aula 2: Estrutura básica de um projeto</h4>
-                    <p>Como organizar arquivos e pastas em um projeto frontend</p>
-                    <a class="botao-download-material" href="#" download>baixar material - aula 2</a>
-                </article>
-                <article class="aula" aria-labelledby="aula-3-frontend">
-                    <h4 id="aula-3-frontend">Aula 3: Semântica no HTML</h4>
-                    <p>Tags semânticas e boas práticas para acessibilidade</p>
-                    <a class="botao-download-material" href="#"download>baixar material - aula 3</a>
-                </article>
+    
+    <nav class="barra-trilhas" aria-label="Trilhas de estudo da Code Queens">
+        <button class="botao-trilha" aria-pressed="false"><span class="nome-botao">Frontend</span></button>
+        <button class="botao-trilha" aria-pressed="false"><span class="nome-botao">Backend</span></button>
+        <button class="botao-trilha" aria-pressed="false"><span class="nome-botao">Dados</span></button>
+        <button class="botao-trilha"aria-pressed="false"><span class="nome-botao">UI/UX</span></button>
+    </nav>
+
+    <div class="container-bloco-principal">
+        <main class="bloco-principal" aria-label="Conteúdos da trilha selecionada">
+
+            <div class="titulos-bloco-principal">
+                <h2 class="titulo-trilha">Frontend</h2>
+                <p class="descricao-trilha">Desenvolvimento de interfaces web e aplicações frontend.</p>
+            </div> 
+                
+            <section class="area-modulo-ativo">
+                <h3 class="titulo-modulo">Módulo 1: HTML e CSS</h3>
+
+                <section class="informacoes-aula">
+                    <p class="titulo-aula">Aula 01: Introdução ao HTML</p>
+                    <p class="descricao-aula">Fundamentos do HTML e estrutura básica de documentos web</p>
+                    <a href="assets/imagens/arquivo.gif" download class="botao-download-material">
+                        <svg class="icone-botao-download" aria-hidden="true"><use href="assets/sprite.svg#icone-botao-download"></use></svg>
+                        <span class="descricao-botao-download">baixar material</span>
+                    </a>
+                </section>
+
+                <section class="informacoes-aula">
+                    <p class="titulo-aula">Aula 02: Estrutura básica de um projeto</p>
+                    <p class="descricao-aula">Como organizar arquivos e pastas em um projeto frontend</p>
+                    <a href="assets/imagens/arquivo.gif" download class="botao-download-material">
+                        <svg class="icone-botao-download" aria-hidden="true"><use href="assets/sprite.svg#icone-botao-download"></use></svg>
+                        <span class="descricao-botao-download">baixar material</span>
+                    </a>
+                </section>
+
+                <section class="informacoes-aula">
+                    <p class="titulo-aula">Aula 03: Semântica HTML</p>
+                    <p class="descricao-aula">Tags semânticas e boas práticas para acessibilidade</p>
+                    <a href="assets/imagens/arquivo.gif" download class="botao-download-material">
+                        <svg class="icone-botao-download" aria-hidden="true"><use href="assets/sprite.svg#icone-botao-download"></use></svg>
+                        <span class="descricao-botao-download">baixar material</span>
+                    </a>
+                </section>
+
+                <hr class="divisor-modulos">
             </section>
-            <section class="modulo" aria-labelledby="modulo-2-frontend">
-                <h3 id="modulo-2-frontend">Módulo 2: CSS Avançado</h3>
-            </section>
-        </section>
-        
+
+            <section class="area-modulo">
+                <div class="barra-acesso-modulo">
+                    <h3 class="titulo-modulo">Módulo 2: CSS Avançado</h3>
+                    <svg class="icone-abrir-modulo" aria-hidden="true"><use href="assets/sprite.svg#icone-abrir-modulo"></use></svg>
+                </div>
+                <div class="informacoes-modulo">
+                    <p class="descricao-trilha">Em breve...</p>
+                </div>
+                <hr class="divisor-modulos">
+            </section> 
+
+        </main>
+    </div>
+
 <script src ="script.js"></script><!--Vinculando com o código JavaScript-->
 </body>
 </html>
