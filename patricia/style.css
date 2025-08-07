@@ -8,11 +8,9 @@
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
     background-color: #FFF2F6;
-
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 header {
@@ -57,12 +55,6 @@ header {
     cursor: pointer;
 }
 
-main {
-    width: 100%;
-    height: calc(100vh - 73px);
-
-
-}
 
 .opcoes {
     padding-top: 20px;
@@ -248,12 +240,14 @@ h2 {
     margin: 20px auto auto;
     width: 90%;
 }
+
 .button-enviar {
     background: #E25F8B;
     color: #FFFAFC;
     border: none;
     box-shadow: 0px 4px 4px 0px #00000040;
 }
+
 .button-reenviar {
     background: #FFF1F6;
     color: #3C254D;
@@ -265,14 +259,14 @@ h2 {
 
 
 @media (max-width: 768px) {
-    body {
-        height: 100vh;
-        overflow: hidden;
+
+    header {
+        height: 60px;
     }
 
     .logo {
         width: 80px;
-        height: 25px;
+        height: 30px;
         left: 10px;
     }
 
@@ -286,12 +280,7 @@ h2 {
     }
 
     .nome-perfil {
-        font-size: 12px;
-    }
-
-    main {
-        overflow-y: auto;
-        overflow-x: hidden;
+        font-size: 14px;
     }
 
     .opcoes ul {
@@ -303,167 +292,39 @@ h2 {
 
     }
 
-    .selecao {
-        margin: 25px auto auto 22px;
+    .ativo {
+        width: 100%;
+        margin: 0 auto;
     }
 
     .selecao h1 {
-        font-size: 24px;
+        font-size: 30px;
     }
 
     .selecao p {
-        font-size: 12px;
+        margin: 0 auto 20px auto;
+        font-size: 18px;
     }
 
     .selecao div {
-        width: 350px;
+        flex-direction: column;
+        padding: 20px;
 
     }
 
-    .front,
-    .back,
-    .dados,
-    .ui-ux {
-        width: 75px;
-        height: 30px;
-        left: 8px;
-        font-size: 12px;
+    section {
+        padding: 20px;
     }
 
     .div-sections {
-        width: 100%;
-        flex-direction: column;
-        gap: 16px;
-        margin-top: 20px;
-        padding: 0 12px;
+        margin: 30px auto;
 
     }
 
-    .section-esquerda {
-        width: 360px;
-        height: 210px;
-        margin-left: 5px;
-        padding: 16px;
-    }
-
-    .div-section-esquerda {
-        display: flex;
-        align-items: flex-start;
-        gap: 2px;
-        margin-top: 10px;
-    }
-
-    .section-esquerda h2 {
-        font-weight: 500;
-        font-size: 18px;
-        color: #3C254D;
-        flex: 1;
-        min-width: 200px;
-    }
-
-    .pendente {
-        padding: 6px 12px;
-        height: auto;
-        font-size: 12px;
-        margin-right: 5px;
-    }
-
-    .paragrafo-data {
-        width: 100%;
-        margin-left: 0;
-        font-size: 13px;
-        margin-bottom: 4px;
-    }
-
-    .paragrafo-tarefa {
-        width: 100%;
-        margin-left: 0;
-        font-size: 14px;
-        line-height: 1.4;
-        margin-bottom: 12px;
-    }
-
-    .button-enviar {
-        width: 80%;
-        height: 44px;
-        margin-left: 30px;
-        margin-top: 38px;
-        font-size: 14px;
-
-    }
-
-    .section-direita {
-        width: 360px;
-        height: auto;
-        padding: 12px;
-        margin-left: 5px;
-    }
-
+    .div-section-esquerda,
     .div-section-direita {
-        display: flex;
         align-items: flex-start;
-        margin-top: 10px;
-        gap: 2px;
     }
 
-    .div-section-direita h2 {
-        width: 100%;
-        font-size: 18px;
-        margin-bottom: 8px;
-    }
-
-    .entregue {
-        padding: 6px 12px;
-        height: auto;
-        font-size: 12px;
-    }
-
-    .paragrafo-data2 {
-        width: 100%;
-        margin-left: 0;
-        font-size: 13px;
-        margin-bottom: 4px;
-    }
-
-    .paragrafo-tarefa2 {
-        width: 100%;
-        margin-left: 0;
-        font-size: 14px;
-        line-height: 1.4;
-        margin-bottom: 12px;
-    }
-
-    .div-feedback {
-        width: 100%;
-        height: auto;
-        margin-left: 0;
-        margin-top: 25px;
-        padding: 12px;
-    }
-
-    .div-feedback div {
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-
-    .div-feedback h4 {
-        font-size: 13px;
-    }
-
-    .prazo {
-        font-size: 13px;
-    }
-
-    .p-feedback {
-        font-size: 13px;
-        line-height: 1.4;
-    }
-
-    .button-reenviar {
-        width: 80%;
-        height: 44px;
-        margin-left: 30px;
-        margin-top: 12px;
-        font-size: 14px;
-    }
-}
+    
+} 
