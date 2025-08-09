@@ -36,24 +36,21 @@ document.addEventListener("DOMContentLoaded", () => {
   if (clicadoInterno) clicadoInterno.classList.add("card-ativo");
 }
 
-  //"Gerenciar Trilhas", mostra o painel correspondente e ativa o visual do card
-    cardGerenciar.addEventListener("click",() => {
-        mostrarContainer(containerTrilhas);
-        ativarCard(cardGerenciar);
-    });
-    
-    cardEntregas.addEventListener("click", () => {
-        mostrarContainer(containerEntregas);
-        ativarCard(cardEntregas);
-    });
+  // Mapeia cada card com seu respectivo container
+  const mapaCards = [
+    { card: cardGerenciar, container: containerTrilhas },
+    { card: cardEntregas, container: containerEntregas },
+    { card: cardFeedback, container: containerFeedback },
+    { card: cardRelatorios, container: containerRelatorios }
+  ];
 
-    cardFeedback.addEventListener("click",() => {
-        mostrarContainer(containerFeedback);
-         ativarCard(cardFeedback);
-    });
-
-    cardRelatorios.addEventListener("click", () =>{
-        mostrarContainer(containerRelatorios);
-        ativarCard(cardRelatorios);
-    });
+  // Adiciona eventos de clique dinamicamente
+  mapaCards.forEach(({ card, container }) => {
+    if (card && container) {
+      card.addEventListener("click", () => {
+        mostrarContainer(container);
+        ativarCard(card);
+      });
+    }
+  });
 });
