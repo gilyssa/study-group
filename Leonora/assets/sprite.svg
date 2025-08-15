@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+
+  <symbol id="icone-avatar" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="50"/>
+  </symbol>
+
+  <symbol id="separador-breadcrumb" viewBox="0 0 8 16">
+    <path d="M1 1l6 7-6 7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  
+  <symbol id="icone-botao-download" viewBox="0 0 24 24">
+    <path d="M12 15l-5-5h3V3h4v7h3l-5 5zM20 18H4v-2h16v2z"/>
+  </symbol>
+
+  <symbol id="icone-abrir-modulo" viewBox="0 0 8 16">
+      <path d="M1 1l6 7-6 7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+</svg>
