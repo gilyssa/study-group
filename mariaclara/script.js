@@ -1,47 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // BREADCRUMB
-  const breadcrumb = document.querySelector(".breadcrumb");
-  let pagesVisited = ["Início"];
+function animarNumerosSuavemente() {
+  // NÚMEROS DO RESUMO ANIMADOS 
+  const contadores = document.querySelectorAll('.resumo strong');
 
-  function renderBreadcrumb() {
-    breadcrumb.innerHTML = "";
-    pagesVisited.forEach((page, index) => {
-      if (index > 0) {
-        const imgSeta = document.createElement("img");
-        imgSeta.src = "imagens/seta.png";
-        imgSeta.alt = "Separador";
-        imgSeta.classList.add("breadcrumb-separador");
-        breadcrumb.appendChild(imgSeta);
-      }
-      const span = document.createElement("span");
-      span.textContent = page;
-      span.setAttribute("data-step", page);
-      span.classList.add("breadcrumb-step");
-      breadcrumb.appendChild(span);
-    });
-
-    document.querySelectorAll(".breadcrumb-step").forEach((el, i) => {
-      el.addEventListener("click", () => {
-        if (i < pagesVisited.length - 1) {
-          pagesVisited = pagesVisited.slice(0, i + 1);
-          renderBreadcrumb();
-        }
-      });
-    });
-  }
-
-  document.querySelectorAll("button[data-page]").forEach(button => {
-    button.addEventListener("click", () => {
-      const page = button.getAttribute("data-page");
-      if (!pagesVisited.includes(page)) {
-        pagesVisited.push(page);
-        renderBreadcrumb();
-      }
-    });
+  contadores.forEach((contador, i) => {
+    setTimeout(() => {
+      contador.classList.add('aparecer');
+    }, 200 * i); // efeito cascata
   });
-
-  renderBreadcrumb();
-
+}
   // ANIMAÇÃO DE BARRAS
   const progressBars = document.querySelectorAll(".progresso .barra div");
   progressBars.forEach((bar) => {
@@ -55,8 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // CALENDÁRIO
   const monthElement = document.getElementById("mes-atual");
+  const anoElement = document.getElementById("ano");
   const diasContainer = document.querySelector(".dias-calendario");
   const btnAvancar = document.getElementById("btn-avancar");
+  const btnVoltar = document.getElementById("btn-voltar");
 
   let hoje = new Date();
   let mes = hoje.getMonth();
@@ -85,28 +54,29 @@ document.addEventListener("DOMContentLoaded", () => {
       diasContainer.appendChild(vazio);
     }
 
-  for (let dia = 1; dia <= totalDias; dia++) {
-  const divDia = document.createElement("div");
-  divDia.classList.add("dia-calendario");
+    for (let dia = 1; dia <= totalDias; dia++) {
+      const divDia = document.createElement("div");
+      divDia.classList.add("dia-calendario");
 
-  const dataStr = `${ano}-${String(mes + 1).padStart(2, "0")}-${String(dia).padStart(2, "0")}`;
-  const corPino = datasImportantes[dataStr];
+      const dataStr = `${ano}-${String(mes + 1).padStart(2, "0")}-${String(dia).padStart(2, "0")}`;
+      const corPino = datasImportantes[dataStr];
 
-  const numeroSpan = document.createElement("span");
-  numeroSpan.textContent = dia;
-  numeroSpan.classList.add("numero-dia");
+      const numeroSpan = document.createElement("span");
+      numeroSpan.textContent = dia;
+      numeroSpan.classList.add("numero-dia");
 
-  if (corPino) {
-    const pino = document.createElement("span");
-    pino.classList.add("pino-data", corPino);
-    divDia.appendChild(pino);
-  }
+      if (corPino) {
+        const pino = document.createElement("span");
+        pino.classList.add("pino-data", corPino);
+        divDia.appendChild(pino);
+      }
 
-  divDia.appendChild(numeroSpan); 
-  diasContainer.appendChild(divDia);
-}
+      divDia.appendChild(numeroSpan);
+      diasContainer.appendChild(divDia);
+    }
 
-    monthElement.textContent = `${nomesMeses[mes]}`;
+    monthElement.textContent = nomesMeses[mes];
+    anoElement.textContent = ano;
   }
 
   btnAvancar.addEventListener("click", () => {
@@ -118,7 +88,17 @@ document.addEventListener("DOMContentLoaded", () => {
     renderizaCalendario(mes, ano);
   });
 
+  btnVoltar.addEventListener("click", () => {
+    mes--;
+    if (mes < 0) {
+      mes = 11;
+      ano--;
+    }
+    renderizaCalendario(mes, ano);
+  });
+
   renderizaCalendario(mes, ano);
+  animarNumerosSuavemente();
 
   // CARROSSEL DE DICAS
   let indiceAtual = 0;
@@ -146,4 +126,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   mostrarDica(indiceAtual);
   setInterval(proximaDica, 5000);
+});
+
+const logo = document.querySelector(".logo");
+const menuLateral = document.getElementById("menu-lateral");
+
+logo.addEventListener("click", () => {
+  menuLateral.classList.toggle("ativo");
+  menuLateral.classList.toggle("oculto");
+});
+document.addEventListener("click", (e) => {
+  const clicouFora = !menuLateral.contains(e.target) && !logo.contains(e.target);
+
+  if (clicouFora && menuLateral.classList.contains("ativo")) {
+    menuLateral.classList.remove("ativo");
+    menuLateral.classList.add("oculto");
+  }
 });

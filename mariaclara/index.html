@@ -12,15 +12,27 @@
     <div class="header-container">
       <img src="imagens/logo_queens.png" alt="Logo Code Queens" class="logo" />
       <div class="user-info">
-        <div class="avatar"></div>
+        <div class="avatar">
+          <img src="imagens/avatar.jpg" class="avatar"/>
+        </div>
         <span>Lyssa Lima</span>
       </div>
     </div>
   </header>
 
-  <nav class="breadcrumb">
-    <span data-step="Início" class="breadcrumb-step">Início</span>
+<aside id="menu-lateral" class="menu-lateral oculto">
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="trilhas.html">Trilhas</a></li>
+      <li><a href="repositorios.html">Repositórios</a></li>
+      <li><a href="atividades.html">Atividades</a></li>
+      <li><a href="progresso.html">Progresso</a></li>
+      <li><a href="calendario.html">Calendário</a></li>
+    </ul>
   </nav>
+</aside>
+
 
 <main class="dashboard">
   <!-- Coluna da Esquerda -->
@@ -50,7 +62,7 @@
             <span class="tag">Backend</span>
             <span class="tag">Dados</span>
           </div>
-          <button data-page="Trilhas de estudo">ver trilhas →</button>
+          <a href="trilhas.html" class="botao-link">ver trilhas →</a>
         </div>
 
         <div class="card">
@@ -67,7 +79,7 @@
             </div>
           </div>
           </div>
-          <button data-page="Submeter atividades">ver atividades →</button>
+          <a href="atividades.html" class="botao-link">ver atividades →</a>
         </div>
       </div>
 
@@ -80,7 +92,7 @@
             <li><span class="bolinha lilas"></span>code-queen/frontend-exemplos</li>
             <li><span class="bolinha roxa"></span>code-queen/projetos-react</li>
           </ul>
-          <button data-page="Repositórios do Git">ver repositórios →</button>
+          <a href="repositorios.html" class="botao-link">ver repositórios →</a>
         </div>
 
         <div class="card progresso">
@@ -99,7 +111,7 @@
             </div>
             <div class="barra"><div style="width: 20%"></div></div>
           </div>
-          <button class="botao-direita" data-page="Seu progresso">continuar estudando →</button>
+          <a href="progresso.html" class="botao-link botao-direita">continuar estudando →</a>
         </div>
       </div>
     </section>
@@ -108,14 +120,20 @@
   <!-- Coluna da Direita -->
   <aside class="sidebar-coluna">
     <section class="calendario sidebar">
-      <div class="cabecalho-calendario">
-        <div class="titulo-mes">
-          <h3 id="mes-atual">Maio</h3>
+        <div class="cabecalho-calendario">
+          <button id="btn-voltar">
+            <img src="imagens/seta-back.png" alt="Voltar" class="calendar-arrow-back">
+          </button>
+            <div class="mes-ano">
+              <a href="agenda.html" class="mes-link">
+                <span id="mes-atual">Julho</span>
+                <span id="ano">2025</span>
+              </a>
+            </div>
+          <button id="btn-avancar">
+            <img src="imagens/seta.png" alt="Avançar mês" class="calendar-arrow">
+          </button>
         </div>
-        <button id="btn-avancar">
-           <img src="imagens/seta.png" alt="Avançar mês" class="calendar-arrow">
-        </button>
-      </div>
       <div class="semana">
         <span>dom</span><span>seg</span><span>ter</span><span>qua</span>
         <span>qui</span><span>sex</span><span>sab</span>
