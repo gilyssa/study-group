@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar trilhas e atividades</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="navbar-logo">
+            <img src="assets/icons/navbar-logo.png" alt="Logo da Code Queens">
+        </div>
+    <div class="user-info">
+            <div class="user-avatar">
+                <img src="assets/icons/avatar-default.png" alt="Avatar padrão do usuário">
+            </div>
+        <div class="user-name">
+            <p>Lyssa Lima</p>
+        </div>
+    </div>
+    </nav>
+    <main id="container-geral">
+        <div id="container-gerenciar">
+            <section id="header-trilhas">
+                <header class="gerenciar-texto">
+                    <h2 class="gerenciar-titulo">Gerenciar Trilhas</h2>
+                    <p class="gerenciar-subtitulo">Painel administrativo para gerenciar conteúdos e alunas</p>
+                </header>
+            </section>
+        </div>
+
+        <div id="container-cards">
+            <section id="card-gerenciar">
+                <div class="card-padrao">
+                    <div class="card-icone">
+                        <img src="assets/photos/gerenciar-foto.png" alt="Gerenciar trilhas e atividades">
+                    </div>
+                    <div class="card-textos">
+                        <p class="card-titulo">Gerenciar trilhas e atividades</p>
+                        <p class="card-subtitulo">Adicione, edite ou remova conteúdos</p>
+                    </div>
+                </div>
+            </section>
+                
+            <section id="card-entregas">
+                <div class="card-padrao">
+                    <div class="card-icone">
+                        <img src="assets/photos/entregas-foto.png" alt="Visualizar entregas">
+                    </div>
+                    <div class="card-textos">
+                        <p class="card-titulo">Ver entregas por aluna</p>
+                        <p class="card-subtitulo">Acompanhe e avalie as atividades</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="card-feedback">
+                <div class="card-padrao">
+                    <div class="card-icone">
+                        <img src="assets/photos/feedback.png" alt="Enviar feedback">
+                    </div>
+                    <div class="card-textos">
+                        <p class="card-titulo">Enviar feedback</p>
+                        <p class="card-subtitulo">Envie mensagens e orientações</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="card-relatorios">
+                <div class="card-padrao">
+                    <div class="card-icone">
+                        <img src="assets/photos/relatorio.png" alt="Relatório de progresso">
+                    </div>
+                    <div class="card-textos">
+                        <p class="card-titulo">Relatórios de progresso</p>
+                        <p class="card-subtitulo">Visualize estatísticas e análises</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div id="container-cadastrar-evento">
+            <button id="botao-cadastrar-evento">
+                <div id="icone-cadastrar-evento">
+                    <img src="assets/photos/calendario.png" alt="ícone de calendário">
+                </div>
+                <span>cadastrar novo evento</span>
+            </button>
+        </div>
+        <div id="container-trilhas-estudos" class="container-conteudo ativo">
+            <div class="container-painel">
+                <div class="cabecalho-painel">
+                    <h2 class="titulo-painel">Trilhas de estudo</h2>
+                    <div class="subtitulo-e-botao">
+                        <p class="subtitulo-painel">Gerencia as trilhas de estudos e seus conteúdos</p>
+                    <div id="container-nova-trilha">
+                    <button id="botao-nova-trilha" class="botao-painel">
+                        <div class="icone-botao">
+                            <img src="assets/photos/add-icone.png" alt="Adicionar nova trilha">
+                        </div>
+                        <span>nova trilha</span>
+                    </button>
+                </div> 
+            </div> 
+        </div> 
+        <div class="bloco-conteudo">
+            <div class="container-lista-conteudo">
+                <!-- Trilha Frontend -->
+                <div class="painel-item">
+                <div class="info-item">
+                    <span class="titulo-item">Frontend</span>
+                    <span class="subtitulo-item">4 módulos</span>
+                </div>
+                <div class="container-acoes">
+                    <button class="acao-editar"><img src="assets/photos/editar.png"alt="Editar trilha"></button>
+                    <button class="acao-excluir"><img src="assets/photos/excluir.png" alt="Excluir trilha"></button>
+                </div>
+            </div>
+        </div>
+        <!-- Trilha Backend -->
+            <div class="container-lista-conteudo">
+                <div class="painel-item">
+                <div class="info-item">
+                    <span class="titulo-item">Backend</span>
+                    <span class="subtitulo-item">3 módulos</span>
+                </div>
+            <div class="container-acoes">
+                <button class="acao-editar"><img src="assets/photos/editar.png"alt="Editar trilha"></button>
+                <button class="acao-excluir"><img src="assets/photos/excluir.png" alt="Excluir trilha"></button>
+            </div>
+        </div>
+    </div>
+    <!-- Trilha Dados -->
+        <div class="container-lista-conteudo">
+            <div class="painel-item">
+            <div class="info-item">
+                <span class="titulo-item">Dados</span>
+                <span class="subtitulo-item">2 módulos</span>
+            </div>
+        <div class="container-acoes">
+            <button class="acao-editar"><img src="assets/photos/editar.png"alt="Editar trilha"></button>
+            <button class="acao-excluir"><img src="assets/photos/excluir.png" alt="Excluir trilha"></button>
+        </div>
+       </div> 
+    </div> 
+  </div> 
+</div> 
+</div> <!-- fecha #container-trilhas-estudos -->
+
+    
+    <div id="container-entregas" class="container-conteudo oculto">
+        <div class="container-painel">
+        <div class="cabecalho-painel cabecalho-container">
+            <h2 class="titulo-painel titulo-container">Entregas por aluna</h2>
+            <p class="subtitulo-painel">Visualize e avalie as atividades entregues por cada alunas</p>
+        </div>
+        <div class="bloco-conteudo">
+        <div class="container-lista-conteudo">
+        <!-- Primeira aluna-->
+        <div class="painel-item">
+        <div class="info-item">
+            <span class="titulo-item">Ana Silva</span>
+            <span class="subtitulo-item">3 atividades pendentes para avaliação</span>
+        </div>
+        <div id="container-entregas-aluna">
+            <button class="botao-acao-aluna">
+            <img src="assets/photos/icone-entregas.png" alt="Ver entregas por aluna">
+            <span>ver entregas</span>
+            </button>
+        </div>
+    </div>
+ </div>       
+        <div class="container-lista-conteudo">
+        <!-- Segunda aluna-->
+        <div class="painel-item">
+        <div class="info-item">
+            <span class="titulo-item">Bianca Rodrigues</span>
+            <span class="subtitulo-item">3 atividades pendentes para avaliação</span>
+        </div>
+        <div id="container-entregas-aluna">
+            <button class="botao-acao-aluna">
+            <img src="assets/photos/icone-entregas.png" alt="Ver entregas por aluna">
+            <span>ver entregas</span>
+            </button>
+        </div>
+    </div>
+</div>
+    <div class="container-lista-conteudo">
+        <!-- Terceira aluna-->
+        <div class="painel-item">
+        <div class="info-item">
+            <span class="titulo-item">Carolina Mendes</span>
+            <span class="subtitulo-item">4 atividades pendentes para avaliação</span>
+        </div>
+        <div id="container-entregas-aluna">
+            <button class="botao-acao-aluna">
+            <img src="assets/photos/icone-entregas.png" alt="Ver entregas por aluna">
+            <span>ver entregas</span>
+            </button>
+        </div>
+        </div> 
+      </div> 
+    </div> 
+  </div>
+    </div>  <!-- fecha .container-entregas -->
+
+    <div id="container-feedback" class="container-conteudo oculto">
+        <div class="container-painel">
+            <div class="cabecalho-painel">
+                <h2 class="titulo-painel">Enviar feedback</h2>
+                <div class="subtitulo-e-botao">
+                    <p class="subtitulo-painel">Envie feedback personalizado ou para toda a comunidade</p>
+            <div id="container-feedback-geral">
+                <button id="botao-feedback-geral" class="botao-painel">
+                    <div class="icone-botao">
+                        <img src="assets/icons/feedback-icon.png" alt="">
+                    </div>
+                    <span>mensagem para todas as alunas</span>
+                </button>
+            </div>
+        </div>
+    </div>
+        <div class="bloco-conteudo">
+        <div class="container-lista-conteudo">
+        <!-- Primeiro feedback-->
+        <div class="painel-item">
+        <div class="info-item">
+            <span class="titulo-item">Ana Silva</span>
+            <span class="subtitulo-item">Último feedback: 2 dias atrás</span>
+        </div>
+        <div class="container-feedback-aluna">
+            <button class="botao-acao-aluna">
+            <span>enviar feedback</span>
+            </button>
+        </div>
+    </div>
+</div> 
+</div>   
+        <div class="bloco-conteudo">
+        <div class="container-lista-conteudo">
+        <!-- Segundo feedback-->
+        <div class="painel-item">
+        <div class="info-item">
+            <span class="titulo-item">Bianca Rodrigues</span>
+            <span class="subtitulo-item">Último feedback: 5 dias atrás</span>
+        </div>
+        <div class="container-feedback-aluna">
+            <button class="botao-acao-aluna">
+            <span>enviar feedback</span>
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+     <div class="bloco-conteudo">
+        <div class="container-lista-conteudo">
+        <!--Terceiro feedback-->
+        <div class="painel-item">
+        <div class="info-item">
+            <span class="titulo-item">Carolina Mendes</span>
+            <span class="subtitulo-item">Último feedback: 1 dia atrás</span>
+        </div>
+        <div class="container-feedback-aluna">
+            <button class="botao-acao-aluna">
+            <span>enviar feedback</span>
+            </button>
+        </div>
+    </div>
+</div>  
+</div>
+</div>
+    </div> <!-- fecha .container-feedback -->     
+
+ <div id="container-relatorios" class="container-conteudo oculto">
+     <div class="container-painel">
+     <div class="cabecalho-painel cabecalho-container">
+            <h2 class="titulo-painel titulo-container">Relatórios de progresso</h2>
+            <p class="subtitulo-painel">Envie feedback personalizado ou para toda a comunidade</p>
+     </div>
+        <!-- Primeiro bloco de relatório -->
+    <div class="box-relatorios">
+  <div class="coluna-relatorio">
+    <div class="container-lista-conteudo relatorio-largura-personalizada">
+      <div class="info-item">
+        <div class="texto-relatorio">
+          <span class="titulo-item">Progresso geral das alunas</span>
+          <span class="subtitulo-item">Visualize o progresso de todas as alunas nas trilhas</span>
+        </div>
+        <button class="botao-acao-aluna botao-relatorio">
+          <span>ver relatorio</span>
+        </button>
+      </div>
+    </div>
+     <!-- Terceiro bloco de relatório (embaixo do primeiro) -->
+    <div class="container-lista-conteudo relatorio-largura-personalizada">
+      <div class="info-item">
+        <div class="texto-relatorio">
+          <span class="titulo-item">Engajamento nas aulas</span>
+          <span class="subtitulo-item">Estatísticas de participação nas aulas ao vivo</span>
+        </div>
+        <button class="botao-acao-aluna botao-relatorio">
+          <span>ver relatorio</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="coluna-relatorio">
+    <!-- Segundo bloco de relatório -->
+    <div class="container-lista-conteudo relatorio-largura-personalizada">
+      <div class="info-item">
+        <div class="texto-relatorio">
+          <span class="titulo-item">Performance por trilha</span>
+          <span class="subtitulo-item">Analise o desempenho das alunas em cada trilha</span>
+        </div>
+        <button class="botao-acao-aluna botao-relatorio">
+          <span>ver relatorio</span>
+        </button>
+      </div>
+    </div>
+      <!-- Quarto bloco de relatório (embaixo do segundo) -->
+    <div class="container-lista-conteudo relatorio-largura-personalizada">
+      <div class="info-item">
+        <div class="texto-relatorio">
+          <span class="titulo-item">Entregas de atividades</span>
+          <span class="subtitulo-item">Relatório de entregas, atrasos e não-entregas</span>
+        </div>
+        <button class="botao-acao-aluna botao-relatorio">
+          <span>ver relatorio</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</main>
+<script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
