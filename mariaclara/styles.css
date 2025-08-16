@@ -13,12 +13,8 @@ body {
 
 /* HEADER */
 header {
-  background-color: #fffafc;
   border-bottom: 1px solid #ffe1e7;
-  padding: 16px 118px; 
-  display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 /* CONTAINER CENTRAL DO HEADER */
@@ -27,7 +23,6 @@ header {
   width: 100%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
   min-width: 0;
@@ -36,9 +31,10 @@ header {
 
 /* LOGO À ESQUERDA */
 .logo {
-  width: 110px;
+  width: 111px;
   height: auto;
   flex-shrink: 0;
+  margin-right: auto;
 }
 
 /* AVATAR + NOME À DIREITA */
@@ -185,6 +181,15 @@ header {
   box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.1);
 }
 
+#icone-menu{
+  width: 21px;
+  height: 19px;
+  margin-right: 20px;
+  margin-bottom: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .icone-card {
   width: 30px;
   height: 26px;
@@ -194,7 +199,7 @@ header {
   vertical-align: middle;
 }
 #icone-trilhas{
-  width: 23px;
+  width: 19px;
   height: 24px;
   margin-right: 8px;
   margin-bottom: 0;
@@ -203,13 +208,50 @@ header {
 }
 
 #icone-atv{
-  width: 26px;
+  width: 22px;
   height: 23px;
   margin-right: 8px;
   margin-bottom: 0;
   display: inline-block;
   vertical-align: middle;
 }
+
+#icone-progresso{
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  margin-bottom: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#icone-repositorio{
+  width: 30px;
+  height: 29.26px;
+  margin-right: 8px;
+  margin-bottom: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#icone-inicio{
+  width: 23px;
+  height: 25px;
+  margin-right: 8px;
+  margin-bottom: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#icone-agenda{
+  width: 22px;
+  height: 24px;
+  margin-right: 8px;
+  margin-bottom: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .card h2 {
   font-size: 24px;
   font-weight: 500;
@@ -566,15 +608,6 @@ button:hover {
 
 @media (max-width: 768px) {
   header,
-  .breadcrumb {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  .logo {
-    width: 80px;
-  }
-
   .avatar {
     width: 32px;
     height: 32px;
@@ -919,10 +952,7 @@ button:hover {
 
 
 @media (max-width: 600px) {
-  header {
-    padding: 16px 24px; 
-  }
-
+  header, 
   .logo {
     width: 80px;
   }
@@ -939,11 +969,6 @@ button:hover {
 
 @media (max-width: 480px) {
   header,
-  .breadcrumb {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
   .logo {
     width: 60px;
   }
@@ -1038,8 +1063,9 @@ button:hover {
   position: fixed;
   top: 0;
   left: 0;
-  width: 220px;
-  height: 100%;
+  width: auto;
+  margin-top: auto;
+  height: 100vh;
   background-color: #fff;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
   padding: 2rem 1rem;
@@ -1070,4 +1096,130 @@ button:hover {
 
 .menu-lateral.oculto {
   transform: translateX(-100%);
+}
+
+/*MENU FIXO*/
+header {
+  position: relative; /* volta pro fluxo normal */
+  width: 100%;
+  height: 70px;
+  background: #FFFAFC;
+  display: flex;
+  align-items: center;
+  padding: 0 118px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.breadcrumb {
+  position: relative; /* também no fluxo normal */
+  width: 100%;
+  height: 50px;
+  padding: 10px 118px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.breadcrumb a {
+  background: #fff2f6;
+  padding: 6px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #3C254D;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  background: #e25f8b;
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  margin-top: 40px; 
+}
+
+/* Ajuste menu*/
+.breadcrumb a {
+  font-size: 16px; /* padrão */
+}
+
+/* Telas médias */
+@media (max-width: 1200px) {
+  .breadcrumb a {
+    font-size: 14px;
+  }
+}
+
+/* Telas pequenas */
+@media (max-width: 992px) {
+  .breadcrumb a {
+    font-size: 13px;
+    padding: 5px 12px;
+  }
+}
+
+/* Telas muito pequenas */
+@media (max-width: 768px) {
+  .breadcrumb a {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+}
+
+/* Telas mínimas */
+@media (max-width: 480px) {
+  .breadcrumb a {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; 
+}
+
+.breadcrumb a {
+  font-size: 16px;
+  padding: 6px 16px;
+  white-space: nowrap;
+}
+
+/* Telas médias */
+@media (max-width: 1024px) {
+  .breadcrumb {
+    gap: 14px;
+  }
+  .breadcrumb a {
+    font-size: 14px;
+    padding: 5px 12px;
+  }
+}
+
+/* Telas pequenas */
+@media (max-width: 768px) {
+  .breadcrumb {
+    gap: 12px;
+  }
+  .breadcrumb a {
+    font-size: 13px;
+    padding: 4px 10px;
+  }
+}
+
+/* Telas muito pequenas */
+@media (max-width: 480px) {
+  .breadcrumb {
+    gap: 8px;
+  }
+  .breadcrumb a {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
 }
