@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'MontserratBoldItalic';
+    src: url('fonts/static/Montserrat-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'MontserratBoldItalic';
+background-color: #ffffff;
+display: flex;
+height: 100vh;
+}
+
+.inicio {
+background-color: #f2d6fb;
+flex: 1;
+padding: 60px 40px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border-top-left-radius: 15px;
+border-bottom-left-radius: 15px;
+text-align: center;
+}
+
+.inicio h1 {
+font-size: 28px;
+color: #2e1432;
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 10px;
+}
+
+.icone {
+height: 32px;
+}
+
+.inicio p {
+font-size: 16px;
+color: #2e1432;
+margin-top: 10px;
+white-space: pre-line;
+}
+
+.login {
+flex: 1;
+background-color: #fff0f7;
+padding: 60px 40px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+border-top-right-radius: 15px;
+border-bottom-right-radius: 15px;
+}
+
+.login h2 {
+font-size: 24px;
+color: #2e1432;
+margin-bottom: 20px;
+}
+
+label {
+margin-top: 15px;
+color: #2e1432;
+font-weight: bold;
+}
+
+input {
+padding: 10px;
+border: none;
+border-radius: 10px;
+background-color: #ffe3f0;
+margin-top: 5px;
+width: 100%;
+}
+
+
+.senha {
+position: relative;
+}
+
+.esqueceu {
+text-align: right;
+margin-top: 5px;
+font-size: 12px;
+}
+
+.esqueceu a {
+color: #e55cae;
+text-decoration: none;
+}
+a.esqueceu-senha {
+color: #d63384; 
+text-decoration: none; 
+font-weight: 500;
+}
+a.cadastre-se{
+color: #d63384; 
+text-decoration: none; 
+font-weight: 500;
+}
+
+button {
+margin-top: 25px;
+padding: 12px;
+background-color: #e55cae;
+color: white;
+border: none;
+border-radius: 10px;
+font-size: 16px;
+cursor: pointer;
+}
+
+.cadastro {
+margin-top: 20px;
+font-size: 14px;
+}
+
+.cadastro a {
+color: #e55cae;
+text-decoration: none;
+}
