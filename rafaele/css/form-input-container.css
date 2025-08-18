@@ -1,0 +1,9 @@
+.form-input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #3C254D;
+}

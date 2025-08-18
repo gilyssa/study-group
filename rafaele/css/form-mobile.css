@@ -1,0 +1,53 @@
+.form-mobile{
+    min-height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+.form-cadastro-esquerda {
+    background-color:  #F4D7F5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;    
+    order: 1;
+}
+
+.form-cadastro-esquerda .material-symbols-outlined {
+    align-self: flex-start
+}
+
+.form-cadastro-direita {
+    background-color: #FFF0F5;
+    padding: 20px;
+    order: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+}
+
+.form-cadastro-direita .form-text {
+    font-size: 12px;
+}
+
+.form-cadastro-esquerda .form-text {
+    font-size: 12px;
+    color: #3C254D;
+}
+
+@media (max-width: 1370px) {
+    .form-cadastro-esquerda{
+        display: none;
+    }
+
+    .form-mobile{
+        width: 100%;
+    }
+}

@@ -1,0 +1,17 @@
+.cadastro-container {
+    width: 1270px;
+    height: 810px;
+    border-radius: 12px;
+    box-shadow: 0 20px 31.1px #D8458B40;
+    overflow: hidden;
+    margin: 0 auto; /* Centraliza o container na tela */
+    display: flex; /* Mantém os formulários lado a lado */
+}
+
+@media (max-width: 1370px) {
+    .cadastro-container{
+        width: 100vw;
+        height: 100vh;
+        box-shadow: none;
+    }
+}
