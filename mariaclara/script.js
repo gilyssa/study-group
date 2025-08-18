@@ -128,15 +128,15 @@ function animarNumerosSuavemente() {
   setInterval(proximaDica, 5000);
 });
 
-const logo = document.querySelector(".logo");
+const menu = document.querySelector(".menu-icon");
 const menuLateral = document.getElementById("menu-lateral");
 
-logo.addEventListener("click", () => {
+menu.addEventListener("click", () => {
   menuLateral.classList.toggle("ativo");
   menuLateral.classList.toggle("oculto");
 });
 document.addEventListener("click", (e) => {
-  const clicouFora = !menuLateral.contains(e.target) && !logo.contains(e.target);
+  const clicouFora = !menuLateral.contains(e.target) && !menu.contains(e.target);
 
   if (clicouFora && menuLateral.classList.contains("ativo")) {
     menuLateral.classList.remove("ativo");

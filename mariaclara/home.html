@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CODE QUEENS - HOME</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="imagens/logo_queens.png" alt="Logo Code Queens" class="logo"/>
+      <div class="user-info">
+        <div class="avatar">
+          <img src="imagens/avatar.jpg" class="avatar"/>
+        </div>
+        <span>Lyssa Lima</span>
+      </div>
+    </div>
+  </header>
+
+<div class="breadcrumb-div">
+<nav class="breadcrumb">
+  <a href="home.html" class="breadcrumb-step">Início</a>
+  <a href="trilhas.html" class="breadcrumb-step">Trilhas de estudo</a>
+  <a href="atividades.html" class="breadcrumb-step">Submeter atividades</a>
+  <a href="agenda.html" class="breadcrumb-step">Agenda</a>
+</nav>
+</div>
+
+  <main class="dashboard">
+    <!-- Coluna da Esquerda -->
+    <div class="coluna-esquerda">
+      <section class="boas-vindas">
+        <h1>Olá, Lyssa!</h1>
+        <p class="subtitulo">Bem vinda ao espaço oficial da Code Queens</p>
+        <p class="descricao">Uma comunidade para educar e conectar mulheres na tecnologia.</p>
+        <div class="resumos">
+          <div class="resumo"><strong>571</strong><span>membros</span></div>
+          <div class="resumo"><strong>40</strong><span>aulas</span></div>
+          <div class="resumo"><strong>16</strong><span>projetos</span></div>
+          <div class="resumo"><strong>39</strong><span>encontros</span></div>
+        </div>
+      </section>
+      <section class="grid-cards-custom">
+        <div class="coluna-cards">
+          <div class="card">
+            <h2><img src="imagens/livro_trilhas.png" alt="Trilhas de estudo" id="icone-trilhas"> Trilhas de estudo</h2>
+            <p>Explore nossas trilhas e veja o melhor conteúdo para o seu nível!</p>
+            <div class="tags">
+              <span class="tag">Frontend</span>
+              <span class="tag">Backend</span>
+              <span class="tag">Dados</span>
+            </div>
+            <a href="trilhas.html" class="botao-link">ver trilhas →</a>
+          </div>
+          <div class="card">
+            <h2><img src="imagens/folha_atividade.png" alt="Submeter atividades" id="icone-atv"> Submeter atividades</h2>
+            <p>Entregue seus projetos e receba feedback personalizado das instrutoras</p>
+            <div class="card-atividade">
+              <div class="bolha">
+                <div class="linha-topo">
+                  <ul class="info-atividade">
+                    <li class="titulo-atividade">Landing page responsiva</li>
+                    <li class="descricao">Trilha frontend - módulo 1</li>
+                  </ul>
+                  <span class="tag small">pendente</span>
+                </div>
+              </div>
+            </div>
+            <a href="atividades.html" class="botao-link">ver atividades →</a>
+          </div>
+        </div>
+        <div class="coluna-cards">
+          <div class="card">
+            <h2><img src="imagens/github_logo.png" alt="Repositórios do Git" id="icone-repositorio"> Repositórios do Git</h2>
+            <p>Acesse as tarefas e projetos nos repositórios da comunidade</p>
+            <ul class="lista-repositorios">
+              <li><span class="bolinha lilas"></span>code-queen/frontend-exemplos</li>
+              <li><span class="bolinha roxa"></span>code-queen/projetos-react</li>
+            </ul>
+            <a href="repositorios.html" class="botao-link">ver repositórios →</a>
+          </div>
+          <div class="card progresso">
+            <h2><img src="imagens/progresso_academico.png" alt="Seu progresso" id="icone-progresso"> Seu progresso</h2>
+            <div class="progresso-item">
+              <div class="progresso-label">
+                <span>Trilha frontend</span>
+                <span class="porcentagem">60%</span>
+              </div>
+              <div class="barra"><div style="width: 60%"></div></div>
+            </div>
+            <div class="progresso-item">
+              <div class="progresso-label">
+                <span>Trilha backend</span>
+                <span class="porcentagem">20%</span>
+              </div>
+              <div class="barra"><div style="width: 20%"></div></div>
+            </div>
+            <a href="trilhas.html" class="botao-link botao-direita">continuar estudando →</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  <!-- Coluna da Direita -->
+  <aside class="sidebar-coluna">
+    <section class="calendario sidebar">
+        <div class="cabecalho-calendario">
+          <button id="btn-voltar">
+            <img src="imagens/seta-back.png" alt="Voltar" class="calendar-arrow-back">
+          </button>
+            <div class="mes-ano">
+              <a href="agenda.html" class="mes-link">
+                <span id="mes-atual">Julho</span>
+                <span id="ano">2025</span>
+              </a>
+            </div>
+          <button id="btn-avancar">
+            <img src="imagens/seta.png" alt="Avançar mês" class="calendar-arrow">
+          </button>
+        </div>
+      <div class="semana">
+        <span>dom</span><span>seg</span><span>ter</span><span>qua</span>
+        <span>qui</span><span>sex</span><span>sab</span>
+      </div>
+      <div class="dias-calendario"></div>
+    </section>
+
+    <div class="card cronograma sidebar">
+      <h2>Cronograma</h2>
+      <div class="cronograma-item">
+        <div class="icon pink"><img src="imagens/icon-aula.png" alt="Aula ao vivo" /></div>
+        <div class="info">
+          <strong>Aula ao vivo</strong>
+          <span>HTML básico</span>
+        </div>
+        <div class="hora">19h</div>
+      </div>
+      <div class="cronograma-item">
+        <div class="icon purple"><img src="imagens/icon-duvidas.png" alt="Plantão de dúvidas" /></div>
+        <div class="info">
+          <strong>Plantão de dúvidas</strong>
+          <span>Frontend</span>
+        </div>
+        <div class="hora">9h</div>
+      </div>
+      <div class="cronograma-item">
+        <div class="icon blue"><img src="imagens/icon-desafio.png" alt="Desafio semanal" /></div>
+        <div class="info">
+          <strong>Desafio semanal</strong>
+          <span>Frontend</span>
+        </div>
+        <div class="hora">18h</div>
+      </div>
+    </div>
+
+    <div class="card dicas sidebar">
+      <h2>Dicas rápidas</h2>
+      <div class="carrossel-dicas">
+        <div class="dica ativa">
+          <p class="titulo">Hidrate-se</p>
+          <p>Manter-se hidratada ajuda a melhorar o foco e o desempenho mental.</p>
+        </div>
+        <div class="dica">
+          <p class="titulo">Durma bem</p>
+          <p>Uma boa noite de sono é essencial para consolidar o aprendizado.</p>
+        </div>
+        <div class="dica">
+          <p class="titulo">Faça pausas</p>
+          <p>Intervalos curtos ajudam a manter a produtividade por mais tempo.</p>
+        </div>
+      </div>
+      <div class="bolinhas">
+        <span class="bolinha ativa" onclick="mostrarDica(0)"></span>
+        <span class="bolinha" onclick="mostrarDica(1)"></span>
+        <span class="bolinha" onclick="mostrarDica(2)"></span>
+      </div>
+    </div>
+  </aside>
+</main>
+  <script src="script.js"></script>
+</body>
+</html>
