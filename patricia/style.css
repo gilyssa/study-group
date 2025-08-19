@@ -74,8 +74,18 @@ li {
 }
 
 a {
-    margin-right: 30px;
+    margin-right: 20px;
     text-decoration: none;
+    border-radius: 50px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+a:hover {  
+    background-color: #e7557c;
+    color: white;
+    transform: scale(1.03);
+    transform-origin: center;
 }
 
 
@@ -306,6 +316,7 @@ h2 {
         width: 200px;
         box-shadow: 6px 6px 10px #FF98AD40;
     }
+
     .opcoes ul.active {
         display: flex;
         align-items: flex-start;
@@ -320,7 +331,7 @@ h2 {
     .opcoes li {
         font-size: 18px;
     }
-    
+
     .hamburguer {
         display: block;
     }
