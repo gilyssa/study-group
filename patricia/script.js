@@ -5,18 +5,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-    const selecaoButtons = document.querySelectorAll('.front , .back , .dados , .ui-ux')
-
+    const selecaoButtons = document.querySelectorAll('.front , .back , .dados , .uiux')
+    const selecaoDivs = document.querySelectorAll('.div-front, .div-back, .div-dados, .div-uiux')
 
     selecaoButtons.forEach(function (botao) {
 
         botao.addEventListener('click', function () {
 
-            selecaoButtons.forEach(function (btn) {
-                btn.classList.remove('ativo')
-            })
+            selecaoButtons.forEach(btn => btn.classList.remove('ativo'))            
             this.classList.add('ativo')
 
+            selecaoDivs.forEach(div => div.style.display = 'none')
+
+            const classeBotao = Array.from(this.classList).find(classe =>
+            ['front', 'back', 'dados', 'uiux'].includes(classe)
+            )
+
+            const divCorrespondente = document.querySelector(`.div-${classeBotao}`)
+            if (divCorrespondente){
+                divCorrespondente.style.display = 'grid'
+            }
         })
     })
 
