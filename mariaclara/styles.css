@@ -21,12 +21,14 @@ header {
 .header-container {
   max-width: 1684px; 
   width: 100%;
+  gap: 20px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
   min-width: 0;
   padding: 0 0; 
+  justify-content: space-between;
 }
 
 /* LOGO À ESQUERDA */
@@ -380,7 +382,7 @@ button:hover {
 }
 
 .calendario {
-  min-width: 388px;
+  min-width: 38px;
   min-height: 238px;
   background-color: #FFFAFC;
   border-radius: 20px;
@@ -984,6 +986,7 @@ button:hover {
 
   .dashboard {
     padding: 16px;
+    padding-top: 10px;
   }
 
   .resumo strong {
@@ -993,10 +996,10 @@ button:hover {
   .tag {
     font-size: 10px;
     padding: 3px 6px;
+    align-content: space-around;
   }
 
   .resumos {
-    flex-direction: column;
     gap: 12px;
   }
 
@@ -1006,7 +1009,7 @@ button:hover {
   }
 
   .cronograma-item {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     gap: 8px;
   }
@@ -1108,6 +1111,9 @@ header {
   align-items: center;
   padding: 0 118px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  justify-content: space-between;
+  align-content: center;
+  margin: auto;
 }
 
 .breadcrumb {
@@ -1181,8 +1187,7 @@ main {
 
 .breadcrumb {
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px; 
+  gap: 16px;
 }
 
 .breadcrumb a {
@@ -1206,6 +1211,8 @@ main {
 @media (max-width: 768px) {
   .breadcrumb {
     gap: 12px;
+    flex-wrap: nowrap;
+    justify-content: center;
   }
   .breadcrumb a {
     font-size: 13px;
@@ -1216,7 +1223,9 @@ main {
 /* Telas muito pequenas */
 @media (max-width: 480px) {
   .breadcrumb {
-    gap: 8px;
+    gap: 5px;
+    flex-wrap: nowrap;
+    justify-content: center;
   }
   .breadcrumb a {
     font-size: 12px;
