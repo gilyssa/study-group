@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CODE QUEENS - AGENDA</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <img
+          src="imagens/logo_queens.png"
+          alt="Logo Code Queens"
+          class="logo"
+        />
+        <div class="user-info">
+          <div class="avatar">
+            <img
+              src="imagens/avatar.jpg"
+              alt="Avatar do usuário"
+              class="avatar"
+            />
+          </div>
+          <span>Lyssa Lima</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-div">
+      <nav class="breadcrumb">
+        <a href="home.html" class="breadcrumb-step">Início</a>
+        <span class="breadcrumb-separator">></span>
+        <a href="trilhas.html" class="breadcrumb-step">Trilhas de estudo</a>
+        <span class="breadcrumb-separator">></span>
+        <a href="atividades.html" class="breadcrumb-step"
+          >Submeter atividades</a
+        >
+        <span class="breadcrumb-separator">></span>
+        <a href="agenda.html" class="breadcrumb-step">Agenda</a>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="agenda-container">
+      <!-- Page Header -->
+      <section class="agenda-header">
+        <h1>Agenda</h1>
+        <p>Visualize os próximos eventos da comunidade</p>
+      </section>
+
+      <!-- Agenda Layout -->
+      <div class="agenda-layout">
+        <!-- Calendar Section -->
+        <section class="calendario-principal">
+          <div class="calendario-header">
+            <div class="navegacao-mes">
+              <button id="btn-voltar-mes" class="btn-navegacao">
+                <img
+                  src="imagens/seta-back.png"
+                  alt="Mês anterior"
+                  class="seta-navegacao"
+                />
+              </button>
+              <div class="mes-ano-display">
+                <span id="mes-atual">Maio de 2025</span>
+              </div>
+              <button id="btn-avancar-mes" class="btn-navegacao">
+                <img
+                  src="imagens/seta.png"
+                  alt="Próximo mês"
+                  class="seta-navegacao"
+                />
+              </button>
+            </div>
+          </div>
+
+          <div class="calendario-grid">
+            <!-- Days of Week Header -->
+            <div class="dias-semana">
+              <span>DOM</span>
+              <span>SEG</span>
+              <span>TER</span>
+              <span>QUA</span>
+              <span>QUI</span>
+              <span>SEX</span>
+              <span>SÁB</span>
+            </div>
+
+            <!-- Calendar Days Grid -->
+            <div class="dias-mes" id="dias-mes">
+              <!-- Days will be generated dynamically by JavaScript -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Events Sidebar -->
+        <aside class="proximos-eventos">
+          <h2>Próximos eventos</h2>
+
+          <!-- Event Items -->
+          <div class="evento-item">
+            <div class="evento-badge aula">Aula</div>
+            <div class="evento-details">
+              <div class="evento-data">20/05/2025 às 19:00</div>
+              <div class="evento-titulo">Aula ao vivo - HTML e CSS</div>
+            </div>
+          </div>
+
+          <div class="evento-item">
+            <div class="evento-badge plantao">Plantão</div>
+            <div class="evento-details">
+              <div class="evento-data">22/05/2025 às 19:00</div>
+              <div class="evento-titulo">Plantão de dúvidas - React</div>
+            </div>
+          </div>
+
+          <div class="evento-item">
+            <div class="evento-badge aula">Aula</div>
+            <div class="evento-details">
+              <div class="evento-data">25/05/2025 às 19:00</div>
+              <div class="evento-titulo">Aula ao vivo - React Hooks</div>
+            </div>
+          </div>
+
+          <div class="evento-item">
+            <div class="evento-badge desafio">Desafio</div>
+            <div class="evento-details">
+              <div class="evento-data">28/05/2025 às 10:00</div>
+              <div class="evento-titulo">Resolução do desafio semanal</div>
+            </div>
+          </div>
+
+          <div class="evento-item">
+            <div class="evento-badge evento">Evento</div>
+            <div class="evento-details">
+              <div class="evento-data">29/05/2025 às 18:30</div>
+              <div class="evento-titulo">Meetup - Mulheres na tecnologia</div>
+            </div>
+          </div>
+
+          <!-- Event Legend -->
+          <div class="legenda-eventos">
+            <div class="legenda-item">
+              <span class="legenda-cor aula"></span>
+              <span>Aula</span>
+            </div>
+            <div class="legenda-item">
+              <span class="legenda-cor plantao"></span>
+              <span>Plantão</span>
+            </div>
+            <div class="legenda-item">
+              <span class="legenda-cor desafio"></span>
+              <span>Desafio</span>
+            </div>
+            <div class="legenda-item">
+              <span class="legenda-cor evento"></span>
+              <span>Evento</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

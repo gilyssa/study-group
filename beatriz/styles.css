@@ -1,0 +1,679 @@
+/* ========================================
+   RESET & BASE STYLES
+   ======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #fff2f6;
+  color: #3c254d;
+  min-height: 100vh;
+}
+
+/* ========================================
+   CSS VARIABLES
+   ======================================== */
+:root {
+  /* Colors */
+  --primary-color: #3c254d;
+  --secondary-color: #e25f8b;
+  --background-color: #fff2f6;
+  --card-background: #fffafc;
+  --border-color: #ffe1e7;
+
+  /* Event Colors */
+  --event-aula: #ff8ca3;
+  --event-plantao: #c084fc;
+  --event-desafio: #60a5fa;
+  --event-evento: #374151;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Border Radius */
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 20px;
+
+  /* Shadows */
+  --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================================
+   HEADER STYLES
+   ======================================== */
+header {
+  border-bottom: 1px solid var(--border-color);
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 70px;
+  background: var(--card-background);
+  display: flex;
+  align-items: center;
+  padding: 0 118px;
+  box-shadow: var(--shadow-light);
+}
+
+.header-container {
+  max-width: 1684px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  min-width: 0;
+  padding: 0;
+}
+
+.logo {
+  width: 111px;
+  height: auto;
+  flex-shrink: 0;
+  margin-right: auto;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f4d7f5;
+  flex-shrink: 0;
+}
+
+/* ========================================
+   BREADCRUMB STYLES
+   ======================================== */
+.breadcrumb {
+  padding: var(--spacing-xl) 118px 0 118px;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 16px;
+  color: var(--primary-color);
+  font-weight: 500;
+  max-width: 1920px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.breadcrumb a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 400;
+}
+
+.breadcrumb a:hover {
+  color: var(--secondary-color);
+}
+
+.breadcrumb a:last-child {
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.breadcrumb-separator {
+  color: #999;
+  margin: 0 var(--spacing-xs);
+}
+
+/* ========================================
+   MAIN LAYOUT
+   ======================================== */
+.agenda-container {
+  max-width: 1684px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) 118px;
+}
+
+.agenda-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.agenda-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.agenda-header p {
+  font-size: 16px;
+  color: #666;
+  font-weight: 400;
+}
+
+.agenda-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: var(--spacing-xl);
+  align-items: start;
+}
+
+/* ========================================
+   CALENDAR STYLES
+   ======================================== */
+.calendario-principal {
+  background: var(--card-background);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-medium);
+  border: 1px solid var(--border-color);
+}
+
+.calendario-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.navegacao-mes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+}
+
+.btn-navegacao {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.btn-navegacao:hover {
+  transform: scale(1.1);
+}
+
+.seta-navegacao {
+  width: 12px;
+  height: 12px;
+  filter: brightness(0) saturate(100%) invert(24%) sepia(13%) saturate(1940%)
+    hue-rotate(264deg) brightness(91%) contrast(89%);
+}
+
+.mes-ano-display {
+  min-width: 200px;
+  text-align: center;
+}
+
+#mes-atual {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Calendar Grid */
+.calendario-grid {
+  width: 100%;
+}
+
+.dias-semana {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.dias-semana span {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  padding: var(--spacing-sm) 0;
+}
+
+.dias-mes {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--spacing-sm);
+}
+
+/* Calendar Days */
+.dia-calendario {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  min-height: 60px;
+  padding: var(--spacing-xs);
+  background-color: #fff;
+}
+
+.dia-calendario:hover {
+  background-color: var(--border-color);
+}
+
+.dia-calendario.outro-mes {
+  color: #ccc;
+  border-color: #f8f8f8;
+  background-color: #fafafa;
+}
+
+.dia-calendario.outro-mes:hover {
+  background-color: #f5f5f5;
+  border-color: #e5e5e5;
+  transform: none;
+  box-shadow: none;
+}
+
+.dia-calendario.hoje {
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: 600;
+}
+
+.dia-calendario.hoje .numero-dia {
+  color: white;
+}
+
+.dia-calendario.selecionado {
+  background-color: #f4d7f5;
+  color: var(--primary-color);
+}
+
+.dia-calendario.selecionado .numero-dia {
+  color: var(--primary-color);
+}
+
+.dia-calendario.outro-mes .numero-dia {
+  color: #ccc;
+}
+
+.dia-calendario.outro-mes .evento-chip {
+  opacity: 0.5;
+}
+
+/* Day Number */
+.numero-dia {
+  padding: 0.2rem;
+  font-weight: 500;
+  font-size: 14px;
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  z-index: 2;
+}
+
+/* Event Chips */
+.eventos-container {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-start;
+  max-width: calc(100% - 30px);
+  padding: 0.2rem;
+}
+
+.evento-chip {
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  height: 20px;
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  width: fit-content;
+  min-width: 25px;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.1;
+  box-shadow: var(--shadow-light);
+}
+
+.evento-chip.aula {
+  background-color: var(--event-aula);
+}
+
+.evento-chip.plantao {
+  background-color: var(--event-plantao);
+}
+
+.evento-chip.duvidas {
+  background-color: var(--event-plantao);
+}
+
+.evento-chip.desafio {
+  background-color: var(--event-desafio);
+}
+
+.evento-chip.evento {
+  background-color: var(--event-evento);
+}
+
+.evento-chip.workshop {
+  background-color: var(--event-evento);
+}
+
+/* ========================================
+   EVENTS SIDEBAR
+   ======================================== */
+.proximos-eventos {
+  background: var(--card-background);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-medium);
+  border: 1px solid var(--border-color);
+  height: fit-content;
+}
+
+.proximos-eventos h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+/* Event Items */
+.evento-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  background: linear-gradient(180deg, #fff8fa 0%, #fae8f8 95.67%, #f4d7f5 100%);
+  border: 1px solid #f4d7f5;
+  border-radius: var(--border-radius-md);
+  transition: transform 0.2s ease;
+}
+
+.evento-item:hover {
+  transform: translateY(-2px);
+}
+
+.evento-badge {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: 50px;
+}
+
+.evento-badge.aula {
+  background-color: var(--event-aula);
+}
+
+.evento-badge.plantao {
+  background-color: var(--event-plantao);
+}
+
+.evento-badge.desafio {
+  background-color: var(--event-desafio);
+}
+
+.evento-badge.evento {
+  background-color: var(--event-evento);
+}
+
+.evento-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.evento-data {
+  font-size: 12px;
+  color: #666;
+  font-weight: 400;
+}
+
+.evento-titulo {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-color);
+  line-height: 1.3;
+}
+
+/* Event Legend */
+.legenda-eventos {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border-color);
+}
+
+.legenda-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+  font-size: 12px;
+  color: #666;
+}
+
+.legenda-cor {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legenda-cor.aula {
+  background-color: var(--event-aula);
+}
+
+.legenda-cor.plantao {
+  background-color: var(--event-plantao);
+}
+
+.legenda-cor.desafio {
+  background-color: var(--event-desafio);
+}
+
+.legenda-cor.evento {
+  background-color: var(--event-evento);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Large Tablets */
+@media (max-width: 1200px) {
+  .agenda-layout {
+    grid-template-columns: 1fr 300px;
+    gap: var(--spacing-lg);
+  }
+
+  .agenda-container {
+    padding: var(--spacing-lg) 48px;
+  }
+
+  .breadcrumb {
+    padding: var(--spacing-lg) 48px 0 48px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .agenda-layout {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .proximos-eventos {
+    order: -1;
+  }
+
+  .agenda-container {
+    padding: var(--spacing-lg) 32px;
+  }
+
+  header {
+    padding: 0 48px;
+  }
+
+  .breadcrumb {
+    padding: var(--spacing-lg) 32px 0 32px;
+    font-size: 14px;
+  }
+}
+
+/* Small Tablets */
+@media (max-width: 768px) {
+  .calendario-principal {
+    padding: 20px;
+  }
+
+  .dias-calendario {
+    gap: var(--spacing-xs);
+  }
+
+  .dia-calendario {
+    min-height: 40px;
+    font-size: 14px;
+  }
+
+  .agenda-header h1 {
+    font-size: 28px;
+  }
+
+  .mes-ano-display {
+    min-width: 150px;
+  }
+
+  #mes-atual {
+    font-size: 20px;
+  }
+
+  .agenda-container {
+    padding: var(--spacing-md) 24px;
+  }
+
+  header {
+    padding: 0 24px;
+  }
+
+  .breadcrumb {
+    padding: var(--spacing-lg) 24px 0 24px;
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  .logo {
+    width: 90px;
+  }
+
+  .user-info span {
+    font-size: 14px;
+  }
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Mobile - Event chips as dots */
+@media (max-width: 700px) {
+  .evento-chip {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    padding: 0;
+    min-width: 8px;
+    font-size: 0;
+    text-indent: -9999px;
+  }
+
+  .eventos-container {
+    bottom: 4px;
+    left: 4px;
+    flex-direction: row;
+    gap: 2px;
+    max-width: calc(100% - 20px);
+  }
+
+  .numero-dia {
+    font-size: 11px;
+    top: 2px;
+    right: 3px;
+  }
+
+  .dia-calendario {
+    min-height: 50px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .calendario-principal {
+    padding: var(--spacing-md);
+  }
+
+  .navegacao-mes {
+    gap: var(--spacing-md);
+  }
+
+  .dia-calendario {
+    min-height: 36px;
+    font-size: 12px;
+  }
+
+  .dias-semana span {
+    font-size: 12px;
+    padding: var(--spacing-xs) 0;
+  }
+
+  .evento-item {
+    padding: var(--spacing-sm);
+  }
+
+  .evento-info h3 {
+    font-size: 13px;
+  }
+
+  .evento-info p {
+    font-size: 11px;
+  }
+
+  .agenda-header h1 {
+    font-size: 24px;
+  }
+
+  .proximos-eventos h2 {
+    font-size: 18px;
+  }
+}
