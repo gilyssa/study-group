@@ -49,8 +49,8 @@ body {
 .icone-avatar {
     fill: #F4D7F5;
     width: 40px;
-    aspect-ratio: 1/1;
-    flex-shrink: 0;
+    height: 40px;
+    border-radius: 50%;
 }
 
 .nome-user {
@@ -87,15 +87,6 @@ body {
     text-decoration-thickness: auto;
     text-underline-offset: auto;
     text-underline-position: from-font;
-}
-
-.separador-breadcrumb {
-    stroke: #3C254D;
-    stroke-width: 1px;
-    width:8px;
-    height: 16px;
-    flex-shrink: 0;
-    vertical-align: middle;
 }
 
 .titulos-principais {
@@ -140,6 +131,7 @@ body {
     margin: 12px;
     padding-inline: 12px;
     flex-shrink: 0;
+    cursor: pointer;
 }
 
 .nome-botao {
@@ -262,7 +254,6 @@ body {
     fill: #FFFAFC;
     width: 17px;
     height: 17px;
-    flex-shrink: 0;
 }
 
 .descricao-botao-download {
@@ -290,12 +281,23 @@ body {
     align-items: center;
 }
 
+btn-abrir-modulo {
+    appearance: none;
+    border: none;
+    background: transparent;
+    display: inline-block;
+    line-height: 0;
+    padding: 8px;
+    cursor: pointer;
+}
+
 .icone-abrir-modulo {
     stroke: #C89FF2;
-    stroke-width: 1px;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
     width: 12px;
-    aspect-ratio: 1/2;
-    flex-shrink: 0;
+    height: auto;
     transition: transform 0.3s ease-in-out;
 }
 
