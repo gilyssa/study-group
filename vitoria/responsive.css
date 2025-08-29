@@ -1,0 +1,292 @@
+/*Estilos para dispositivos com largura de tela de até 1024px*/
+ @media (max-width: 1024px){
+    nav{
+        width: 100%;
+    }
+
+    #container-cards{
+        flex-wrap: wrap;
+    }
+
+    #container-cadastrar-evento{
+        justify-content: center;
+    }
+
+/*container-trilhas-estudos*/
+    .container-painel{
+        width: 100%;
+    }
+    
+/*container-relatorios*/
+    .box-relatorios{
+        justify-content: center;
+        gap: 8px;
+    }
+}
+
+/*Estilos para dispositivos com largura de tela de até 768px*/
+@media(max-width: 768px){
+    html{
+       font-size: 87%;
+    }
+
+    nav{
+        padding: 20px 0px 8px 100px;
+    }
+
+    #container-cards{
+        padding: 0 20px;
+        flex-wrap: wrap;
+    }
+    
+    .card-padrao{
+        width: 250px; 
+    }
+
+ /*container-feedback*/
+    #botao-feedback-geral{
+    width:320px;
+    height: 44px;
+    }
+}
+
+/*Estilos para dispositivos com largura de tela de até 425px*/ 
+@media(max-width: 425px){
+    html{
+    font-size: 68.5%;
+}  
+     nav{
+      padding: 20px 4px 8px 10px; 
+       width: 100%;
+        
+    & .user-info{
+        padding: 17px 32px;
+    } 
+}
+    #container-geral{
+        padding: 0px 10px;
+}
+  
+   #container-cards{
+        flex-wrap: wrap;
+    }
+
+    .card-icone img{
+        width: 50px;
+    }
+
+    .card-textos{
+        padding: 20px;
+    }
+
+    .card-subtitulo{
+        display: none;
+    }
+
+    .card-padrao{
+        width: 170px;
+        height: 160px;
+    }
+
+      #botao-cadastrar-evento{
+        width: 250px;
+        height: 44px;
+    }
+
+/*container-trilhas-estudos*/
+      #botao-nova-trilha{
+        width: 130px;
+        height: 37px;
+     }
+    
+    .container-lista-conteudo{
+    padding: 13px;
+}
+
+.container-lista-conteudo img{
+    width: 15px;
+}
+
+/*container-entregas-aluna*/
+#container-entregas-aluna .botao-acao-aluna{
+    width: 130px;
+}
+    
+/*container-feedback*/
+#container-feedback .titulo-painel {
+   padding-bottom: 18px;
+}
+    #botao-feedback-geral{
+    width: 160px;
+    height: 36px;
+}
+
+     #botao-feedback-geral img{
+        width: 27px;
+}
+
+    #container-feedback .botao-acao-aluna{
+    width: 120px;
+}
+
+/*container-relatorios*/ 
+    box-relatorios{
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .relatorio-largura-personalizada{
+    width: 310px;
+    height: 139px;
+}
+
+    .botao-relatorio{
+    width: 280px;
+    height: 43px;
+    }
+}
+
+/*Estilos para dispositivos com largura de tela de até 375px*/
+@media(max-width:375px){
+
+/*container-cards*/
+.card-padrao{
+        width: 250px;
+        height: 140px;
+        gap: 4px;
+}
+
+     .card-icone img{
+        width: 40px;
+    }
+
+    .card-textos{
+        padding: 20px 14px;
+    }
+
+ #botao-nova-trilha{
+    width: 110px;
+    height: 31px;
+}
+/*container-trilhas-estudos*/
+#container-trilhas-estudos .titulo-painel{
+    padding-bottom: 10px;
+}
+
+.container-lista-conteudo img{
+    width: 13px;
+}
+
+/*container-entregas-aluna*/
+#container-entregas-aluna .titulo-painel{
+   padding-bottom: 18px;
+}
+
+#container-entregas-aluna .botao-acao-aluna{
+    width: 114px;
+}
+
+/*container-feedback*/
+#container-feedback .titulo-painel{
+   padding-bottom: 18px;
+}
+
+#botao-feedback-geral{
+    width: 160px;
+    height: 34px;
+}
+
+#botao-feedback-geral img{
+    width:27px;
+}
+
+#container-feedback .container-lista-conteudo{
+   width: 290px;
+}
+#container-feedback .botao-acao-aluna{
+    width: 130px;
+}
+
+}
+
+/*Estilos para dispositivos com largura de tela de até 320px*/
+@media(max-width:320px){
+    nav{
+        width: 100%;
+        padding: 10px 0px 8px 0px;
+
+    & .navbar-logo {
+        margin-left: 6px;
+    }
+
+    & .user-info {
+            padding: 17px 20px;
+        }
+    }
+
+/*container-cards*/
+    .card-padrao{
+        width: 200px;
+    }
+
+    #botao-cadastrar-evento{
+        width: 200px;
+        height: 44px;
+    }
+
+    /*container-trilhas-estudos*/
+   .cabecalho-painel {
+        margin: 0 17px;
+    }
+    
+    .container-lista-conteudo{
+        width: 250px;
+        padding: 14px;
+    }
+
+    .container-lista-conteudo img{
+        width: 12px;    
+   }
+
+  /*container-entregas-aluna*/
+    #container-entregas .subtitulo-painel{
+        padding-bottom: 18px;
+}
+
+#container-entregas-aluna .botao-acao-aluna{
+    width: 110px;
+ }
+
+  /* container-feedback */
+ #botao-feedback-geral{
+    width: 140px;
+    height: 36px;
+}
+
+#container-feedback .cabecalho-painel{
+    margin: 0px 9px;
+}
+
+#container-feedback .container-lista-conteudo{
+    width: 250px;
+}
+
+  #container-feedback .botao-acao-aluna{
+     width: 110px;
+    height: 40px;
+}
+
+ /*container-relatorios*/ 
+ #container-relatorios .subtitulo-painel{
+     padding-bottom: 18px;
+ }
+    .relatorio-largura-personalizada{
+        width: 250px;
+        height: 139px;
+    }
+
+    .botao-relatorio{
+        width: 220px;
+        height: 43px;
+    }
+}
