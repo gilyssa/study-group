@@ -23,3 +23,29 @@
         gap: 8px;
     }
 }
+
+/*Estilos para dispositivos com largura de tela de até 768px*/
+@media(max-width: 768px){
+    html{
+       font-size: 87%;
+    }
+
+    nav{
+        padding: 20px 0px 8px 100px;
+    }
+
+    #container-cards{
+        padding: 0 20px;
+        flex-wrap: wrap;
+    }
+    
+    .card-padrao{
+        width: 250px; 
+    }
+
+ /*container-feedback*/
+    #botao-feedback-geral{
+    width:320px;
+    height: 44px;
+    }
+}
