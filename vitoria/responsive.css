@@ -208,3 +208,85 @@
 }
 
 }
+
+/*Estilos para dispositivos com largura de tela de até 320px*/
+@media(max-width:320px){
+    nav{
+        width: 100%;
+        padding: 10px 0px 8px 0px;
+
+    & .navbar-logo {
+        margin-left: 6px;
+    }
+
+    & .user-info {
+            padding: 17px 20px;
+        }
+    }
+
+/*container-cards*/
+    .card-padrao{
+        width: 200px;
+    }
+
+    #botao-cadastrar-evento{
+        width: 200px;
+        height: 44px;
+    }
+
+    /*container-trilhas-estudos*/
+   .cabecalho-painel {
+        margin: 0 17px;
+    }
+    
+    .container-lista-conteudo{
+        width: 250px;
+        padding: 14px;
+    }
+
+    .container-lista-conteudo img{
+        width: 12px;    
+   }
+
+  /*container-entregas-aluna*/
+    #container-entregas .subtitulo-painel{
+        padding-bottom: 18px;
+}
+
+#container-entregas-aluna .botao-acao-aluna{
+    width: 110px;
+ }
+
+  /* container-feedback */
+ #botao-feedback-geral{
+    width: 140px;
+    height: 36px;
+}
+
+#container-feedback .cabecalho-painel{
+    margin: 0px 9px;
+}
+
+#container-feedback .container-lista-conteudo{
+    width: 250px;
+}
+
+  #container-feedback .botao-acao-aluna{
+     width: 110px;
+    height: 40px;
+}
+
+ /*container-relatorios*/ 
+ #container-relatorios .subtitulo-painel{
+     padding-bottom: 18px;
+ }
+    .relatorio-largura-personalizada{
+        width: 250px;
+        height: 139px;
+    }
+
+    .botao-relatorio{
+        width: 220px;
+        height: 43px;
+    }
+}
