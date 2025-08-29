@@ -431,7 +431,6 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 30px;
   flex-grow: 1;
 }
 
