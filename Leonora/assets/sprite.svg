@@ -1,19 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
 
-  <symbol id="icone-avatar" viewBox="0 0 100 100">
-    <circle cx="50" cy="50" r="50"/>
-  </symbol>
+    <symbol id="icone-avatar" viewBox="0 0 24 24">
+        <title>Ícone para inserção de foto ou avatar da usuária</title>
+        <circle cx="12" cy="12" r="12"/>
+    </symbol>
 
-  <symbol id="separador-breadcrumb" viewBox="0 0 8 16">
-    <path d="M1 1l6 7-6 7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  </symbol>
-  
-  <symbol id="icone-botao-download" viewBox="0 0 24 24">
-    <path d="M12 15l-5-5h3V3h4v7h3l-5 5zM20 18H4v-2h16v2z"/>
-  </symbol>
+    <symbol id="icone-botao-download" viewBox="0 0 17 17">
+        <title>Ícone sinalizador de material para download</title>
+        <path d="M16.15 10.2c-.23 0-.44.09-.6.25s-.3.38-.3.6v3.4c0 .22-.09.44-.25.6s-.38.25-.6.25H2.55c-.22 0-.44-.09-.6-.25s-.25-.38-.25-.6v-3.4c0-.22-.09-.44-.25-.6S1.07 10.2.85 10.2c-.22 0-.44.09-.6.25S0 10.82 0 11.05v3.4c0 .68.27 1.33.75 1.81s1.13.75 1.8.75h11.9c.68 0 1.33-.27 1.8-.75s.75-1.13.75-1.81v-3.4c0-.23-.09-.44-.25-.6s-.37-.25-.6-.25z M7.9 11.65c.16.16.38.25.6.25s.44-.09.6-.25l3.4-3.4c.16-.16.25-.38.25-.6s-.09-.44-.25-.6c-.32-.32-.88-.32-1.2 0L9.35 9V.85C9.35.39 8.96 0 8.5 0s-.85.39-.85.85V9L5.7 7.05c-.32-.32-.88-.32-1.2 0s-.32.88 0 1.2l3.4 3.4z"/>
+    </symbol>
 
-  <symbol id="icone-abrir-modulo" viewBox="0 0 8 16">
-      <path d="M1 1l6 7-6 7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  </symbol>
-
+    <symbol id="icone-abrir-modulo" viewBox="0 0 16 9">
+        <title>Ícone de chevron para abrir e fechar seções da página</title>
+        <path d="M1 1L8 8L15 1" fill="none"/>
+    </symbol>
 </svg>
