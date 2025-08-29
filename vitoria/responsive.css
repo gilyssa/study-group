@@ -1,0 +1,25 @@
+/*Estilos para dispositivos com largura de tela de até 1024px*/
+ @media (max-width: 1024px){
+    nav{
+        width: 100%;
+    }
+
+    #container-cards{
+        flex-wrap: wrap;
+    }
+
+    #container-cadastrar-evento{
+        justify-content: center;
+    }
+
+/*container-trilhas-estudos*/
+    .container-painel{
+        width: 100%;
+    }
+    
+/*container-relatorios*/
+    .box-relatorios{
+        justify-content: center;
+        gap: 8px;
+    }
+}
