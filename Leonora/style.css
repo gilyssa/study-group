@@ -1,316 +1,293 @@
-@charset "UTF-8";
-
+/* ===== VARIÁVEIS CSS ===== */
 :root {
-    --shadow-blocos: 6px 6px 5.2px 0 rgba(255, 152, 173, 0.25);
-    --shadow-botao: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    --shadow-texto: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  /* CORES */
+    --cor-texto-principal: #3C254D;
+    --cor-fundo: #FFF2F6;
+    --cor-elemento-claro: #FFFAFC;
+    --cor-borda-suave: #FFE1E7;
+    --cor-destaque-claro: #F4D7F5;
+    --cor-destaque-medio: #C89FF2;
+    --cor-destaque-forte: #FF8CA3;
+    --cor-botao-principal: #E25F8B;
+    --cor-texto-claro: #FFFAFC;
+    --cor-texto-hover-breadcrumb: white;
+
+
+  /* FONTES */
+    --fonte-principal: 'Montserrat', sans-serif;
+
+
+  /* SOMBRAS E GRADIENTES */
+    --sombra-blocos: 6px 6px 5.2px 0px rgba(255, 152, 173, 0.25);
+    --sombra-botao: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    --sombra-texto: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     --gradiente-botao-trilha: linear-gradient(180deg, #FFF8FA 0%, #F9E7F7 95.67%, #F4D7F5 100%);
     --gradiente-info-aula: linear-gradient(180deg, #FFF8FA 0%, #F9E7F7 95.67%, #F4D7F5 100%);
 }
 
-body {
-    background: #FFF2F6;
-    padding-top: 74px; /* devido ao position: fixed do container-barra-superior */
+/* SELETOR UNIVERSAL CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-principal);
+    font-style: normal;
 }
 
+body {
+    background: var(--cor-fundo);
+    padding-top: 74px;
+    color: var(--cor-texto-principal);
+}
+
+/* BARRA SUPERIOR */
 .container-barra-superior {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    background: var(--cor-elemento-claro);
+    border-bottom: 1px solid var(--cor-borda-suave);
 }
 
 .conteudo-barra-superior {
-    background: #FFFAFC;
-    border-bottom: 1px solid #FFE1E7;
-    max-width: 100%;
-    height: 54px;
+    height: 74px;
     padding: 10px 40px;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between; /*alinha a logo com avatar + nome*/
-    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .area-user {
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
     gap: 12px;
-    min-width: 0;
 }
 
 .logo-superior {
     width: 111px;
-    aspect-ratio: 37/15;
 }
 
 .icone-avatar {
-    fill: #F4D7F5;
+    fill: var(--cor-destaque-claro);
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
 
 .nome-user {
-    color: #3C254D;
-    font-family: Montserrat;
     font-size: 16px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
-    flex: 1;
-    min-width: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+/* BREADCRUMB */
+.breadcrumb {
+    margin: 20px 60px;
 }
 
 .breadcrumb ol {
     display: flex;
     align-items: center;
     list-style: none;
-    column-gap: 24px;
+    gap: 24px;
+}
+.breadcrumb li {
+    display: inline;
 }
 
-.breadcrumb a {
-    color: #3C254D;
-    font-family: Montserrat;
-    font-size: 20px;
-    font-style: normal;
+    .breadcrumb a {
+    color: var(--cor-texto-principal);
     font-weight: 500;
-    line-height: normal;
-    text-decoration-line: underline;
-    text-decoration-style: solid;
-    text-decoration-skip-ink: auto;
-    text-decoration-thickness: auto;
-    text-underline-offset: auto;
-    text-underline-position: from-font;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.titulos-principais {
-    margin: 56px 72px;
+.breadcrumb a:hover {
+    background-color: var(--cor-botao-principal);
+    color: var(--cor-texto-hover-breadcrumb);
+    transform: scale(1.03);
+    transform-origin: center;
+} 
+
+/* BARRA DE NAVEGAÇÃO DAS TRILHAS */
+.container-barra-trilhas {
+    display: flex;
+    flex-direction: column;
+    margin: 0 176px;
+    gap: 24px;
 }
 
-.titulos-principais h1 {
-    color: #3C254D;
-    font-family: Montserrat;
+.container-barra-trilhas h1 {
     font-size: 32px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
 }
 
-.titulos-principais p {
-    color: #3C254D;
-    font-family: Montserrat;
+.container-barra-trilhas p {
     font-size: 20px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
 }
 
 .barra-trilhas {
-    background: #FFFAFC;
-    border: 1px solid #FFE1E7;
+    background: var(--cor-elemento-claro);
+    border: 1px solid var(--cor-borda-suave);
     border-radius: 20px;
-    box-shadow: var(--shadow-blocos);
+    box-shadow: var(--sombra-blocos);
     display: flex;
     justify-content: space-around;
-    flex-wrap: nowrap;
-    max-width: 80%;
+    align-items: center;
+    width: 80%;
     height: 72px;
-    margin: 0 auto;
 }
 
 .botao-trilha {
     border: none;
     background-color: transparent;
     min-height: 44px;
-    margin: 12px;
-    padding-inline: 12px;
-    flex-shrink: 0;
+    padding: 8px 16px;
+    border-radius: 20px; 
     cursor: pointer;
-}
-
-.nome-botao {
-    color: #3C254D;
-    font-family: Montserrat;
     font-size: 20px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
+    color: var(--cor-texto-principal);
 }
 
 .botao-trilha[aria-pressed="true"] {
     background: var(--gradiente-botao-trilha);
-    border: 1px solid #F4D7F5;
-    border-radius: 20px;
-    min-height: 44px; /* área clicável recomendada para usabilidade */
-    aspect-ratio: 5/1;
-    margin: 12px;
-    padding-inline: 12px;
-    flex-shrink: 0;
+    border: 1px solid var(--cor-destaque-claro);
 }
 
+/* BLOCO PRINCIPAL */
 .container-bloco-principal {
     display: flex;
     justify-content: center;
+    margin-top: 56px;
 }
 
 .bloco-principal {
-    background: #FFFAFC;
-    border: 1px solid #FFE1E7;
+    background: var(--cor-elemento-claro);
+    border: 1px solid var(--cor-borda-suave);
     border-radius: 20px;
-    box-shadow: var(--shadow-blocos);
-    max-width: 80%;
-    min-height: 45%;
-    min-width: 70%;
-    margin-top: 56px;
+    box-shadow: var(--sombra-blocos);
+    width: 80%;
     padding: 36px 48px;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-content: space-between;
+    gap: 24px;
 }
 
 .titulo-trilha {
-    color: #3C254D;
-    font-family: Montserrat;
     font-size: 24px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
 }
 
 .descricao-trilha {
-    color: #3C254D;
-    font-family: Montserrat;
     font-size: 14px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
 }
 
-.titulo-modulo {
-    color: #C89FF2;
-    font-family: Montserrat;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
-
-.informacoes-aula {
-    background: var(--gradiente-info-aula);
-    border: 1px solid #F4D7F5;
-    border-radius: 20px;
-    max-width: 90%;
-    padding-right: 16px;
-    padding-left: 16px;
-    margin-bottom: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    vertical-align: middle;
-}
-
-.titulo-aula {
-    color: #3C254D;
-    font-family: Montserrat;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-
-.descricao-aula {
-    color: #3C254D;
-    font-family: Montserrat;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.botao-download-material {
-    background: #E25F8B;
-    box-shadow: var(--shadow-botao);
-    border-radius: 20px;
-    min-height: 44px;
-    aspect-ratio: 3/1;
-    margin: 12px;
-    padding-inline:12px; 
-    flex-shrink: 0;
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-    text-decoration: none;
-}
-
-.icone-botao-download {
-    fill: #FFFAFC;
-    width: 17px;
-    height: 17px;
-}
-
-.descricao-botao-download {
-    color: #FFFAFC;
-    text-shadow: var(--shadow-texto);
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-
-.divisor-modulos {
-    background: #FFE1E7;
-    border: 1px solid #FFE1E7;
-    display: block;
-    max-width: 100%;
-    height: 2px;
-    margin: 0 auto;
-}
-
+/* MÓDULOS */
 .barra-acesso-modulo {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer; 
 }
 
-btn-abrir-modulo {
+.titulo-modulo {
+    color: var(--cor-destaque-medio);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.btn-abrir-modulo {
     appearance: none;
     border: none;
     background: transparent;
-    display: inline-block;
     line-height: 0;
     padding: 8px;
     cursor: pointer;
 }
 
 .icone-abrir-modulo {
-    stroke: #C89FF2;
+    stroke: var(--cor-destaque-medio);
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
     width: 12px;
     height: auto;
     transition: transform 0.3s ease-in-out;
-}
+    }
 
 .modulo-ativo .icone-abrir-modulo {
-    transform: rotate(90deg);
+    transform: rotate(180deg);
 }
 
 .informacoes-modulo {
-    display: none; 
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
     padding-left: 20px;
-    padding-bottom: 20px;
 }
 
-.modulo-ativo .informacoes-modulo {
-    display: block; 
+/* AULAS */
+.informacoes-aula {
+    background: var(--gradiente-info-aula);
+    border: 1px solid var(--cor-destaque-claro);
+    border-radius: 20px;
+    max-width: 90%;
+    padding: 16px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.titulo-aula, .descricao-aula {
+    font-size: 16px;
+}
+
+.descricao-aula {
+    font-weight: 400;
+}
+
+.botao-download-material {
+    background: var(--cor-botao-principal);
+    box-shadow: var(--sombra-botao);
+    border-radius: 20px;
+    min-height: 44px;
+    padding: 8px 16px;
+    flex-shrink: 0;
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    text-decoration: none;
+    color: var(--cor-texto-claro);
+}
+
+.icone-botao-download {
+    fill: var(--cor-texto-claro);
+    width: 17px;
+    height: 17px;
+}
+
+.descricao-botao-download {
+    text-shadow: var(--sombra-texto);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.divisor-modulos {
+    background: var(--cor-borda-suave);
+    height: 2px;
+    border: none;
 }
