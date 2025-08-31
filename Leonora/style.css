@@ -1,4 +1,4 @@
-/* ===== VARIÁVEIS CSS ===== */
+/* VARIÁVEIS CSS */
 :root {
 
   /* CORES */
@@ -13,10 +13,8 @@
     --cor-texto-claro: #FFFAFC;
     --cor-texto-hover-breadcrumb: white;
 
-
   /* FONTES */
     --fonte-principal: 'Montserrat', sans-serif;
-
 
   /* SOMBRAS E GRADIENTES */
     --sombra-blocos: 6px 6px 5.2px 0px rgba(255, 152, 173, 0.25);
@@ -35,39 +33,42 @@
     font-style: normal;
 }
 
+/* CORPO DA PÁGINA */
 body {
     background: var(--cor-fundo);
-    padding-top: 74px;
     color: var(--cor-texto-principal);
 }
 
 /* BARRA SUPERIOR */
-.container-barra-superior {
+.barra-superior {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    width: 100vw;
+    height: 74px;
     background: var(--cor-elemento-claro);
     border-bottom: 1px solid var(--cor-borda-suave);
 }
 
-.conteudo-barra-superior {
-    height: 74px;
-    padding: 10px 40px;
+.wrapper-barra-superior {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 12px 20px;
     display: flex;
-    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
 }
 
+/* AVATAR E NOME DA USUÁRIA */
 .area-user {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
 }
 
-.logo-superior {
+.logo {
     width: 111px;
+    height: 45px;
+    position: relative;
 }
 
 .icone-avatar {
@@ -78,6 +79,7 @@ body {
 }
 
 .nome-user {
+    max-width: 300px;
     font-size: 16px;
     font-weight: 500;
     white-space: nowrap;
@@ -86,21 +88,21 @@ body {
 }
 
 /* BREADCRUMB */
-.breadcrumb {
+/* .breadcrumb {
     margin: 20px 60px;
-}
+} */
 
-.breadcrumb ol {
+/*.breadcrumb ol {
     display: flex;
     align-items: center;
     list-style: none;
     gap: 24px;
-}
-.breadcrumb li {
+} */
+/* .breadcrumb li {
     display: inline;
-}
+} */
 
-    .breadcrumb a {
+    /* .breadcrumb a {
     color: var(--cor-texto-principal);
     font-weight: 500;
     font-size: 18px;
@@ -109,34 +111,34 @@ body {
     padding: 5px 10px;
     transition: all 0.3s ease;
     cursor: pointer;
-}
+} */
 
-.breadcrumb a:hover {
+/* .breadcrumb a:hover {
     background-color: var(--cor-botao-principal);
     color: var(--cor-texto-hover-breadcrumb);
     transform: scale(1.03);
     transform-origin: center;
-} 
+}  */
 
 /* BARRA DE NAVEGAÇÃO DAS TRILHAS */
-.container-barra-trilhas {
+/* .container-barra-trilhas {
     display: flex;
     flex-direction: column;
     margin: 0 176px;
     gap: 24px;
-}
+} */
 
-.container-barra-trilhas h1 {
+/* .container-barra-trilhas h1 {
     font-size: 32px;
     font-weight: 700;
-}
+} */
 
-.container-barra-trilhas p {
+/* .container-barra-trilhas p {
     font-size: 20px;
     font-weight: 500;
-}
+} */
 
-.barra-trilhas {
+/* .barra-trilhas {
     background: var(--cor-elemento-claro);
     border: 1px solid var(--cor-borda-suave);
     border-radius: 20px;
@@ -146,9 +148,9 @@ body {
     align-items: center;
     width: 80%;
     height: 72px;
-}
+} */
 
-.botao-trilha {
+/* .botao-trilha {
     border: none;
     background-color: transparent;
     min-height: 44px;
@@ -158,21 +160,21 @@ body {
     font-size: 20px;
     font-weight: 500;
     color: var(--cor-texto-principal);
-}
+} */
 
-.botao-trilha[aria-pressed="true"] {
+/* .botao-trilha[aria-pressed="true"] {
     background: var(--gradiente-botao-trilha);
     border: 1px solid var(--cor-destaque-claro);
-}
-
+} */
+/* 
 /* BLOCO PRINCIPAL */
-.container-bloco-principal {
+/*.container-bloco-principal {
     display: flex;
     justify-content: center;
     margin-top: 56px;
-}
+} */
 
-.bloco-principal {
+/* .bloco-principal {
     background: var(--cor-elemento-claro);
     border: 1px solid var(--cor-borda-suave);
     border-radius: 20px;
@@ -182,64 +184,60 @@ body {
     display: flex;
     flex-direction: column;
     gap: 24px;
-}
+} */
 
-.titulo-trilha {
+/* .titulo-trilha {
     font-size: 24px;
     font-weight: 500;
-}
+} */
 
-.descricao-trilha {
+/* .descricao-trilha {
     font-size: 14px;
     font-weight: 400;
-}
+} */
 
 /* MÓDULOS */
-.barra-acesso-modulo {
+/* .barra-acesso-modulo {
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer; 
-}
+} */
 
-.titulo-modulo {
+/* .titulo-modulo {
     color: var(--cor-destaque-medio);
     font-size: 22px;
     font-weight: 600;
-}
+} */
 
-.btn-abrir-modulo {
+/* .btn-abrir-modulo {
     appearance: none;
     border: none;
     background: transparent;
-    line-height: 0;
-    padding: 8px;
+    padding: 0 32px;
     cursor: pointer;
-}
+} */
 
-.icone-abrir-modulo {
+/* .icone-abrir-modulo {
     stroke: var(--cor-destaque-medio);
     stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
     width: 12px;
     height: auto;
-    transition: transform 0.3s ease-in-out;
-    }
+} */
 
-.modulo-ativo .icone-abrir-modulo {
+/* .modulo-ativo .icone-abrir-modulo {
     transform: rotate(180deg);
-}
+} */
 
-.informacoes-modulo {
+/* .informacoes-modulo {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-out;
     padding-left: 20px;
-}
+} */
 
 /* AULAS */
-.informacoes-aula {
+/* .informacoes-aula {
     background: var(--gradiente-info-aula);
     border: 1px solid var(--cor-destaque-claro);
     border-radius: 20px;
@@ -250,17 +248,17 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 16px;
-}
+} */
 
-.titulo-aula, .descricao-aula {
+/* .titulo-aula, .descricao-aula {
     font-size: 16px;
-}
+} */
 
-.descricao-aula {
+/* .descricao-aula {
     font-weight: 400;
-}
+} */
 
-.botao-download-material {
+/* .botao-download-material {
     background: var(--cor-botao-principal);
     box-shadow: var(--sombra-botao);
     border-radius: 20px;
@@ -272,22 +270,22 @@ body {
     align-items: center;
     text-decoration: none;
     color: var(--cor-texto-claro);
-}
+} */
 
-.icone-botao-download {
+/* .icone-botao-download {
     fill: var(--cor-texto-claro);
     width: 17px;
     height: 17px;
-}
+} */
 
-.descricao-botao-download {
+/* .descricao-botao-download {
     text-shadow: var(--sombra-texto);
     font-size: 14px;
     font-weight: 500;
-}
+} */
 
-.divisor-modulos {
+/*.divisor-modulos {
     background: var(--cor-borda-suave);
     height: 2px;
     border: none;
-}
+} */
