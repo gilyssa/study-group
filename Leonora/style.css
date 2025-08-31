@@ -44,17 +44,19 @@ body {
     position: fixed;
     width: 100vw;
     height: 74px;
+    display: flex;
+    align-items: center;
     background: var(--cor-elemento-claro);
     border-bottom: 1px solid var(--cor-borda-suave);
 }
 
 .wrapper-barra-superior {
-    max-width: 1500px;
+    width: 100%;
+    max-width: 1366px;
     margin: 0 auto;
-    padding: 12px 24px;
+    padding: 12px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     flex-wrap: nowrap;
 }
 
@@ -91,7 +93,7 @@ body {
 
 /* BREADCRUMB */
 .breadcrumb {
-    padding-top: 75px;
+    padding-top:75px;
 }
 
 .breadcrumb ol {
@@ -99,11 +101,11 @@ body {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    max-width: 1500px; 
+    max-width: 1366px; 
     margin: 0 auto;
     padding-top: 16px;
-    padding-left: 24px;
-    gap: 16px;
+    padding-left: 4px;
+    gap: 8px;
 }
 
 .breadcrumb a {
@@ -124,28 +126,18 @@ body {
     transform-origin: center;
 }
 
-
-
-
 /* BARRA DE NAVEGAÇÃO DAS TRILHAS */
-/* .container-barra-trilhas {
-    display: flex;
-    flex-direction: column;
-    margin: 0 176px;
-    gap: 24px;
-} */
-
-/* .container-barra-trilhas h1 {
+h1 {
     font-size: 32px;
     font-weight: 700;
-} */
+} 
 
-/* .container-barra-trilhas p {
+p {
     font-size: 20px;
     font-weight: 500;
-} */
+}
 
-/* .barra-trilhas {
+.nav-bar-trilhas {
     background: var(--cor-elemento-claro);
     border: 1px solid var(--cor-borda-suave);
     border-radius: 20px;
@@ -155,9 +147,9 @@ body {
     align-items: center;
     width: 80%;
     height: 72px;
-} */
+}
 
-/* .botao-trilha {
+.selecionar-trilha {
     border: none;
     background-color: transparent;
     min-height: 44px;
@@ -167,13 +159,17 @@ body {
     font-size: 20px;
     font-weight: 500;
     color: var(--cor-texto-principal);
-} */
+}
 
-/* .botao-trilha[aria-pressed="true"] {
-    background: var(--gradiente-botao-trilha);
-    border: 1px solid var(--cor-destaque-claro);
-} */
-/* 
+
+
+
+
+
+
+
+
+
 /* BLOCO PRINCIPAL */
 /*.container-bloco-principal {
     display: flex;
