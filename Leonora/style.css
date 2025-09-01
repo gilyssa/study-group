@@ -1,316 +1,191 @@
-@charset "UTF-8";
-
+/* VARIÁVEIS CSS */
 :root {
-    --shadow-blocos: 6px 6px 5.2px 0 rgba(255, 152, 173, 0.25);
-    --shadow-botao: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    --shadow-texto: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    /* CORES */
+    --cor-texto-principal: #3C254D;
+    --cor-fundo: #FFF2F6;
+    --cor-elemento-claro: #FFFAFC;
+    --cor-borda-suave: #FFE1E7;
+    --cor-destaque-claro: #F4D7F5;
+    --cor-destaque-medio: #C89FF2;
+    --cor-destaque-forte: #FF8CA3;
+    --cor-botao-principal: #E25F8B;
+    --cor-texto-claro: #FFFAFC;
+    --cor-texto-hover-breadcrumb: white;
+
+    /* SOMBRAS E GRADIENTES */
+    --sombra-blocos: 6px 6px 5.2px 0px rgba(255, 152, 173, 0.25);
+    --sombra-botao: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    --sombra-texto: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     --gradiente-botao-trilha: linear-gradient(180deg, #FFF8FA 0%, #F9E7F7 95.67%, #F4D7F5 100%);
     --gradiente-info-aula: linear-gradient(180deg, #FFF8FA 0%, #F9E7F7 95.67%, #F4D7F5 100%);
+
+    /* FONTES */
+    --fonte-principal: 'Montserrat', sans-serif;
+
+    /* TIPOGRAFIA RESPONSIVA */
+    --font-size-sm: clamp(0.8rem, 0.34vi + 0.71rem, 1.13rem);
+    --font-size-base: clamp(1rem, 0.53vi + 0.87rem, 1.5rem);
+    --font-size-md: clamp(1.25rem, 0.79vi + 1.05rem, 2rem);
+
+    /* MEDIDAS */
+    --max-width-principal: 1366px;
+    --max-width-secundaria: 1200px;
 }
 
+    /* SELETOR UNIVERSAL CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-principal);
+    font-style: normal;
+}
+
+    /* CORPO DA PÁGINA */
 body {
-    background: #FFF2F6;
-    padding-top: 74px; /* devido ao position: fixed do container-barra-superior */
+    background: var(--cor-fundo);
+    color: var(--cor-texto-principal);
 }
 
-.container-barra-superior {
+    /* BARRA SUPERIOR */
+.barra-superior {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-.conteudo-barra-superior {
-    background: #FFFAFC;
-    border-bottom: 1px solid #FFE1E7;
-    max-width: 100%;
-    height: 54px;
-    padding: 10px 40px;
+    width: 100vw;
+    height: 74px;
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between; /*alinha a logo com avatar + nome*/
-    margin: 0 auto;
+    align-items: center;
+    background: var(--cor-elemento-claro);
+    border-bottom: 1px solid var(--cor-borda-suave);
 }
 
+.wrapper-barra-superior {
+    width: 100%;
+    max-width: var(--max-width-principal);
+    margin: 0 auto;
+    padding: 24px 36px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+    /* AVATAR E NOME DA USUÁRIA */
 .area-user {
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
-    gap: 12px;
-    min-width: 0;
+    gap: 8px;
 }
 
-.logo-superior {
-    width: 111px;
-    aspect-ratio: 37/15;
-}
+.logo {
+    width: clamp(111px, 8vw, 156px);
+    height: auto;
+    flex-shrink: 0;
+    position: relative;
+    }
 
 .icone-avatar {
-    fill: #F4D7F5;
+    fill: var(--cor-destaque-claro);
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    flex-shrink: 0;
+    position: relative;
 }
 
 .nome-user {
-    color: #3C254D;
-    font-family: Montserrat;
-    font-size: 16px;
-    font-style: normal;
+    max-width: 300px;
+    font-size: var(--font-size-sm);
     font-weight: 500;
-    line-height: normal;
-    flex: 1;
-    min-width: 0;
+    flex-shrink: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
+    /* BREADCRUMB */
+.breadcrumb {
+    padding-top:75px;
+}
+
 .breadcrumb ol {
+    list-style: none;
     display: flex;
     align-items: center;
-    list-style: none;
-    column-gap: 24px;
+    flex-wrap: wrap;
+    max-width: var(--max-width-principal); 
+    margin: 0 auto;
+    padding-top: 16px;
+    padding-left: 28px;
+    gap: 8px;
 }
 
 .breadcrumb a {
-    color: #3C254D;
-    font-family: Montserrat;
-    font-size: 20px;
-    font-style: normal;
+    color: var(--cor-texto-principal);
+    font-size: var(--font-size-sm);
     font-weight: 500;
-    line-height: normal;
-    text-decoration-line: underline;
-    text-decoration-style: solid;
-    text-decoration-skip-ink: auto;
-    text-decoration-thickness: auto;
-    text-underline-offset: auto;
-    text-underline-position: from-font;
-}
-
-.titulos-principais {
-    margin: 56px 72px;
-}
-
-.titulos-principais h1 {
-    color: #3C254D;
-    font-family: Montserrat;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-.titulos-principais p {
-    color: #3C254D;
-    font-family: Montserrat;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-
-.barra-trilhas {
-    background: #FFFAFC;
-    border: 1px solid #FFE1E7;
-    border-radius: 20px;
-    box-shadow: var(--shadow-blocos);
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    max-width: 80%;
-    height: 72px;
-    margin: 0 auto;
-}
-
-.botao-trilha {
-    border: none;
-    background-color: transparent;
-    min-height: 44px;
-    margin: 12px;
-    padding-inline: 12px;
-    flex-shrink: 0;
-    cursor: pointer;
-}
-
-.nome-botao {
-    color: #3C254D;
-    font-family: Montserrat;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-
-.botao-trilha[aria-pressed="true"] {
-    background: var(--gradiente-botao-trilha);
-    border: 1px solid #F4D7F5;
-    border-radius: 20px;
-    min-height: 44px; /* área clicável recomendada para usabilidade */
-    aspect-ratio: 5/1;
-    margin: 12px;
-    padding-inline: 12px;
-    flex-shrink: 0;
-}
-
-.container-bloco-principal {
-    display: flex;
-    justify-content: center;
-}
-
-.bloco-principal {
-    background: #FFFAFC;
-    border: 1px solid #FFE1E7;
-    border-radius: 20px;
-    box-shadow: var(--shadow-blocos);
-    max-width: 80%;
-    min-height: 45%;
-    min-width: 70%;
-    margin-top: 56px;
-    padding: 36px 48px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-content: space-between;
-}
-
-.titulo-trilha {
-    color: #3C254D;
-    font-family: Montserrat;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-
-.descricao-trilha {
-    color: #3C254D;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.titulo-modulo {
-    color: #C89FF2;
-    font-family: Montserrat;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
-
-.informacoes-aula {
-    background: var(--gradiente-info-aula);
-    border: 1px solid #F4D7F5;
-    border-radius: 20px;
-    max-width: 90%;
-    padding-right: 16px;
-    padding-left: 16px;
-    margin-bottom: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    vertical-align: middle;
-}
-
-.titulo-aula {
-    color: #3C254D;
-    font-family: Montserrat;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-
-.descricao-aula {
-    color: #3C254D;
-    font-family: Montserrat;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.botao-download-material {
-    background: #E25F8B;
-    box-shadow: var(--shadow-botao);
-    border-radius: 20px;
-    min-height: 44px;
-    aspect-ratio: 3/1;
-    margin: 12px;
-    padding-inline:12px; 
-    flex-shrink: 0;
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
     text-decoration: none;
-}
-
-.icone-botao-download {
-    fill: #FFFAFC;
-    width: 17px;
-    height: 17px;
-}
-
-.descricao-botao-download {
-    color: #FFFAFC;
-    text-shadow: var(--shadow-texto);
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-
-.divisor-modulos {
-    background: #FFE1E7;
-    border: 1px solid #FFE1E7;
-    display: block;
-    max-width: 100%;
-    height: 2px;
-    margin: 0 auto;
-}
-
-.barra-acesso-modulo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-btn-abrir-modulo {
-    appearance: none;
-    border: none;
-    background: transparent;
-    display: inline-block;
-    line-height: 0;
-    padding: 8px;
+    border-radius: 50px;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
     cursor: pointer;
 }
 
-.icone-abrir-modulo {
-    stroke: #C89FF2;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    width: 12px;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
+.breadcrumb a:hover {
+    background-color: var(--cor-botao-principal);
+    color: var(--cor-texto-hover-breadcrumb);
+    transform: scale(1.03);
+    transform-origin: center;
 }
 
-.modulo-ativo .icone-abrir-modulo {
-    transform: rotate(90deg);
+    /* SEÇÃO DO TÍTULO DA PÁGINA */
+.secao-titulo {
+    width: 90%;
+    max-width: var(--max-width-secundaria);
+    margin: 6vh auto;
 }
 
-.informacoes-modulo {
-    display: none; 
-    padding-left: 20px;
-    padding-bottom: 20px;
+.secao-titulo h1 {
+    font-size: var(--font-size-md);
+    font-weight: 700;
 }
 
-.modulo-ativo .informacoes-modulo {
-    display: block; 
+.secao-titulo p {
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+    /* BARRA DE NAVEGAÇÃO DAS TRILHAS */
+.nav-bar-trilhas {
+    background: var(--cor-elemento-claro);
+    border: 1px solid var(--cor-borda-suave);
+    border-radius: 20px;
+    box-shadow: var(--sombra-blocos);
+    width: fit-content;
+    min-width: var(--max-width-secundaria);
+    height: 74px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.selecionar-trilha {
+    background: transparent;
+    border: transparent;
+    border-radius: 50px;
+    color: var(--cor-texto-principal);
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    padding: 8px 24px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.selecionar-trilha:hover {
+    background-color: var(--cor-destaque-forte);
+    color: var(--cor-texto-hover-breadcrumb);
+    transform: scale(1.03);
+    transform-origin: center;
 }
