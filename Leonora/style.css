@@ -1,7 +1,7 @@
 /* VARIÁVEIS CSS */
 :root {
 
-  /* CORES */
+    /* CORES */
     --cor-texto-principal: #3C254D;
     --cor-fundo: #FFF2F6;
     --cor-elemento-claro: #FFFAFC;
@@ -13,18 +13,27 @@
     --cor-texto-claro: #FFFAFC;
     --cor-texto-hover-breadcrumb: white;
 
-  /* FONTES */
-    --fonte-principal: 'Montserrat', sans-serif;
-
-  /* SOMBRAS E GRADIENTES */
+    /* SOMBRAS E GRADIENTES */
     --sombra-blocos: 6px 6px 5.2px 0px rgba(255, 152, 173, 0.25);
     --sombra-botao: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
     --sombra-texto: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     --gradiente-botao-trilha: linear-gradient(180deg, #FFF8FA 0%, #F9E7F7 95.67%, #F4D7F5 100%);
     --gradiente-info-aula: linear-gradient(180deg, #FFF8FA 0%, #F9E7F7 95.67%, #F4D7F5 100%);
+
+    /* FONTES */
+    --fonte-principal: 'Montserrat', sans-serif;
+
+    /* TIPOGRAFIA RESPONSIVA */
+    --font-size-sm: clamp(0.8rem, 0.34vi + 0.71rem, 1.13rem);
+    --font-size-base: clamp(1rem, 0.53vi + 0.87rem, 1.5rem);
+    --font-size-md: clamp(1.25rem, 0.79vi + 1.05rem, 2rem);
+
+    /* MEDIDAS */
+    --max-width-principal: 1366px;
+    --max-width-secundaria: 1200px;
 }
 
-/* SELETOR UNIVERSAL CSS */
+    /* SELETOR UNIVERSAL CSS */
 * {
     margin: 0;
     padding: 0;
@@ -33,13 +42,13 @@
     font-style: normal;
 }
 
-/* CORPO DA PÁGINA */
+    /* CORPO DA PÁGINA */
 body {
     background: var(--cor-fundo);
     color: var(--cor-texto-principal);
 }
 
-/* BARRA SUPERIOR */
+    /* BARRA SUPERIOR */
 .barra-superior {
     position: fixed;
     width: 100vw;
@@ -52,15 +61,15 @@ body {
 
 .wrapper-barra-superior {
     width: 100%;
-    max-width: 1366px;
+    max-width: var(--max-width-principal);
     margin: 0 auto;
-    padding: 12px;
+    padding: 24px 36px;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
 }
 
-/* AVATAR E NOME DA USUÁRIA */
+    /* AVATAR E NOME DA USUÁRIA */
 .area-user {
     display: flex;
     align-items: center;
@@ -68,9 +77,10 @@ body {
 }
 
 .logo {
-    width: 111px;
+    width: clamp(111px, 8vw, 156px);
     height: auto;
     flex-shrink: 0;
+    position: relative;
     }
 
 .icone-avatar {
@@ -79,11 +89,12 @@ body {
     height: 40px;
     border-radius: 50%;
     flex-shrink: 0;
+    position: relative;
 }
 
 .nome-user {
     max-width: 300px;
-    font-size: 16px;
+    font-size: var(--font-size-sm);
     font-weight: 500;
     flex-shrink: 0;
     white-space: nowrap;
@@ -91,7 +102,7 @@ body {
     text-overflow: ellipsis;
 }
 
-/* BREADCRUMB */
+    /* BREADCRUMB */
 .breadcrumb {
     padding-top:75px;
 }
@@ -101,10 +112,10 @@ body {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    max-width: 1366px; 
+    max-width: var(--max-width-principal); 
     margin: 0 auto;
     padding-top: 16px;
-    padding-left: 4px;
+    padding-left: 28px;
     gap: 8px;
 }
 
@@ -117,6 +128,7 @@ body {
     padding: 8px 16px;
     transition: all 0.3s ease;
     cursor: pointer;
+    font-size: var(--font-size-sm);
 }
 
 .breadcrumb a:hover {
@@ -126,17 +138,30 @@ body {
     transform-origin: center;
 }
 
-/* BARRA DE NAVEGAÇÃO DAS TRILHAS */
-h1 {
-    font-size: 32px;
-    font-weight: 700;
-} 
-
-p {
-    font-size: 20px;
-    font-weight: 500;
+    /* SEÇÃO DO TÍTULO DA PÁGINA */
+.secao-titulo {
+    width: 90%;
+    max-width: var(--max-width-secundaria);
+    margin: 6vh auto;
 }
 
+.secao-titulo h1 {
+    font-size: var(--font-size-md);
+    font-weight: 700;
+}
+
+.secao-titulo p {
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    padding-top: 10px;
+} 
+
+
+
+
+
+
+/* 
 .nav-bar-trilhas {
     background: var(--cor-elemento-claro);
     border: 1px solid var(--cor-borda-suave);
@@ -146,7 +171,7 @@ p {
     justify-content: space-around;
     align-items: center;
     width: 80%;
-    height: 72px;
+    height: 74px;
 }
 
 .selecionar-trilha {
@@ -160,7 +185,7 @@ p {
     font-weight: 500;
     color: var(--cor-texto-principal);
 }
-
+ */
 
 
 
