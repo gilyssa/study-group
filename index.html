@@ -12,39 +12,35 @@
 </head>
 
 <body>
-    <main >
+    <main>
         <div class="inicio">
-            <h1>
-                <img src="login/img/material-symbols_crown-outline.png" alt="icone" class="icone">
-                CODE <strong>QUEENS</strong>
-            </h1>
-            <p>
-                Empoderando
-                mulheres<br>na
-                Tecnologia
-            </p>
+            <img src="login/img/logo.svg" alt="icone" class="icone">
+            <p>Empoderando mulheres na tecnologia</p>
         </div>
+
         <div class="login">
             <h2>Login</h2>
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="seu@gmail.com">
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="seuemail@email.com">
+            </div>
 
-            <label for="senha">Senha</label>
             <div class="senha">
+                <label for="senha">Senha</label>
                 <input type="password" id="senha" placeholder="***********">
+                <img src="login/img/eyeOff.svg" alt="icone" id="showPassword">
+                <a href="#" class="esqueceu-senha">Esqueceu sua senha?</a>
+            </div>
 
-            </div>
-            <div class="Esqueceu">
-                <a href="#" class="esqueceu-senha">Esqueceu a senha?</a>
-            </div>
-            <button>Entrar</button>
-            <div class="cadrastro">
-                Ainda não tem uma conta? <a href="#" class="cadastre-se">cadrastre-se aqui</a>
-            </div>
+            <section class="cadastro">
+                <a class="btn" href="./home/home.html">Entrar</a>
+
+                <p>Ainda não tem uma conta? <a href="./cadastro/cadastro.html" class="cadastre-se">cadrastre-se aqui</a></p>
+            </section>
         </div>
     </main>
 
-
+    <script src="login/script.js"></script>
 </body>
 
 </html>
