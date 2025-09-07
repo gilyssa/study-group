@@ -1,46 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
-    <meta charset="utf-8">
-    <link rel="icon" href="img/material-symbols_crown-outline.png" type="imagem">
-    <title>Login</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login/styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/favicon-code-queens.ico" type="image/x-icon">
+    <title>Code Queens</title>
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap">
 </head>
 
 <body>
-    <main>
-        <div class="inicio">
-            <img src="login/img/logo.svg" alt="icone" class="icone">
-            <p>Empoderando mulheres na tecnologia</p>
-        </div>
-
-        <div class="login">
-            <h2>Login</h2>
-            <div>
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="seuemail@email.com">
+    <main class="container-principal">
+        <section class="area-user">
+            <div class="textual-home">
+                <img src="assets/logo-home-code-queens.png" alt="Logo Code Queens" class="icon-home" />
+                <h1 class="title-home">Bem-vinda ao espaço oficial da Code Queens</h1>
+                <p class="description-welcome">Uma comunidade para educar e conectar mulheres no ambiente tech.</p>
             </div>
 
-            <div class="senha">
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" placeholder="***********">
-                <img src="login/img/eyeOff.svg" alt="icone" id="showPassword">
-                <a href="#" class="esqueceu-senha">Esqueceu sua senha?</a>
+                <img src="assets/computer-dev.png" alt="Imagem de boas-vindas" class="image-home" />
+
+        </section>
+
+        <section class="container-panels">
+            <h2 class="title-panels-queen">Painel da Queen</h2>
+            <div class="panel-buttons">
+                <a class="card-button" href="/login/login.html">
+                    <img src="assets/icon-book.png" alt="Ícone Grupo de Estudos" class="icon-button" />
+                    <p class="label-button">Grupo de Estudos</p>
+                </a>
+                <a class="card-button" href="linktree.html">
+                    <img src="assets/icon-linktree.png" alt="Ícone LinkTree" class="icon-button" />
+                    <p class="label-button">LinkTree</p>
+                </a>
+                <a class="card-button" href="projetos.html">
+                    <img src="assets/icon-projects.png" alt="Ícone Projetos" class="icon-button" />
+                    <p class="label-button">Projetos</p>
+                </a>
             </div>
+        </section>
 
-            <section class="cadastro">
-                <a class="btn" href="./home/home.html">Entrar</a>
-
-                <p>Ainda não tem uma conta? <a href="./cadastro/cadastro.html" class="cadastre-se">cadrastre-se aqui</a></p>
-            </section>
-        </div>
     </main>
 
-    <script src="login/script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

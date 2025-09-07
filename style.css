@@ -1,0 +1,227 @@
+@charset "UTF-8";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --shadow-container-principal: 0px 20px 31.1px 0px #D8458B40;
+}
+
+body {
+    height: 100vh;
+    background: #FEE4ED;
+    padding: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container-principal {
+    background: #FFEAF1;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-container-principal);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow: hidden;
+}
+
+/* Topo */
+.area-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    gap: 1rem;
+    height: 50%;
+}
+
+.textual-home {
+    width: 100%;
+}
+
+.icon-home {
+    width: 8rem;
+    height: auto;
+}
+
+.title-home {
+    color: #3C254D;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.description-welcome {
+    color: #3C254D;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.image-home {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+/* Painel */
+.container-panels {
+    background: #FEF3FB;
+    border-radius: 0 0 1rem 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    height: 40%;
+}
+
+.title-panels-queen {
+    color: #3C254D;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.panel-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-button {
+    background: #FAE7FD;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    padding: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.card-button:hover {
+    background-color: #E3C7FA;
+}
+
+.label-button {
+    color: #3C254D;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.icon-button {
+    width: 1.5rem;
+    height: auto;
+}
+
+/* -------- TABLET -------- */
+@media (min-width: 600px) {
+    .title-home {
+        font-size: 2rem;
+    }
+
+    .description-welcome {
+        font-size: 1.125rem;
+    }
+
+    .title-panels-queen {
+        font-size: 1.75rem;
+    }
+
+    .card-button {
+        border-radius: 1rem;
+        padding: 1.25rem;
+    }
+
+    .icon-button {
+        width: 2rem;
+    }
+}
+
+/* -------- DESKTOP -------- */
+@media (min-width: 1024px) {
+    body {
+        padding: 5vw;
+    }
+
+    .container-principal {
+        border-radius: 1.25rem;
+    }
+
+    .area-user {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 2rem;
+        width: 100%;
+        padding: 30px;
+        
+    }
+
+    .icon-home{
+        width: 12vw;
+    }
+
+    .textual-home {
+        width: 50%;
+    }
+
+    .title-home {
+        font-size: 3rem;
+    }
+
+    .description-welcome {
+        font-size: 1.5rem;
+    }
+
+    .image-home {
+        max-width: 20vw;
+        border-radius: 1.25rem 1.25rem 0 1.25rem;
+    }
+
+    .container-panels {
+        padding: 30px;
+        gap: 1.5rem;
+    }
+
+    .title-panels-queen {
+        font-size: 2rem;
+    }
+
+    .panel-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card-button {
+        flex: 1 1 200px;
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    .label-button {
+        font-size: 1.5rem;
+    }
+
+    .icon-button {
+        width: 2.5rem;
+    }
+}
