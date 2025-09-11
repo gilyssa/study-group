@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciar trilhas e atividades</title>
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+      <!-- CSS -->
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modal/modal-cadastrar-evento/modal-cadastrar-evento.css">
     <link rel="stylesheet" href="responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -92,6 +96,51 @@
                 <span>cadastrar novo evento</span>
             </button>
         </div>
+        
+        <!--Modal Cadastrar Novo Evento-->
+        <div id="cadastrarNovoEvento" class="modal">
+            <div class="modal-conteudo">
+                <h2>Cadastrar novo evento</h2>
+            <form id="formCadastrarEvento">
+                <div id="data-e-horario">
+                    <div class="campo">
+                        <label for="data">Data:</label>
+                        <input type="date" id="data" required>
+                    </div>
+                    
+                    <div class="campo">
+                        <label for="horario">Horário:</label>
+                        <input type="time" id="hora" required>
+                    </div>
+                </div>
+                
+                <div id="titulo-cadastrar-evento">
+                    <div class="campo">
+                        <label for="titulo">Título:</label>
+                        <input type="text" required>
+                    </div>
+                </div>
+
+                <div id="descricao-cadastrar-evento">
+                    <div class="campo">
+                        <label for="descricao">Descrição:</label>
+                        
+                        <div id="text-area-cadastrar">
+                            <textarea id="descricao" name="descricao"></textarea>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="botao-salvar-evento">
+                    <button type="submit">Salvar</button>
+                </div>
+            </form>
+            <div id="mensagem-sucesso" class="mensagem-sucesso">
+                    Evento cadastrado com sucesso!
+            </div>
+            </div>
+        </div> <!--Fecha Modal Cadastrar Novo Evento-->
+
         <div id="container-trilhas-estudos" class="container-conteudo ativo">
             <div class="container-painel">
                 <div class="cabecalho-painel">
