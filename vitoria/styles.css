@@ -2,7 +2,7 @@ body{
     background-color:#FFF2F6;
 }
 
-* {
+html, body{
 
     font-family:"Montserrat", sans-serif;
 }
