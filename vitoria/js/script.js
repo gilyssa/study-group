@@ -53,4 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
+  //Deixa o primeiro card ativo assim que a página abrir
+    ativarCard(cardGerenciar);
+    mostrarContainer(containerTrilhas);
 });
