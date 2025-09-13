@@ -64,6 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
             inputFile.click()
         })
     }
+
+    
     const btn = document.getElementById("hamburguer-btn");
     const menu = document.querySelector(".opcoes ul");
 

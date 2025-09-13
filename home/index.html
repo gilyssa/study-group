@@ -8,26 +8,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="header-container">
-      <img src="imagens/logo_queens.png" alt="Logo Code Queens" class="logo"/>
-      <div class="user-info">
-        <div class="avatar">
-          <img src="imagens/avatar.jpg" class="avatar"/>
-        </div>
-        <span>Lyssa Lima</span>
-      </div>
-    </div>
-  </header>
-
-<div class="breadcrumb-div">
-<nav class="breadcrumb">
-  <a href="home.html" class="breadcrumb-step">Início</a>
-  <a href="../trilha-estudo/index.html" class="breadcrumb-step">Trilhas de estudo</a>
-  <a href="../atividades/index.html" class="breadcrumb-step">Submeter atividades</a>
-  <a href="../agenda/index.html" class="breadcrumb-step">Agenda</a>
-</nav>
-</div>
+ <meu-header 
+    nome="Lyssa Lima" 
+    logo="./src/logo.png">
+  </meu-header>
 
   <main class="dashboard">
     <!-- Coluna da Esquerda -->
@@ -181,5 +165,6 @@
   </aside>
 </main>
   <script src="script.js"></script>
+  <script src="../header-component.js"></script>
 </body>
 </html>
