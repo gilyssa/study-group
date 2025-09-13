@@ -25,7 +25,7 @@ main {
     flex-direction: column;
 }
 
-.inicio {
+.queens {
     background-color: #f2d6fb;
     padding: 20px;
     display: flex;
@@ -41,14 +41,14 @@ main {
     height: 8vw;
 }
 
-.inicio p {
+.queens p {
     font-size: 1rem;
     color: #3C254D;
     margin-top: 10px;
     text-align: center;
 }
 
-.login {
+.cadastro {
     background-color: #fff0f7;
     padding: 60px 30px;
     display: flex;
@@ -58,7 +58,7 @@ main {
     flex: 1;
 }
 
-.login h2 {
+.cadastro h2 {
     font-size: 2rem;
     color: #3C254D;
     margin-bottom: 10px;
@@ -116,7 +116,7 @@ a {
     max-width: 468px;
 }
 
-.cadastro {
+.login {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -125,14 +125,23 @@ a {
     margin-top: 10px;
 }
 
-.cadastro p {
+.login p {
     margin-top: 30px;
 }
 
 
 #showPassword {
     position: absolute;
-    top: 50%;
+    top: 70%;
+    right: 1rem;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    cursor: pointer;
+}
+
+#showPassword2 {
+    position: absolute;
+    top: 70%;
     right: 1rem;
     transform: translateY(-50%);
     width: 1.5rem;
@@ -142,22 +151,22 @@ a {
 
 @media (min-width: 641px) {
 
-    .inicio p,
+    .queens p,
     label,
     .btn {
         font-size: 1.5rem;
     }
 
-    .login h2 {
-        font-size: 3rem;
+    .cadastro h2 {
+        font-size: 2.5rem;
     }
 
     input {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .esqueceu-senha,
-    .cadastro p {
+    .login p {
         font-size: 1.1rem;
     }
 
@@ -165,17 +174,14 @@ a {
         max-height: none;
     }
 
-    .inicio {
+    .queens {
         padding: 30px;
     }
 
-    .login {
+    .cadastro {
         padding: 60px 40px;
     }
 
-    /* .btn{
-    font-size: 2rem;
-} */
 
 }
 
@@ -188,7 +194,7 @@ a {
     main {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: "inicio login";
+        grid-template-areas: "cadastro queens";
         height: 100%;
         box-shadow: var(--shadow-container-principal);
         border-radius: 60px;
@@ -198,31 +204,33 @@ a {
         height: 10vw;
     }
 
-    .inicio {
-        grid-area: inicio;
+    .queens {
+        grid-area: queens;
         background-color: #f2d6fb;
-        padding: 10%;
+        padding: 6%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: top;
-        border-radius: 60px 0px 0px 60px;
+        border-radius: 0px 60px 60px 0px;
         text-align: center;
     }
 
-    .inicio p {
+    .queens p {
         text-align: left;
         display: block;
     }
 
-    .login {
-        grid-area: login;
+    .cadastro {
+        grid-area: cadastro;
         background-color: #fff0f7;
-        padding: 10%;
+        padding: 6%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        border-radius: 0px 60px 60px 0px;
+        border-radius: 60px 0px 0px 60px;
     }
+
+
 
 }

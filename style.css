@@ -155,7 +155,7 @@ body {
 }
 
 /* -------- DESKTOP -------- */
-@media (min-width: 1024px) {
+@media (min-width: 1040px) {
     body {
         padding: 5vw;
     }

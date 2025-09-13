@@ -3,23 +3,27 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="../assets/favicon-code-queens.ico" type="image/x-icon">
-    <title>Login</title>
+    <link rel="shortcut icon" href="../assets/favicon-code-queens.ico type=" type="image/x-icon">
+    <title>Cadastrar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap">
 </head>
 
 <body>
     <main>
-        <div class="inicio">
+        <div class="queens">
             <img src="../assets/queenLogo.svg" alt="icone" class="icone">
             <p>Empoderando mulheres na tecnologia</p>
         </div>
 
-        <div class="login">
-            <h2>Login</h2>
+        <div class="cadastro">
+            <h2>Cadastro</h2>
+            <div>
+                <label for="email">Nome completo</label>
+                <input type="email" id="email" placeholder="seuemail@email.com">
+            </div>
             <div>
                 <label for="email">Email</label>
                 <input type="email" id="email" placeholder="seuemail@email.com">
@@ -29,18 +33,26 @@
                 <label for="senha">Senha</label>
                 <input type="password" id="senha" placeholder="***********">
                 <img src="img/eyeOff.svg" alt="icone" id="showPassword">
-                <a href="#" class="esqueceu-senha">Esqueceu sua senha?</a>
             </div>
 
-            <section class="cadastro">
+            <div class="senha">
+                <label for="confirmPassword">Confirmar senha</label>
+                <input type="password" id="confirmPassword" placeholder="***********">
+                <img src="img/eyeOff.svg" alt="icone" id="showPassword2">
+            </div>
+
+            <section class="login">
                 <a class="btn" href="/home/index.html">Entrar</a>
 
-                <p>Ainda não tem uma conta? <a href="../cadastrar/index.html" class="cadastre-se">cadrastre-se aqui</a></p>
+                <p>Já tem uma conta? <a href="../login/login.html">Faça login aqui</a>
+                </p>
             </section>
         </div>
+
+
     </main>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
