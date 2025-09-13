@@ -54,7 +54,7 @@ class MeuHeader extends HTMLElement {
       }
 
       .opcoes ul {
-          margin-left: 122px;
+          margin-left: 40px;
       }
 
       li {

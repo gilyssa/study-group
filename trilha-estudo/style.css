@@ -33,7 +33,7 @@
     --max-width-secundaria: 1200px;
 }
 
-    /* SELETOR UNIVERSAL CSS */
+/* SELETOR UNIVERSAL CSS */
 * {
     margin: 0;
     padding: 0;
@@ -42,102 +42,14 @@
     font-style: normal;
 }
 
-    /* CORPO DA PÁGINA */
+/* CORPO DA PÁGINA */
 body {
-    background: var(--cor-fundo);
-    color: var(--cor-texto-principal);
+    background-color: #FFF2F6;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
-    /* BARRA SUPERIOR */
-.barra-superior {
-    position: fixed;
-    width: 100vw;
-    height: 74px;
-    display: flex;
-    align-items: center;
-    background: var(--cor-elemento-claro);
-    border-bottom: 1px solid var(--cor-borda-suave);
-}
-
-.wrapper-barra-superior {
-    width: 100%;
-    max-width: var(--max-width-principal);
-    margin: 0 auto;
-    padding: 24px 36px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-}
-
-    /* AVATAR E NOME DA USUÁRIA */
-.area-user {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.logo {
-    width: clamp(111px, 8vw, 156px);
-    height: auto;
-    flex-shrink: 0;
-    position: relative;
-    }
-
-.icone-avatar {
-    fill: var(--cor-destaque-claro);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.nome-user {
-    max-width: 300px;
-    font-size: var(--font-size-sm);
-    font-weight: 500;
-    flex-shrink: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-    /* BREADCRUMB */
-.breadcrumb {
-    padding-top:75px;
-}
-
-.breadcrumb ol {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: var(--max-width-principal); 
-    margin: 0 auto;
-    padding-top: 16px;
-    padding-left: 28px;
-    gap: 8px;
-}
-
-.breadcrumb a {
-    color: var(--cor-texto-principal);
-    font-size: var(--font-size-sm);
-    font-weight: 500;
-    text-decoration: none;
-    border-radius: 50px;
-    padding: 8px 16px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.breadcrumb a:hover {
-    background-color: var(--cor-botao-principal);
-    color: var(--cor-texto-hover-breadcrumb);
-    transform: scale(1.03);
-    transform-origin: center;
-}
-
-    /* SEÇÃO DO TÍTULO DA PÁGINA */
+/* SEÇÃO DO TÍTULO DA PÁGINA */
 .secao-titulo {
     width: 90%;
     max-width: var(--max-width-secundaria);
@@ -155,7 +67,7 @@ body {
     padding-top: 10px;
 }
 
-    /* BARRA DE NAVEGAÇÃO DAS TRILHAS */
+/* BARRA DE NAVEGAÇÃO DAS TRILHAS */
 .nav-bar-trilhas {
     background: var(--cor-elemento-claro);
     border: 1px solid var(--cor-borda-suave);
@@ -188,4 +100,24 @@ body {
     color: var(--cor-texto-hover-breadcrumb);
     transform: scale(1.03);
     transform-origin: center;
+}
+
+.front,
+.back,
+.dados,
+.uiux {
+    background: none;
+    border: none;
+    font-weight: 500;
+    font-size: 20px;
+    color: #3C254D;
+    cursor: pointer;
+}
+
+.ativo {
+    width: clamp(120px, 15%, 194px);
+    height: 41px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #FFF8FA 0%, #FAE8F8 95.67%, #F4D7F5 100%);
+    border: 1px solid #F4D7F5;
 }

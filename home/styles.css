@@ -6,9 +6,9 @@
 }
 
 body {
-  background-color: #fff2f6;
-  color: #3c254d;
-  min-height: 100vh;
+    background-color: #FFF2F6;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* HEADER */

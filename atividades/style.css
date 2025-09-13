@@ -13,48 +13,6 @@ body {
     overflow-y: auto;
 }
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    width: 100vw;
-    height: 73px;
-    background-color: #fffafc;
-    border-bottom: 1px solid #FFE1E7
-}
-
-.logo {
-    width: 111px;
-    height: 45px;
-    left: 118px;
-    position: relative;
-}
-
-.perfil {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-right: 118px;
-}
-
-.foto-perfil {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    background-color: #F4D7F5;
-
-}
-
-.nome-perfil {
-    background: none;
-    border: none;
-    font-weight: 500;
-    font-size: 16px;
-    color: #3C254D;
-    cursor: pointer;
-}
-
 
 .opcoes {
     padding-top: 20px;
@@ -92,7 +50,7 @@ a:hover {
 .selecao {
     display: grid;
     grid-template-rows: repeat(1, 1fr 1fr);
-    margin: 80px 10% 0 8%;
+    margin: 40px 10% 0 8%;
     gap: 10px;
 
 }

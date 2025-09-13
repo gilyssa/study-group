@@ -7,47 +7,47 @@
     <link rel="shortcut icon" href="assets/imagens/favicon-code-queens.ico" type="image/x-icon">
     <title>Trilhas de Estudo - Code Queens</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap">
 </head>
 
 <body>
-                    <!-- BARRA SUPERIOR -->
-    <header class="barra-superior">
-        <div class="wrapper-barra-superior">
-            <img src="assets/imagens/logo-code-queens.png" alt="Logo Code Queens" class="logo">
-            <div class="area-user">
-                <svg class="icone-avatar" aria-label="Área para foto da usuária">
-                    <use href="assets/sprite.svg#icone-avatar"></use>
-                </svg>
-                <span class="nome-user">Lyssa Lima</span>
-            </div> 
-        </div>
-    </header>
-        
-
-                    <!-- BREADCRUMB -->
-    <nav class="breadcrumb" aria-label="breadcrumb"> 
-        <ol>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Trilhas de Estudo</a></li>
-            <li><a href="#">Submeter Atividades</a></li>
-            <li><a href="#">Agenda</a></li>
-        </ol>
-    </nav>
-
-                    <!-- SEÇÃO DO TÍTULO DA PÁGINA -->
+    <meu-header nome="Lyssa Lima" logo="../assets/queenLogo.svg">
+    </meu-header>
+    <!-- SEÇÃO DO TÍTULO DA PÁGINA -->
     <section class="secao-titulo">
         <h1>Trilhas de Estudo</h1>
         <p>Escolha uma trilha e comece sua jornada de aprendizado!</p>
     </section>
-                    <!-- BARRA DE NAVEGAÇÃO DAS TRILHAS -->
-    <nav class="nav-bar-trilhas" aria-label="Trilhas de estudo da Code Queens">
-        <button class="selecionar-trilha">Frontend</button>
-        <button class="selecionar-trilha">Backend</button>
-        <button class="selecionar-trilha">Dados</button>
-        <button class="selecionar-trilha">UI/UX</button>
-    </nav>
+    <!-- BARRA DE NAVEGAÇÃO DAS TRILHAS -->
+    <div class="nav-bar-trilhas" aria-label="Trilhas de estudo da Code Queens">
+        <button class="front ativo">Frontend</button>
+        <button class="back">Backend</button>
+        <button class="dados">Dados</button>
+        <button class="uiux">UI/UX</button>
+    </div>
 
-<script src ="script.js"></script><!--Vinculando com o código JavaScript-->
+    <div class="conteudo-trilhas">
+        <div class="div-front" style="display: grid;">
+            <!-- Conteúdo Frontend -->
+        </div>
+
+        <div class="div-back" style="display: none;">
+            <!-- Conteúdo Backend -->
+        </div>
+
+        <div class="div-dados" style="display: none;">
+           <!--  Conteúdo Dados -->
+        </div>
+
+        <div class="div-uiux" style="display: none;">
+            <!-- Conteúdo UI/UX -->
+        </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+    <script src="../header-component.js"></script><!--Vinculando com o código JavaScript-->
 </body>
+
 </html>
