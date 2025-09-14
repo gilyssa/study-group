@@ -12,7 +12,7 @@ class MeuHeader extends HTMLElement {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 0 20px;
+          
           width: 100%;
           height: 73px;
           background-color: #fffafc;
@@ -97,11 +97,11 @@ class MeuHeader extends HTMLElement {
           .logo {
               width: 80px;
               height: 30px;
-              left: 10px;
+              left: 20px;
           }
 
           .perfil {
-              margin-right: 10px;
+               margin-right: 15px;
           }
 
           .foto-perfil {
@@ -111,7 +111,6 @@ class MeuHeader extends HTMLElement {
 
           .nome-perfil {
               font-size: 14px;
-              margin-right:30px;
           }
 
           .opcoes ul {
@@ -153,7 +152,6 @@ class MeuHeader extends HTMLElement {
           }
       }
     `;
-
     // Estrutura HTML
     wrapper.innerHTML = `
       <header>
@@ -172,6 +170,7 @@ class MeuHeader extends HTMLElement {
           <li><a href="../trilha-estudo/index.html">Trilhas de estudo</a></li>
           <li><a href="../atividades/index.html">Submeter atividade</a></li>
           <li><a href="../agenda/index.html">Agenda</a></li>
+          <li><a href="../gerenciar-trilhas/index.html">Gerenciar Trilhas</a></li>
         </ul>
       </nav>
     `;

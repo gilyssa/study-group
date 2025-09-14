@@ -48,6 +48,35 @@
     width:320px;
     height: 44px;
     }
+
+    .relatorio-largura-personalizada{
+        width: 100%;
+    }
+
+    .botao-relatorio{
+        width: 100%;
+    }
+
+    .container-lista-conteudo{
+        width: 100%;
+       
+    }
+
+    .painel-item{
+ display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subtitulo-e-botao{
+         display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #container-geral{
+        padding: 0 40px;
+    }
 }
 
 /*Estilos para dispositivos com largura de tela de até 425px*/ 

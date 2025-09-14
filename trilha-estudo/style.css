@@ -73,8 +73,8 @@ body {
     border: 1px solid var(--cor-borda-suave);
     border-radius: 20px;
     box-shadow: var(--sombra-blocos);
-    width: fit-content;
-    min-width: var(--max-width-secundaria);
+    width: 100%; /* ocupa toda a largura disponível */
+    max-width: var(--max-width-secundaria); /* no desktop limita */
     height: 74px;
     margin: 0 auto;
     display: flex;
@@ -120,4 +120,21 @@ body {
     border-radius: 16px;
     background: linear-gradient(180deg, #FFF8FA 0%, #FAE8F8 95.67%, #F4D7F5 100%);
     border: 1px solid #F4D7F5;
+}
+
+@media (max-width: 768px) {
+
+    .nav-bar-trilhas {
+        display: flex;
+        flex-direction: column;
+         width: 90%; /* não cola nas bordas */
+        height: auto; /* ajusta conforme conteúdo */
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .nav-bar-trilhas button {
+        width: 100%;
+    }
+
 }

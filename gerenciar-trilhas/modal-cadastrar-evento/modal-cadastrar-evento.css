@@ -10,7 +10,6 @@
   background: #61616180; 
   z-index: 1000;
 
-
   justify-content: center;
   align-items: center;
 }
@@ -141,4 +140,44 @@ textarea{
 .mensagem-sucesso.ativo{
     opacity: 1;
     visibility: visible;
+}
+
+@media(max-width: 768px){
+    #data-e-horario{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    #formCadastrarEvento{
+        width: 100%;
+        height: 100%;
+    }
+    #data-e-horario, #titulo-cadastrar-evento,#descricao-cadastrar-evento, .modal-conteudo, #text-area-cadastrar{
+        width: 100%;
+    }
+    .campo, #descricao{
+        width: 100%;
+    }
+
+    .campo input{
+        width: 100%
+    }
+
+    .modal-conteudo{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+ .modal-conteudo h2{
+    padding: 0;
+    width: ;
+ }
+ #botao-salvar-evento{
+    margin: 0;
+ }
+
+ .modal{
+    padding: 20px;
+ }
+
 }
