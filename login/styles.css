@@ -1,0 +1,228 @@
+:root {
+    --shadow-container-principal: 0px 20px 31.1px 0px #D8458B40;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #FFFAFC;
+    padding: 10vw;
+    height: 100vh;
+
+}
+
+main {
+    box-shadow: var(--shadow-container-principal);
+    border-radius: 60px;
+    height: 100%;
+    max-height: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inicio {
+    background-color: #f2d6fb;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    border-radius: 60px 60px 0px 0px;
+    text-align: center;
+    height: auto;
+}
+
+.icone {
+    height: 8vw;
+}
+
+.inicio p {
+    font-size: 1rem;
+    color: #3C254D;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.login {
+    background-color: #fff0f7;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0px 0px 60px 60px;
+    flex: 1;
+}
+
+.login h2 {
+    font-size: 2rem;
+    color: #3C254D;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-top: 1.5rem;
+    color: #3C254D;
+    font-weight: medium;
+    font-size: 1rem;
+}
+
+input {
+    padding: 16px 8px;
+    border: none;
+    border-radius: 16px;
+    background-color: #ffe3f0;
+    margin-top: 5px;
+    width: 100%;
+}
+
+input:focus {
+    outline: 2px solid #E25F8B;
+    outline-offset: 2px;
+}
+
+.senha {
+    position: relative;
+}
+
+.esqueceu-senha {
+    text-align: right;
+    display: block;
+}
+
+a {
+    color: #E25F8B;
+    text-decoration: none;
+    font-weight: medium;
+    margin-top: 1rem;
+}
+
+
+.btn {
+    text-align: center;
+    margin-top: 25px;
+    padding: 12px;
+    background-color: #E25F8B;
+    color: #FFF0F5;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    max-width: 468px;
+}
+
+.cadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.cadastro p {
+    margin-top: 30px;
+}
+
+
+#showPassword {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    cursor: pointer;
+}
+
+
+@media (min-width: 641px) {
+
+    .inicio p,
+    label,
+    .btn {
+        font-size: 1.5rem;
+    }
+
+    .login h2 {
+        font-size: 3rem;
+    }
+
+    input {
+        font-size: 1.2rem;
+    }
+
+    .esqueceu-senha,
+    .cadastro p {
+        font-size: 1.1rem;
+    }
+
+    main {
+        max-height: none;
+    }
+
+    .inicio {
+        padding: 30px;
+    }
+
+    .login {
+        padding: 60px 40px;
+    }
+
+    /* .btn{
+    font-size: 2rem;
+} */
+
+}
+
+@media (min-width: 1040px) {
+    body {
+        padding: 4vw;
+        height: 100vh;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "inicio login";
+        height: 100%;
+        box-shadow: var(--shadow-container-principal);
+        border-radius: 60px;
+    }
+
+    .icone {
+        height: 10vw;
+    }
+
+    .inicio {
+        grid-area: inicio;
+        background-color: #f2d6fb;
+        padding: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: top;
+        border-radius: 60px 0px 0px 60px;
+        text-align: center;
+    }
+
+    .inicio p {
+        text-align: left;
+        display: block;
+    }
+
+    .login {
+        grid-area: login;
+        background-color: #fff0f7;
+        padding: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 0px 60px 60px 0px;
+    }
+
+}

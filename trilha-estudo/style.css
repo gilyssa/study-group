@@ -1,0 +1,140 @@
+/* VARIÁVEIS CSS */
+:root {
+
+    /* CORES */
+    --cor-texto-principal: #3C254D;
+    --cor-fundo: #FFF2F6;
+    --cor-elemento-claro: #FFFAFC;
+    --cor-borda-suave: #FFE1E7;
+    --cor-destaque-claro: #F4D7F5;
+    --cor-destaque-medio: #C89FF2;
+    --cor-destaque-forte: #FF8CA3;
+    --cor-botao-principal: #E25F8B;
+    --cor-texto-claro: #FFFAFC;
+    --cor-texto-hover-breadcrumb: white;
+
+    /* SOMBRAS E GRADIENTES */
+    --sombra-blocos: 6px 6px 5.2px 0px rgba(255, 152, 173, 0.25);
+    --sombra-botao: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    --sombra-texto: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    --gradiente-botao-trilha: linear-gradient(180deg, #FFF8FA 0%, #F9E7F7 95.67%, #F4D7F5 100%);
+    --gradiente-info-aula: linear-gradient(180deg, #FFF8FA 0%, #F9E7F7 95.67%, #F4D7F5 100%);
+
+    /* FONTES */
+    --fonte-principal: 'Montserrat', sans-serif;
+
+    /* TIPOGRAFIA RESPONSIVA */
+    --font-size-sm: clamp(0.8rem, 0.34vi + 0.71rem, 1.13rem);
+    --font-size-base: clamp(1rem, 0.53vi + 0.87rem, 1.5rem);
+    --font-size-md: clamp(1.25rem, 0.79vi + 1.05rem, 2rem);
+
+    /* MEDIDAS */
+    --max-width-principal: 1366px;
+    --max-width-secundaria: 1200px;
+}
+
+/* SELETOR UNIVERSAL CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-principal);
+    font-style: normal;
+}
+
+/* CORPO DA PÁGINA */
+body {
+    background-color: #FFF2F6;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* SEÇÃO DO TÍTULO DA PÁGINA */
+.secao-titulo {
+    width: 90%;
+    max-width: var(--max-width-secundaria);
+    margin: 6vh auto;
+}
+
+.secao-titulo h1 {
+    font-size: var(--font-size-md);
+    font-weight: 700;
+}
+
+.secao-titulo p {
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+/* BARRA DE NAVEGAÇÃO DAS TRILHAS */
+.nav-bar-trilhas {
+    background: var(--cor-elemento-claro);
+    border: 1px solid var(--cor-borda-suave);
+    border-radius: 20px;
+    box-shadow: var(--sombra-blocos);
+    width: 100%; /* ocupa toda a largura disponível */
+    max-width: var(--max-width-secundaria); /* no desktop limita */
+    height: 74px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.selecionar-trilha {
+    background: transparent;
+    border: transparent;
+    border-radius: 50px;
+    color: var(--cor-texto-principal);
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    padding: 8px 24px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.selecionar-trilha:hover {
+    background-color: var(--cor-destaque-forte);
+    color: var(--cor-texto-hover-breadcrumb);
+    transform: scale(1.03);
+    transform-origin: center;
+}
+
+.front,
+.back,
+.dados,
+.uiux {
+    background: none;
+    border: none;
+    font-weight: 500;
+    font-size: 20px;
+    color: #3C254D;
+    cursor: pointer;
+}
+
+.ativo {
+    width: clamp(120px, 15%, 194px);
+    height: 41px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #FFF8FA 0%, #FAE8F8 95.67%, #F4D7F5 100%);
+    border: 1px solid #F4D7F5;
+}
+
+@media (max-width: 768px) {
+
+    .nav-bar-trilhas {
+        display: flex;
+        flex-direction: column;
+         width: 90%; /* não cola nas bordas */
+        height: auto; /* ajusta conforme conteúdo */
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .nav-bar-trilhas button {
+        width: 100%;
+    }
+
+}
